@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Divshot Guides - {{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/06e857f3029b3bc678879b3d8226893c9a791d43.css"> 
+    {% stylesheet guides %}
+  </head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Divshot</a>
+          <div class="navbar-content">
+            <ul class="nav ">
+              <li class="active">
+                <a href="/">Guides</a> 
+              </li>
+              <li>
+                <a href="mailto:support@divshot.com">Contact Support</a> 
+              </li>
+            </ul>
+          </div>
+          <ul class="nav pull-right">
+            <li>
+              <a href="https://app.divshot.com/">Launch App</a> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container main-content">
+      <div class="row main-features">
+        <div class="span3">
+          <ul class="nav nav-stacked nav-pills guide-nav">
+            <li>
+              <a href="/">Introduction</a> 
+            </li>
+            <li>
+              <a href="/guides/overview.html">Interface Overview</a> 
+            </li>
+            <li>
+              <a href="/guides/pages.html">Folders and Pages</a> 
+            </li>
+            <li>
+              <a href="/guides/components.html">Working With Components</a> 
+            </li>
+            <li>
+              <a href="/guides/content.html">Editing Content</a> 
+            </li>
+            <li>
+              <a href="/guides/source.html">Using the Source Editor</a> 
+            </li>
+            <li>
+              <a href="/guides/export.html">Preview and Export</a> 
+            </li>
+          </ul>
+        </div>
+        <div class="span9">
+          {{content}}
+        </div>
+      </div>
+    </div>
+    <script src="https://app.divshot.com/js/jquery.min.js"></script>
+    <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $(".guide-nav a[href='" + window.location.pathname + "']").parent().addClass('active');
+      });
+    </script>
+  </body>
+
+</html>

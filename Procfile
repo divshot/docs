@@ -1,0 +1,1 @@
+jekyll: bundle exec jekyll --auto --server
