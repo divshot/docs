@@ -28,3 +28,16 @@ To add a component to the canvas, you simply drag it from the component drawer o
 You can select a component on the canvas by clicking it. The currently selected component will be outlined in blue and will also cause the options available in the [inspector](#configuring-components) to change based on the type of component.
 
 <div class='alert alert-success'><b>Quick Tip:</b> If you want to select a parent of the selected component, you can use the breadcrumb navigation at the top of the canvas to select components up the hierarchy.</div>
+
+Once a component is selected, you can delete it by pressing the **Delete** key on your keyboard. You can also cut (**Ctrl+X**), copy (**Ctrl+C**), and paste (**Ctrl+V**) components. You can **right click** a component to bring up a context menu with options including the ability to instantly view the HTML source of the component.
+
+If there is text content you want to modify on the page, simply **double click** the text you want to edit. You can learn more about this feature in the [Content Editing Guide](/guides/content.html).
+
+<h3 id='configuring-components'>Configuring Components with the Inspector</h3>
+
+The **Inspector** is a panel in the sidebar that allows you to change both component-specific attributes and generic properties of a component. Any component-specific attributes should be self-descriptive (for instance, the Bootstrap "Button" component has a "Size" attribute in the inspector that lets you change the size of the button). There are some attributes that can be applied to all Divshot components, these are:
+
+* **Classes:** This is a space-separated list of CSS classes to apply to this component. This is especially useful if you have written custom CSS in the [source editor](/guides/source.html#custom-css).
+* **ID:** This defines a custom HTML element ID to the selected component. Remember that IDs should be unique on a page, so don't give two components the same ID.
+* **Float:** You may want a component to float outside the normal flow of elements. You can choose to float to the right or left of the layout using this option. This is useful, for instance, when adding multiple menus to a navigation bar.
+* **Visibility:** Because Divshot has built-in responsive design features, visibility allows you to select which devices you want a component to appear on.
