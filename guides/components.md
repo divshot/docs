@@ -17,9 +17,14 @@ Some components have configurable attributes (see [configuring components](#conf
 
 To add a component to the canvas, you simply drag it from the component drawer on the right hand side of the Divshot interface onto the canvas. As you drag, you will see a "ghost" version of the component appear. This ghost indicates where the component will be placed when you release the mouse button.
 
-<div class='alert alert-question alert-block'>
+<div class='alert alert-question alert-info alert-block'>
   <h4>Why doesn't the component drop directly under my mouse?</h4>
 
   <p>Behind the scenes, Divshot's simple visual interface is building professional-quality HTML output. When developers build HTML pages each element flows onto the page based on the rules of HTML and CSS. By restricting component insertion to this real-world flow we ensure that all code generated with Divshot adheres to web development best practices.</p>
 </div>
 
+### Manipulating Existing Components
+
+You can select a component on the canvas by clicking it. The currently selected component will be outlined in blue and will also cause the options available in the [inspector](#configuring-components) to change based on the type of component.
+
+<div class='alert alert-success'><b>Quick Tip:</b> If you want to select a parent of the selected component, you can use the breadcrumb navigation at the top of the canvas to select components up the hierarchy.</div>

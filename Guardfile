@@ -3,4 +3,5 @@
 
 guard 'jekyll' do
   watch /.*/
+  ignore %r{_site/.*}
 end
