@@ -34,3 +34,8 @@ The canvas is where your page will take shape. Because Divshot works directly wi
 ### The Source Editor
 
 The Source Editor can be called up by clicking the brackets icon in the top navigation bar at any time. With the source editor the HTML, CSS, and JavaScript source code for a page can be manipulated directly. The [Source Editor Guide](/guides/source.html) has all the information you need for working with Divshot page source directly.
+
+<ul class="pager">
+	<li><a href="/"><b>Prev:</b> Help Center Home</a</li>
+	<li><a href="/guides/pages.html"><b>Next:</b> Pages and Folders</a</li>
+</ul>

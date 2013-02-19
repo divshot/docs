@@ -41,3 +41,8 @@ The **Inspector** is a panel in the sidebar that allows you to change both compo
 * **ID:** This defines a custom HTML element ID to the selected component. Remember that IDs should be unique on a page, so don't give two components the same ID.
 * **Float:** You may want a component to float outside the normal flow of elements. You can choose to float to the right or left of the layout using this option. This is useful, for instance, when adding multiple menus to a navigation bar.
 * **Visibility:** Because Divshot has built-in responsive design features, visibility allows you to select which devices you want a component to appear on.
+
+<ul class="pager">
+  <li><a href="/guides/pages.html"><b>Previous:</b> Pages and Folders</a</li>
+  <li><a href="/guides/content.html"><b>Next:</b> Editing Content</a</li>
+</ul>
