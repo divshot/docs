@@ -5,9 +5,8 @@
     <title>Divshot Guides - {{page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
-    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
-    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/06e857f3029b3bc678879b3d8226893c9a791d43.css"> 
+    {% stylesheet bootstrap %}
+    {% stylesheet bootstrap-responsive %}
     {% stylesheet guides %}
   </head>
   
@@ -15,7 +14,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="#">Divshot</a>
+          <a href="/" class="brand"><img src="http://www.divshot.com/assets/lander/logo-8041b3b51fd8c2f297bc61ff913452b5.svg" width="120" alt="Divshot"/></a>
           <div class="navbar-content">
             <ul class="nav ">
               <li class="active">
