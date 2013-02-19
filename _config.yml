@@ -10,6 +10,7 @@ exclude:
   - Procfile
   - Rakefile
   - README.md
+  - Guardfile
 
 assets:
   sources:

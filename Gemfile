@@ -4,6 +4,8 @@ gem 'jekyll'
 gem 'jekyll-s3'
 gem 'redcarpet'
 
+gem 'guard'
+gem 'guard-jekyll'
 gem 'jekyll-assets'
 gem 'sprockets'
 gem 'sprockets-sass'
