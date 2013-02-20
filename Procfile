@@ -1,1 +1,1 @@
-jekyll: bundle exec jekyll --auto --server
+jekyll: bundle exec jekyll --server

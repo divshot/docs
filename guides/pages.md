@@ -17,6 +17,11 @@ The new page dialog allows you to modify the following attributes of a page:
 * **Page Name:** Each page should have a descriptive name that will help you remember what content it contains.
 * **Folder:** You can choose to put a page into an existing folder when it is created (for information about creating folders, [see below](#folders)).
 
+<div class='alert alert-info alert-question'>
+  <h4>Why is there no save button in Divshot?</h4>
+  <p>Divshot works similar to online tools such as Google Documents by constantly saving in the background. We don't want you to have to worry about clicking save or losing all your work if your browser crashes. While the page is saving, the small page icon in the page dropdown will show an ellipsis, and a checkmark when saving is complete.</p>
+</div>
+
 ### Modifying Page Options
 
 You can change a page's name and folder after creation by accessing the **Page Options Dialog**. To open the page options dialog, click on the page dropdown and then click on the gear icon for the page you wish to edit. The page options dialog allows you to modify the page name and folder.
@@ -40,7 +45,7 @@ Folders are simply groups of similar pages that exist to help you organize your 
 
 To switch between folders, you can click the folder dropdown and simply select a folder. This will filter the page dropdown to only display pages within that folder. Note that each folder has a number next to it indicating the number of pages it contains.
 
-<div class='alert alert-success'><b>Quick Tip:</b> The *All Pages* option at the top of the folder list will show all pages, regardless of folder.</div>
+<div class='alert alert-success'><b>Quick Tip:</b> The *All Pages* option at the top of the folder list will show all pages, regardless of div.</folder>
 
 <ul class="pager">
   <li><a href="/guides/overview.html"><b>Previous:</b> Interface Overview</a</li>
