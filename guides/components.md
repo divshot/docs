@@ -11,11 +11,15 @@ title: Working With Components
 
 In Divshot, a component is any reusable user interface element. Everything you see on a page in Divshot is made up of components. Components can be nested inside each other (for instance, a "Button Group" component might contain several "Button" components) and some components are only meant to be used inside another component (for instance, a "Menu Item" Bootstrap component is only meant to be used inside a "Menu" component).
 
+![Divshot - Components]({% asset_path components.png %} "Components")
+
 Some components have configurable attributes (see [configuring components](#configuring-components) below) that alter their appearance or behavior. For instance, a Bootstrap "Menu" component may be tabs or pills and also may stack vertically or not.
 
 ### Adding Components to the Canvas
 
 To add a component to the canvas, you simply drag it from the component drawer on the right hand side of the Divshot interface onto the canvas. As you drag, you will see a "ghost" version of the component appear. This ghost indicates where the component will be placed when you release the mouse button.
+
+![Divshot - Canvas Component Dragging]({% asset_path canvas-drag.gif %} "Dragging Components to the Canvas")
 
 <div class='alert alert-question alert-info alert-block'>
   <h4>Why doesn't the component drop directly under my mouse?</h4>
@@ -27,6 +31,8 @@ To add a component to the canvas, you simply drag it from the component drawer o
 
 You can select a component on the canvas by clicking it. The currently selected component will be outlined in blue and will also cause the options available in the [inspector](#configuring-components) to change based on the type of component.
 
+![Divshot - Canvas Component Selecting]({% asset_path canvas-select.gif %} "Selecting Components on the Canvas")
+
 <div class='alert alert-success'><b>Quick Tip:</b> If you want to select a parent of the selected component, you can use the breadcrumb navigation at the top of the canvas to select components up the hierarchy.</div>
 
 Once a component is selected, you can delete it by pressing the **Delete** key on your keyboard. You can also cut (**Ctrl+X**), copy (**Ctrl+C**), and paste (**Ctrl+V**) components. You can **right click** a component to bring up a context menu with options including the ability to instantly view the HTML source of the component.
@@ -34,6 +40,8 @@ Once a component is selected, you can delete it by pressing the **Delete** key o
 If there is text content you want to modify on the page, simply **double click** the text you want to edit. You can learn more about this feature in the [Content Editing Guide](/guides/content.html).
 
 <h3 id='configuring-components'>Configuring Components with the Inspector</h3>
+
+![Divshot - Inspector Component Configuration]({% asset_path inspector.gif %} "Configuring Components with the Inspector")
 
 The **Inspector** is a panel in the sidebar that allows you to change both component-specific attributes and generic properties of a component. Any component-specific attributes should be self-descriptive (for instance, the Bootstrap "Button" component has a "Size" attribute in the inspector that lets you change the size of the button). There are some attributes that can be applied to all Divshot components, these are:
 
