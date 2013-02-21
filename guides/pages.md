@@ -51,7 +51,7 @@ Folders are simply groups of similar pages that exist to help you organize your 
 
 To switch between folders, you can click the folder dropdown and simply select a folder. This will filter the page dropdown to only display pages within that folder. Note that each folder has a number next to it indicating the number of pages it contains.
 
-<div class='alert alert-success'><b>Quick Tip:</b> The <b>All Pages</b> option at the top of the folder list will show all pages, regardless of div.</div>
+<div class='alert alert-success'><b>Quick Tip:</b> The <b>All Pages</b> option at the top of the folder list will show all pages, regardless of folder.</div>
 
 <ul class="pager">
   <li><a href="/guides/overview.html"><b>Previous:</b> Interface Overview</a</li>
