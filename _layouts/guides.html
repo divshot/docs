@@ -82,13 +82,9 @@
     <footer>
       Copyright &copy; 2013 Divshot, Inc., <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">some rights reserved</a>. Error or omission in the docs? <a href="https://github.com/divshot/docs">Fix it on GitHub!</a>
     </footer>
-    <script src="https://app.divshot.com/js/jquery.min.js"></script>
-    <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $(function(){
-        $(".guide-nav a[href='" + window.location.pathname + "']").parent().addClass('active');
-      });
-    </script>
+    <script src="https://app.divshot.com/js/jquery.min.js" defer></script>
+    <script src="https://app.divshot.com/js/bootstrap.min.js" defer></script>
+    <script src="{% asset_path guides.js %}" defer></script>
   </body>
 
 </html>
