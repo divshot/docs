@@ -29,7 +29,7 @@ The right-hand sidebar of the Divshot interface largely features the component d
 
 ### The Canvas
 
-The canvas is where your page will take shape. Because Divshot works directly with HTML in the browser, what you see on the canvas is what you get when you export the code. The canvas allows you to select existing components by single clicking, modify existing content by double-clicking, as well as perform context operations by right clicking. For more information about working with the canvas content, see the [Content Guide](/guides/content.html)
+The canvas is where your page will take shape. Because Divshot works directly with HTML in the browser, what you see on the canvas is what you get when you export the code. The canvas allows you to select existing components by single clicking, modify existing content by double-clicking, as well as perform context operations by right clicking. For more information about working with the canvas content, see the [Content Guide](/guides/content.html).
 
 ![Divshot - Canvas]({% asset_path canvas.png %} "Canvas")
 

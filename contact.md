@@ -3,7 +3,7 @@ layout: guides
 title: Contact Support
 ---
 
-<h1 class="page-title">Need additional help? We're here for you!</h1>
+<h1 class="page-header">Need additional help? We're here for you!</h1>
 
 <p class="lead">We want to make sure everyone has a great experience using Divshot. If these guides didn't answer your question, please get in touch!</p>
 
