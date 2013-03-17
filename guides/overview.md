@@ -1,6 +1,7 @@
 ---
 layout: guides
 title: Interface Overview
+description: "Get a bird's-eye view of the Divshot user interface."
 ---
 
 <h1 class='page-header'>Overview</h1>

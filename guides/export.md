@@ -1,6 +1,7 @@
 ---
 layout: guides
 title: Export and Preview
+description: "Discover how to export and preview your pages in Divshot."
 ---
 
 <h1 class='page-header'>Export and Preview</h1>

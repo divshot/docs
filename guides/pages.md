@@ -1,6 +1,7 @@
 ---
 layout: guides
 title: Pages and Folders
+description: "Learn about page and folder management within Divshot."
 ---
 
 <h1 class='page-header'>Pages and Folders</h1>
