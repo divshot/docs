@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'jekyll'
-gem 'jekyll-s3'
+gem 'jekyll-s3', git: 'https://github.com/divshot/jekyll-s3.git'
 gem 'redcarpet'
 
 gem 'guard'
@@ -12,4 +12,4 @@ gem 'sprockets-sass'
 gem 'coffee-script'
 gem 'compass'
 
-gem 'bootstrap-sass', '2.0.3'
+gem 'bootstrap-sass', '2.0.2'
