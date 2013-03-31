@@ -1,6 +1,7 @@
 ---
 layout: guides
 title: Working With Components
+description: "Learn more about Divshot's powerful drag-and-drop component panel."
 ---
 
 <h1 class='page-header'>Working With Components</h1>

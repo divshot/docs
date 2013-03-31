@@ -1,6 +1,7 @@
 ---
 layout: guides
 title: Interface Overview
+description: "Get a bird's-eye view of the Divshot user interface."
 ---
 
 <h1 class='page-header'>Overview</h1>
@@ -29,7 +30,7 @@ The right-hand sidebar of the Divshot interface largely features the component d
 
 ### The Canvas
 
-The canvas is where your page will take shape. Because Divshot works directly with HTML in the browser, what you see on the canvas is what you get when you export the code. The canvas allows you to select existing components by single clicking, modify existing content by double-clicking, as well as perform context operations by right clicking. For more information about working with the canvas content, see the [Content Guide](/guides/content.html)
+The canvas is where your page will take shape. Because Divshot works directly with HTML in the browser, what you see on the canvas is what you get when you export the code. The canvas allows you to select existing components by single clicking, modify existing content by double-clicking, as well as perform context operations by right clicking. For more information about working with the canvas content, see the [Content Guide](/guides/content.html).
 
 ![Divshot - Canvas]({% asset_path canvas.png %} "Canvas")
 
@@ -37,7 +38,9 @@ The canvas is where your page will take shape. Because Divshot works directly wi
 
 The Source Editor can be called up by clicking the brackets icon in the top navigation bar at any time. With the source editor the HTML, CSS, and JavaScript source code for a page can be manipulated directly. The [Source Editor Guide](/guides/source.html) has all the information you need for working with Divshot page source directly.
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/Vg6xEz-3VKk?rel=0" frameborder="0" allowfullscreen></iframe>
+<div class="video">
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/Vg6xEz-3VKk?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 <ul class="pager">
 	<li><a href="/"><b>Prev:</b> Help Center Home</a</li>

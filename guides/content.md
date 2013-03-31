@@ -1,6 +1,7 @@
 ---
 layout: guides
 title: Editing Content
+description: "Learn more about text editing in the Divshot canvas."
 ---
 
 <h1 class='page-header'>Editing Content</h1>
