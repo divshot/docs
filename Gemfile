@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'jekyll'
+gem 'jekyll', '~> 1.0'
 gem 'jekyll-s3', git: 'https://github.com/divshot/jekyll-s3.git'
 gem 'redcarpet'
 

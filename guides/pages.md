@@ -1,31 +1,36 @@
 ---
 layout: guides
-title: Pages and Folders
+title: Making Pages
 description: "Learn about page and folder management within Divshot."
 ---
 
-<h1 class='page-header'>Pages and Folders</h1>
+<h1 class='page-header'>Making Pages</h1>
 
-<p class='lead'>Divshot organizes your work into <b>folders</b> and <b>pages</b>. Pages are the primary document created by Divshot; each page exports directly to a single HTML file.</p>
+<p class='lead'>Divshot organizes your work into <b><a href="/guides/projects.html">projects</a></b> and <b>pages</b>. Pages are simply HTML files that you can edit using the Divshot visual canvas.</p>
 
 ### Creating a Page
 
-One of the first actions you'll likely want to perform is to create a new page. To do this, click the page dropdown in the top navigation bar. This will open up a list of your existing pages as well as offer a button to **Create a Page**. Clicking on this button will open the **New Page Dialog**.
+One of the first actions you'll likely want to perform after you've created a project is to create a new page. To do this, click the **plus icon** in the left-hand navigator. This will give you the option to create a **New File**, a **New Folder**, or **Upload a File**. Clicking on **New File** will open the **New File Dialog**.
 
-![Divshot - New Page Dialog]({% asset_path new-page-dialog.png %} "New Page Dialog")
+<!-- TODO: Picture of New File Dialog -->
 
-The new page dialog allows you to modify the following attributes of a page:
+The new file dialog allows you to create pages, stylesheets, and script files for your project. You can learn more about other file types in the [scripts and stylesheets guide](/guides/scripts-and-styles.html). When creating a file you will need to provide:
 
-* **Source:** Each page can be created from scratch (Blank Page), by duplicating the current page (Clone Current Page), from a globally supplied template (such as "Landing Page"), or from a [user-created template](#custom-templates). Simply click the option you wish to utilize.
-* **Page Name:** Each page should have a descriptive name that will help you remember what content it contains.
-* **Folder:** You can choose to put a page into an existing folder when it is created (for information about creating folders, [see below](#folders)).
+* **Filename:** You will need to enter a file name; this should only include letters, numbers, dashes, and underscores (no spaces).
+* **Template:** You can choose to create the page blank, by cloning an existing page, or by choosing from one of the pre-made templates. Simply click on your choice from the tiles below the filename box.
 
 <div class='alert alert-info alert-question'>
-  <h4>Why is there no save button in Divshot?</h4>
-  <p>Divshot works similar to online tools such as Google Documents by constantly saving in the background. We don't want you to have to worry about clicking save or losing all your work if your browser crashes. While the page is saving, the small page icon in the page dropdown will show an ellipsis, and a checkmark when saving is complete.</p>
+  <h4>Is my work automatically saved in Divshot?</h4>
+  <p>Divshot will automatically keep a local draft of any file changes you make as you edit; however, you do need to click the <b>Save</b> button or use the <b>Ctrl+S</b> keyboard shortcut to permanently save changes to a file.</p>
 </div>
 
-### Modifying Page Options
+### Working With Existing Pages
+
+To open existing pages, simply click its filename in the Navigator. The page will open in a new tab.
+
+To delete a page, **right click** on its filename in the Navigator and then choose **Delete**.
+
+<!-- ### Modifying Page Options
 
 You can change a page's name and folder after creation by accessing the **Page Options Dialog**. To open the page options dialog, click on the page dropdown and then click on the gear icon for the page you wish to edit. The page options dialog allows you to modify the page name and folder.
 
@@ -52,9 +57,9 @@ Folders are simply groups of similar pages that exist to help you organize your 
 
 To switch between folders, you can click the folder dropdown and simply select a folder. This will filter the page dropdown to only display pages within that folder. Note that each folder has a number next to it indicating the number of pages it contains.
 
-<div class='alert alert-success'><b>Quick Tip:</b> The <b>All Pages</b> option at the top of the folder list will show all pages, regardless of folder.</div>
+<div class='alert alert-success'><b>Quick Tip:</b> The <b>All Pages</b> option at the top of the folder list will show all pages, regardless of folder.</div> -->
 
 <ul class="pager">
-  <li><a href="/guides/overview.html"><b>Previous:</b> Interface Overview</a</li>
+  <li><a href="/guides/projects.html"><b>Previous:</b> Managing Projects</a</li>
   <li><a href="/guides/components.html"><b>Next:</b> Working With Components</a</li>
 </ul>

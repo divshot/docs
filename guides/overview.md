@@ -6,11 +6,11 @@ description: "Get a bird's-eye view of the Divshot user interface."
 
 <h1 class='page-header'>Overview</h1>
 
-<p class='lead'>There are four main components of the Divshot interface: the <b>navigation header</b>, <b>canvas</b>, <b>component drawer</b>, and <b>inspector</b>.</p>
+<p class='lead'>There are five main components of the Divshot interface: the <b>header</b>, <b>navigator</b>, <b><b>canvas</b>, <b>inspector</b>, and <b>source editor</b>.</p>
 
-![Divshot - Overview]({% asset_path overview.png %} "Overview")
+<!-- TODO: New Overview image -->
 
-### Navigation Header
+### Header
 
 The navigation header is where you will go to create new folders and pages, switch which page you're working on, as well as perform account-related activities like logging out or changing your email address.
 

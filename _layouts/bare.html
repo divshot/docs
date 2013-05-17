@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>{{page.title}} - Divshot Docs</title>
+    {% if page.description %}<meta name="description" content="{{page.description}}">{% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    {% stylesheet bootstrap %}
+    {% stylesheet bootstrap-responsive %}
+    {% stylesheet guides %}
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30884255-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="/" class="brand"><img src="{% asset_path logo.svg %}" width="120" alt="Divshot"/> Docs</a>
+          <div class="navbar-content">
+            <ul class="nav ">
+              <li>
+                <a href="/">Guides</a> 
+              </li>
+              <li>
+                <a href="/changelog.html">Changelog</a> 
+              </li>
+              <li>
+                <a href="/contact.html">Contact Support</a> 
+              </li>
+            </ul>
+          </div>
+          <ul class="nav pull-right">
+            <li>
+              <a href="https://app.divshot.com/">Launch App</a> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container main-content">
+      {{content}}
+    </div>
+    <footer>
+      Copyright &copy; 2013 Divshot, Inc., <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">some rights reserved</a>. Error or omission in the docs? <a href="https://github.com/divshot/docs">Fix it on GitHub!</a>
+    </footer>
+    <script src="https://app.divshot.com/js/jquery.min.js" defer></script>
+    <script src="https://app.divshot.com/js/bootstrap.min.js" defer></script>
+    <script src="{% asset_path guides.js %}" defer></script>
+  </body>
+
+</html>
