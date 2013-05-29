@@ -49,6 +49,6 @@ Presently the JavaScript generated from the source editor is inserted just befor
 Note that JavaScript is **not** executed in the canvas but rather only upon preview or export. This is both for application security and to ensure that the HTML content is not manipulated to an unusable state by JavaScript libraries.
 
 <ul class="pager">
-  <li><a href="/guides/content.html"><b>Previous:</b> Editing Content</a</li>
-  <li><a href="/guides/export.html"><b>Next:</b> Preview and Export</a</li>
+  <li><a href="/guides/content.html"><b>Previous:</b> Editing Content</a></li>
+  <li><a href="/guides/export.html"><b>Next:</b> Preview and Export</a></li>
 </ul>

@@ -52,6 +52,6 @@ The **Inspector** is a panel in the sidebar that allows you to change both compo
 * **Visibility:** Because Divshot has built-in responsive design features, visibility allows you to select which devices you want a component to appear on.
 
 <ul class="pager">
-  <li><a href="/guides/pages.html"><b>Previous:</b> Pages and Folders</a</li>
-  <li><a href="/guides/content.html"><b>Next:</b> Editing Content</a</li>
+  <li><a href="/guides/pages.html"><b>Previous:</b> Pages and Folders</a></li>
+  <li><a href="/guides/content.html"><b>Next:</b> Editing Content</a></li>
 </ul>

@@ -1,1 +1,1 @@
-jekyll: bundle exec jekyll --server --auto
+jekyll: bundle exec jekyll server --watch --port 4001

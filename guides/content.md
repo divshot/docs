@@ -25,6 +25,6 @@ When text editing is active, some basic formatting tools appear at the top of th
 Editing text is simple and straightforward in Divshot and always takes place right on the canvas.
 
 <ul class="pager">
-  <li><a href="/guides/components.html"><b>Previous:</b> Working With Components</a</li>
-  <li><a href="/guides/source.html"><b>Next:</b> Using the Source Editor</a</li>
+  <li><a href="/guides/components.html"><b>Previous:</b> Working With Components</a></li>
+  <li><a href="/guides/scripts-and-styles.html"><b>Next:</b> Scripts and Styles</a></li>
 </ul>

@@ -22,3 +22,8 @@ To create a new project, simply click on **New Project** after selecting the des
 * **Theme:** If themes are available for the selected framework, you may pick one here.
 
 Once you've filled out the information for the project, click **Create Project**. 
+
+<ul class="pager">
+  <li><a href="/guides/overview.html"><b>Prev:</b> Interface Overview</a></li>
+  <li><a href="/guides/pages.html"><b>Next:</b> Making Pages</a></li>
+</ul>

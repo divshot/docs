@@ -43,6 +43,6 @@ The Source Editor can be called up by clicking the brackets icon in the top navi
 </div>
 
 <ul class="pager">
-	<li><a href="/"><b>Prev:</b> Help Center Home</a</li>
-	<li><a href="/guides/pages.html"><b>Next:</b> Pages and Folders</a</li>
+	<li><a href="/"><b>Prev:</b> Help Center Home</a></li>
+	<li><a href="/guides/projects.html"><b>Next:</b> Managing Projects</a></li>
 </ul>

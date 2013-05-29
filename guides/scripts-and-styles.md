@@ -22,9 +22,15 @@ use backslashes (for example <code>css/app.css</code>) in the filename. It just 
 
 To use your scripts and styles in an HTML page, you can simply drag it onto the canvas from the 
 Navigator and drop. CSS files will automatically be linked in the `<head>` element and JavaScript files
-will automatically be included just before the `</body>` tag.
+will automatically be included just before the `</body>` tag. You can alternately drag the files
+into the source editor to place them directly.
 
 ### Working With CSS Preprocessors
 
 When you create a SASS, LESS, SCSS, or Stylus file, Divshot will automatically compile a CSS file at the
 same location. You should always use the CSS file, not the uncompiled file when dragging onto the canvas.
+
+<ul class="pager">
+  <li><a href="/guides/content.html"><b>Prev:</b> Editing Content</a></li>
+  <li><a href="/guides/export.html"><b>Next:</b> Sharing and Exporting</a></li>
+</ul>

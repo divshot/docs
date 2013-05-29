@@ -9,7 +9,7 @@ Most content is in the `/guides` folder.
     bundle install
     foreman start
 
-Now you should be able to go to `http://localhost:4000` to see the documentation homepage.
+Now you should be able to go to `http://localhost:4001` to see the documentation homepage.
 
 ## Publishing to S3
 
