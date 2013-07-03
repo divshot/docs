@@ -1,7 +1,7 @@
 source :rubygems
 
 gem 'jekyll', '~> 1.0'
-gem 'jekyll-s3', git: 'https://github.com/divshot/jekyll-s3.git'
+gem 's3_website'
 gem 'redcarpet'
 
 gem 'guard'
