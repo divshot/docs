@@ -16,7 +16,7 @@ using the dropdown menu and then type out the name of the file you want to creat
 click the **Create File** button.
 
 <div class='alert alert-success'><b>Quick Tip:</b> If you want to organize your files into folders,
-use backslashes (for example <code>css/app.css</code>) in the filename. It just works!</div>
+use slashes (for example <code>css/app.css</code>) in the filename. It just works!</div>
 
 ### Using Scripts and Styles
 
