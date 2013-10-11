@@ -1,0 +1,22 @@
+safe: false
+markdown: redcarpet
+pygments: true
+baseurl: /
+url: http://docs.divshot.io
+exclude:
+  - _assets
+  - Gemfile
+  - Gemfile.lock
+  - Procfile
+  - Rakefile
+  - README.md
+  - Guardfile
+
+assets:
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _vendor/stylesheets
+    - _vendor/javascripts
+    - _vendor/webfonts

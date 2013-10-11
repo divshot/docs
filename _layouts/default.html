@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+  
+  <head>
+    <title>Divshot.io Documentation</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group docs-nav">
+            <h3 class="list-group-heading">Guides</h3>
+            <a class="list-group-item" href="/guides/getting-started">Getting Started</a>
+            <h3 class="list-group-heading">Integrations</h3>
+            <a class="list-group-item" href="/integrations/grunt">Grunt</a>
+            <a class="list-group-item" href="/integrations/jekyll">Jekyll</a>
+            <a class="list-group-item" href="/integrations/travis-ci">Travis CI</a>
+          </div>
+        </div>
+        <div class="col-md-9 main-content">
+          {{content}}
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+  
+  <head>
+    <title>Divshot.io Documentation</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group docs-nav">
+            <h3 class="list-group-heading">Guides</h3>
+            <a class="list-group-item" href="/guides/getting-started">Getting Started</a>
+            <h3 class="list-group-heading">Integrations</h3>
+            <a class="list-group-item" href="/integrations/grunt">Grunt</a>
+            <a class="list-group-item" href="/integrations/jekyll">Jekyll</a>
+            <a class="list-group-item" href="/integrations/travis-ci">Travis CI</a>
+          </div>
+        </div>
+        <div class="col-md-9 main-content">
+          <h1>Using Grunt with Divshot.io</h1>
+
+<p><a href="http://gruntjs.com/">Grunt</a> is a powerful JavaScript task runner that is widely used
+to automate command-line processes. To use it with Divshot.io, just follow the
+directions below.</p>
+
+<h2>Getting Started</h2>
+
+<p>First, you&#39;ll need to add <code>grunt-divshot</code> to your NPM development dependencies:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">npm add grunt-divshot --saveDev
+</code></pre></div>
+<p>Next, you&#39;ll need to load the Divshot Grunt tasks by adding this line to your <code>Gruntfile.js</code>:</p>
+<div class="highlight"><pre><code class="js language-js" data-lang="js"><span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-divshot&#39;</span><span class="p">);</span>
+</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

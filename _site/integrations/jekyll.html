@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html>
+  
+  <head>
+    <title>Divshot.io Documentation</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group docs-nav">
+            <h3 class="list-group-heading">Guides</h3>
+            <a class="list-group-item" href="/guides/getting-started">Getting Started</a>
+            <h3 class="list-group-heading">Integrations</h3>
+            <a class="list-group-item" href="/integrations/grunt">Grunt</a>
+            <a class="list-group-item" href="/integrations/jekyll">Jekyll</a>
+            <a class="list-group-item" href="/integrations/travis-ci">Travis CI</a>
+          </div>
+        </div>
+        <div class="col-md-9 main-content">
+          <h1>Publishing Jekyll Sites to Divshot.io</h1>
+
+<p><a href="http://jekyllrb.com/">Jekyll</a> is a powerful static website generator that works great with
+Divshot.io (in fact, it&#39;s powering this very documentation site!).</p>
+
+<h2>Getting Started</h2>
+
+<p>First, you&#39;ll need a working Ruby runtime and to install Jekyll:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">gem install jekyll
+</code></pre></div>
+<p>You&#39;ll also need Node.js and the Divshot command-line tool:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">npm install -g divshot
+</code></pre></div>
+<h2>Configuring Divshot.io</h2>
+
+<p>To publish a Jekyll site properly, you&#39;ll want to specify the Jekyll compile folder (defaults
+to <code>_site</code>):</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">divshot config:add root _site
+</code></pre></div>
+<h2>Running Locally</h2>
+
+<p>To take advantage of advanced Divshot.io features like custom routing, you&#39;ll want to serve
+your app locally using the Divshot server:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">divshot server
+</code></pre></div>
+<p>Note that it will automatically use the <code>root</code> configuration to serve up the <code>_site</code> directory.
+To get updates as you develop, you can use Jekyll&#39;s <code>--watch</code> flag while the server is running:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">jekyll build --watch
+</code></pre></div>
+<p>This will automatically recompile as you save files which will then be served up by the Divshot
+local server.</p>
+
+<h2>Deploying</h2>
+
+<p>This tells us that when you deploy from this application, you want to use the content in the
+<code>_site</code> directory. Now, when you want to release, you can just do:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">jekyll build &amp;&amp; divshot release
+</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
