@@ -8,9 +8,51 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/lnw7qyq.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <style type="text/css">
+      body { background: #ededed; font-family: "ff-din-web", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      h1, h2, h3, h4, h5, h6 { font-family: "ff-din-web", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+      .navbar { background: #242732 url({% asset_path grid.png %}) 50% 800%; background-size: 1200px 740px; border-radius: 0; }
+      .navbar-brand { margin-left: -32px !important; }
+      .navbar-nav { margin: 32px 0 0 0; }
+      .main-content { background: #fff; padding: 25px 30px; border: 1px solid #dfdfdf; box-shadow: 1px 1px 1px rgba(0,0,0,0.04); border-radius: 4px 4px 0 0; }
+
+      h1 + p { padding-bottom: 30px; border-bottom: 1px solid #D9D9D9; }
+    </style>
   </head>
   
   <body>
+    <nav class="navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand"><img src="{% asset_path logo.png %}" data-retina="{% asset_path logo@2x.png %}" alt="Divshot.io" width="242"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="http://divshot.io/pricing">Pricing</a>
+            </li>
+            <li>
+              <a href="http://divshot.io/support">Support</a>
+            </li>
+            <li>
+              <a href="http://divshot.io/contact">Contact</a>
+            </li>
+            <li>
+              <a href="http://divshot.io/in">Sign In</a>
+            </li>
+            <li class="active">
+              <a href="http://divshot.io/up">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -28,6 +70,7 @@
         </div>
       </div>
     </div>
+    {% javascript docs %}
   </body>
 
 </html>
