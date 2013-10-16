@@ -11,15 +11,39 @@
     <script type="text/javascript" src="//use.typekit.net/lnw7qyq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <style type="text/css">
-      body { background: #ededed; font-family: "ff-din-web", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-      h1, h2, h3, h4, h5, h6 { font-family: "ff-din-web", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      body { background: #ededed; font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      h1, h2, h3, h4, h5, h6 { font-family: "ff-din-web", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #000; margin: 20px 0; }
+      h1, h2 { font-weight: 600; }
 
-      .navbar { background: #242732 url({% asset_path grid.png %}) 50% 800%; background-size: 1200px 740px; border-radius: 0; }
-      .navbar-brand { margin-left: -32px !important; }
-      .navbar-nav { margin: 32px 0 0 0; }
-      .main-content { background: #fff; padding: 25px 30px; border: 1px solid #dfdfdf; box-shadow: 1px 1px 1px rgba(0,0,0,0.04); border-radius: 4px 4px 0 0; }
+      .alpha { padding-left: 0; }
+      .omega { padding-right: 0; }
 
-      h1 + p { padding-bottom: 30px; border-bottom: 1px solid #D9D9D9; }
+      .navbar { height: 80px; background: #242732 url({% asset_path grid.png %}) 50% 800%; background-size: 1200px 740px; border-radius: 0; border-top: 2px solid #0f1014; }
+      .navbar-brand { margin-left: -32px !important; padding: 3px 30px; }
+      .navbar-nav { margin: 21px 0 0 0; }
+      .navbar-nav > li > a { padding: 6px 18px; border: 2px solid rgba(255,255,255,0); border-radius: 32px; }
+      .navbar-nav li.active a { border-color: #1D1F28; }
+      .navbar-nav a { color: #9ea5ba; }
+      .navbar-nav a:hover { color: #fff; background-color: transparent !important; }
+      .nav > li { padding: 0 6px; }
+      .nav > li:last-child { padding-right: 0; }
+
+      .main-content { background: #fff; padding: 30px; border: 1px solid #dfdfdf; box-shadow: 1px 1px 1px rgba(0,0,0,0.03); border-radius: 4px; }
+      .main-content a { color: #02bef2; text-decoration: none; border-bottom: 1px solid #2cd0fd; }
+      .main-content a:hover { color: #02aad8; border-bottom-color: #02aad8; }
+
+      h1 { margin-top: 0; font-size: 32px; }
+      h1 + p { color: #777; margin-bottom: 30px; padding-bottom: 30px; border-bottom: 1px solid #e6e6e6; }
+      h2 { margin-top: 40px; font-size: 24px; }
+      h2:first-of-type { margin-top: 0; }
+      p { line-height: 23px; color: #555; }
+
+      pre { margin-bottom: 20px; background: #f1f4fe; border: 0; }
+
+      .list-group h3 { font-size: 12px; font-weight: 600; text-transform: uppercase; margin: 10px 0; padding: 8px 16px; background: #e5e5e5; border-radius: 2px; box-shadow: 0 1px 0 rgba(255,255,255,.32); border: 1px solid #e3e3e3; }
+      .list-group-item { background: transparent; border: 1px solid #e0e0e0; border: 0; border-radius: 0; border-radius: 2px; }
+
+      footer { color: #999; padding: 40px; text-align: center; }
     </style>
   </head>
   
@@ -30,7 +54,7 @@
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand"><img src="{% asset_path logo.png %}" data-retina="{% asset_path logo@2x.png %}" alt="Divshot.io" width="242"></a>
+          <a href="/" class="navbar-brand"><img src="{% asset_path logo.png %}" data-retina="{% asset_path logo@2x.png %}" alt="Divshot.io" width="200"></a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -70,6 +94,9 @@
         </div>
       </div>
     </div>
+    <footer>
+      <span id="copyright">&copy; {{site.time | date: "%Y"}} Divshot, Inc.</span> 
+    </footer>
     {% javascript docs %}
   </body>
 
