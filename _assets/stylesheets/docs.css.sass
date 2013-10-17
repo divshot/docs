@@ -4,6 +4,29 @@
   background: #242732 url(asset-path('grid.png')) 50% 800%
   background-size: 1200px 740px
 
+.navbar-brand
+  margin-left: -26px !important
+  padding: 2px 10px
+
+.navbar-nav
+  margin: 21px 0 0 0
+  > li
+    padding: 0 6px
+    > a
+      padding: 6px 18px
+      border: 2px solid rgba(255,255,255,0)
+      border-radius: 14px
+      color: #9ea5ba
+      transition: color 250ms ease-out
+      &:hover
+        color: #fff
+        background-color: transparent !important
+    &.active a
+      box-shadow: 0 1px 0 rgba(255,255,255,0.02)
+      border-color: #1D1F28
+    &:last-child
+      padding-right: 0
+
 .row
   background: #e6e8eb
   border: 1px solid #dadbde
