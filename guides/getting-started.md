@@ -33,7 +33,9 @@ create a `divshot.json` file that will reside in the root of your project direct
 Once you have initialized the `divshot.json` file you can create the app like so:
 
     divshot create
-    
+
+## Step 3: Release Code to an Application
+
 Now you just need some content! It's simple to test out the deployment process:
 
     echo "<h1>Hello World</h1>" > index.html
