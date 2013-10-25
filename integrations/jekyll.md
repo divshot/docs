@@ -20,10 +20,11 @@ You'll also need Node.js and the Divshot command-line tool:
     
 ## Configuring Divshot.io
 
-To publish a Jekyll site properly, you'll want to specify the Jekyll compile folder (defaults
-to `_site`):
+In the project folder for your Jekyll site, initialize a Divshot.io app:
 
-    divshot config:add root _site
+
+    
+## Configuring Jekyll
     
 ## Running Locally
 
@@ -38,11 +39,13 @@ To get updates as you develop, you can use Jekyll's `--watch` flag while the ser
     jekyll build --watch
     
 This will automatically recompile as you save files which will then be served up by the Divshot
-local server.
+local server. You can also run Jekyll in the background:
+
+    jekyll build --watch & divshot server
 
 ## Deploying
 
 This tells us that when you deploy from this application, you want to use the content in the
 `_site` directory. Now, when you want to release, you can just do:
 
-    jekyll build && divshot release
+    jekyll build && divshot push
