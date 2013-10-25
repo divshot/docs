@@ -39,7 +39,7 @@ Once you have initialized the `divshot.json` file you can create the app like so
 Now you just need some content! It's simple to test out the deployment process:
 
     echo "<h1>Hello World</h1>" > index.html
-    divshot release
+    divshot push
     
 The `release` command will publish to the `production` environment by default. After
 the release command completes, you should be able to visit your application at
