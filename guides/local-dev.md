@@ -5,8 +5,9 @@ title: Local Development for Divshot.io
 
 # Local Development for Divshot.io
 
-It's easy to use Divshot.io's advanced hosting features when developing your application
-locally. Divshot.io runs on our own open source static server, [superstatic](https://github.com/divshot/superstatic),
+<p class="lead">It's easy to use Divshot.io's advanced hosting features when developing locally.</p>
+
+Divshot.io runs on our home-grown open source static server, [superstatic](https://github.com/divshot/superstatic),
 which is automatically packaged in with the Divshot Command Line Interface.
 
 Once you've installed the CLI, running a server locally is as simple as:
@@ -15,3 +16,9 @@ Once you've installed the CLI, running a server locally is as simple as:
 
 If run inside a Divshot.io application directory, it will automatically read your `divshot.json`
 and serve files appropriately.
+
+You can also specify the following command-line options:
+
+* `-p, --port PORT` - run the server on a custom port
+* `-h, --host HOST` - run the server on a custom host
+* `--no-cache` - do not serve any `Cache-Control` headers

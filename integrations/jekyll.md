@@ -22,9 +22,19 @@ You'll also need Node.js and the Divshot command-line tool:
 
 In the project folder for your Jekyll site, initialize a Divshot.io app:
 
-
+    divshot init
+    
+When prompted, supply `_site` as the project's root directory.
     
 ## Configuring Jekyll
+
+You will likely want to add `divshot.json` to the list of files your Jekyll project is
+ignoring. In `_config.yml`, add:
+
+```yaml
+exclude:
+  - divshot.json
+```
     
 ## Running Locally
 
