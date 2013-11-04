@@ -15,8 +15,8 @@ The following are the available configuration options:
   the [routing guide](/guides/routing)
 * **routes:** you can specify custom routes by passing a map of paths and filenames. See [the routing guide](/guides/routing)
   for more information.
-* **max_age:** a map of paths to the length of time (in seconds) that they should be cached by the CDN and the browser. By
-  default all Divshot.io pages are cached for 24 hours on the CDN, but not in the browser. For more information see the
+* **cache_control:** a map of paths to the length of time (in seconds) that they should be cached by the CDN and the browser. By
+  default all Divshot.io requests are cached until a new deploy on the CDN, and for one hour in the browser. For more information see the
   [performance guide](/guides/performance).
 * **error_page:** the path (relative to the `root` directory) to a document to display when a page is missing or there is
-  an error.
+  an error. You can also specify an external URL that will be used instead.
