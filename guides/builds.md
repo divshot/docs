@@ -42,6 +42,9 @@ If you don't specify an environment, `production` will be assumed:
 
     divshot push staging
     
+> **Why does it take longer to deploy to production?**  
+> Your production environment is hosted on a CDN, so it takes a little extra time for us to purge the old release and update necessary information. This ensures a fast, seamless experience for your end users.
+    
 ### Promoting Builds and Rollback
 
 You may want to move a build that is presently in one environment to another. To do this, you
