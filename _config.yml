@@ -13,6 +13,7 @@ exclude:
   - Guardfile
   - divshot.json
   - _vendor
+  - vendor
 
 assets:
   sources:
