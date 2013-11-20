@@ -1,10 +1,11 @@
-node_js:
-- '0.10'
-script: echo 'Nothing to see here.'
+ruby:
+- 2.0.0
+script: bundle exec jekyll build
 deploy:
   provider: divshot
   environment:
     master: development
   edge: true
+  skip_cleanup: true
   api_key:
     secure: vXpaEBmcy9wYGtyN9q7v2oV1Kt5QC2v1ggareiGgqUPaQw/mosounI9KLvbILcqwg5nw3hlFm65TJsbjdbmRz8ZDDdmwFBZFx1CzlgdnJoJ/1y98lIKdgtF0InpWA4I6FeqanpL4T2dCMCgPTjuK292a5MeVUxtlsMUCiPnyGAU=
