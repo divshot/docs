@@ -1,6 +1,7 @@
 ruby:
 - 2.0.0
 script: bundle exec jekyll build
+cache: bundler
 deploy:
   provider: divshot
   environment:
