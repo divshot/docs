@@ -12,6 +12,8 @@ exclude:
   - README.md
   - Guardfile
   - divshot.json
+  - _vendor
+  - vendor
 
 assets:
   sources:

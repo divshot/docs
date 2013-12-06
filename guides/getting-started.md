@@ -30,9 +30,8 @@ Next you'll need to create a Divshot.io application. In an empty folder, run thi
     
 This will prompt you for some basic application information such as app name and
 create a `divshot.json` file that will reside in the root of your project directory.
-Once you have initialized the `divshot.json` file you can create the app like so:
-
-    divshot create
+Once you have entered the information you will be asked if you wish to create an
+application. Answer in the affirmative and you'll be up and running!
 
 ## Step 3: Release Code to an Application
 
