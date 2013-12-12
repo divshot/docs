@@ -1,0 +1,7 @@
+{
+  "name": "divshot-docs",
+  "root": "_site",
+  "clean_urls": true,
+  "cache_control": {},
+  "routes": {}
+}
