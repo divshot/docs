@@ -20,3 +20,5 @@ The following are the available configuration options:
   [performance guide](/guides/performance).
 * **error_page:** the path (relative to the `root` directory) to a document to display when a page is missing or there is
   an error. You can also specify an external URL that will be used instead.
+* **exclude:** exclude allows you to ignore certain files that you don't want to be served, for example `Gruntfile.js`. Simply add
+  an array of file globs to exclude.
