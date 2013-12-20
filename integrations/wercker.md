@@ -30,8 +30,8 @@ deploy:
           divshot push $WERCKER_DEPLOYTARGET_NAME --token $DIVSHOT_TOKEN
 ```
 
-You'll need to ensure the WERCKER_DEPLOYTARGET_NAME is one of `development`, `staging', or `production` and you'll have to
-set the DIVSHOT_TOKEN variable to your divshot API key.
+You'll need to ensure the `WERCKER_DEPLOYTARGET_NAME` is one of `development`, `staging`, or `production` and you'll have to
+set the `DIVSHOT_TOKEN` variable to your divshot API key.
 
 You can get your divshot api key from the divshot command line tools.
 
