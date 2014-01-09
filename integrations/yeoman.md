@@ -29,7 +29,7 @@ divshot: {
       cache_control: {}
     }
   }
-}
+},
 ```
 
 For an overview of Divshot Grunt configuration options, check out the [README](https://github.com/divshot/grunt-divshot#readme) on GitHub.
@@ -37,6 +37,8 @@ For an overview of Divshot Grunt configuration options, check out the [README](h
 Finally, you'll need to make adjustments to your Gruntfile based on the Yeoman generator you're using. We'll cover the most popular generators.
 
 ## Angular Generator
+
+*Use the example [Angular Gruntfile](https://gist.github.com/fastdivision/8344071) or follow the steps below:*
 
 In order to run a local Divshot server, you'll have to replace Connect by changing `connect:livereload` to `divshot:server` under the Grunt `serve` task:
 
@@ -71,7 +73,7 @@ copy: {
       '{,**/*}*.js',
       'bower_components/**/*',
       'icons/**/*',
-      'images/{,*/}*.{webp}'
+      'images/**/*'
     ]
   }
 ```
@@ -81,8 +83,6 @@ Under the `concurrent` task, change `copy:styles` to `copy:server`:
 ```js
 concurrent: {
   server: [
-    'coffee:dist',
-    'stylus',
     'copy:server'
   ],
 ``` 
@@ -100,3 +100,5 @@ divshot: {
   }
 }
 ```
+
+*Want to make sure you followed the steps correctly? Refer to the example [Angular Gruntfile](https://gist.github.com/fastdivision/8344071).*
