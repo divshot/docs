@@ -11,7 +11,7 @@ title: Using Grunt with Divshot.io
 
 First, you'll need to add `grunt-divshot` to your NPM development dependencies:
 
-    npm add grunt-divshot --save-dev
+    npm install grunt-divshot --save-dev
     
 Next, you'll need to load the Divshot Grunt tasks by adding this line to your `Gruntfile.js`:
 

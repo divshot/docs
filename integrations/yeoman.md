@@ -11,7 +11,7 @@ title: Using Yeoman with Divshot.io
 
 To run a local Divshot server and deploy to Divshot from Yeoman's generated Gruntfile, you'll first need to integrate the [Divshot Grunt plugin](/integrations/grunt). To get started, add `grunt-divshot` to your NPM development dependencies:
 
-    npm add grunt-divshot --save-dev
+    npm install grunt-divshot --save-dev
 
 Yeoman's Gruntfile should load the Divshot Grunt tasks automatically. Next, you'll need to set up the Divshot server in your `Gruntfile.js`. Add the following section to the data object passed into `grunt.initConfig()`:
 
