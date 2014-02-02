@@ -1,24 +1,27 @@
 //= require bootstrap
 
+body
+  background: #000 url(asset-path('background3.jpg')) top left no-repeat
+  background-size: 100%
+
 .navbar
-  background: #242732 url(asset-path('grid.png')) 50% 800%
-  background-size: 1200px 740px
+  background: transparent
   height: 120px
 
 .navbar-brand
-  margin-left: -26px !important
-  padding: 2px 10px
-  color: #9ea5ba
+  margin-left: 0 !important
+  padding: 25px 10px
+  color: #ccc
   &:hover
-    color: #9ea5ba
+    color: #fff
   span
     font-size: 15px
-    margin: 0 0 0 -4px
+    margin: 0 0 0 10px
     text-transform: uppercase
     letter-spacing: 1px
     b
       font-weight: normal
-      color: #A6E22D
+      color: #FED044
       padding: 0 6px 0 0
 
 .navbar-nav
@@ -29,14 +32,15 @@
       padding: 6px 18px
       border: 2px solid rgba(255,255,255,0)
       border-radius: 14px
-      color: #9ea5ba
+      color: #fff
       transition: color 250ms ease-out
       &:hover
         color: #fff
         background-color: transparent !important
     &.active a
-      box-shadow: 0 1px 0 rgba(255,255,255,0.02)
-      border-color: #1D1F28
+      border-color: rgba(255,255,255,.2)
+      &:hover
+        border-color: #fff
     &:last-child
       padding-right: 0
 
@@ -46,11 +50,27 @@
   z-index: 1001
 
 .row
-  background: #f5f5f5
+  background: rgba(0,0,0,.6)
   // border: 1px solid #dadbde
   border-top: 0
   border-right: 0
   box-shadow: 0 1px 1px rgba(0,0,0,0.03)
+
+.list-group h3
+  color: #999
+  text-shadow: none
+
+.list-group-item
+  color: #fff !important
+  border-left: 2px solid transparent !important
+  border-radius: 0
+  &.active
+    color: #FED044 !important
+    font-weight: normal
+  &:hover
+    color: #FED044 !important
+    border-left: 2px solid #FED044 !important
+    background: transparent !important
 
 .docs-nav
   margin: 25px 0
