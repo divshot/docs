@@ -17,8 +17,8 @@ For example:
 
 ```json
 {
-  "name":"my-app-name",
-  "clean_urls":true
+  "name": "my-app-name",
+  "clean_urls": true
 }
 ```
 
@@ -45,10 +45,10 @@ As an example, if I have an application with a landing page at `index.html` but 
 
 ```json
 {
-  "name":"my-app-name",
-  "routes":{
-    "/":"index.html",
-    "/app/**","app.html"
+  "name": "my-app-name",
+  "routes": {
+    "/*.html": "index.html",
+    "/app/**/*.html": "app.html"
   }
 }
 ```

@@ -34,9 +34,9 @@ Let's take a look at an example `divshot.json`:
 ```json
 {
   "cache_control": {
-    "/assets/**":31536000,
-    "/private/**":"no-cache, no-store",
-    "/":false
+    "/assets/**": 31536000,
+    "/private/**": "no-cache, no-store",
+    "/": false
   }
 }
 ```

@@ -24,7 +24,7 @@ divshot: {
       root: '<%= yeoman.app %>',
       clean_urls: true,
       routes: {
-        '/': 'index.html'
+        '**/*.html': 'index.html'
       },
       cache_control: {}
     }
