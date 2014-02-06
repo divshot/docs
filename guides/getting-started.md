@@ -40,7 +40,7 @@ Now you just need some content! It's simple to test out the deployment process:
     echo "<h1>Hello World</h1>" > index.html
     divshot push
     
-The `release` command will publish to the `development` environment by default. After
+The `push` command will publish to the `development` environment by default. After
 the release command completes, you should be able to visit your application at
 `http://development.your-app-name.divshot.io`.
 
