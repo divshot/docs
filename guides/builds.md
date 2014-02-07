@@ -31,6 +31,8 @@ can be used to verify that there aren't any bugs or unexpected glitches.
 
 **production:** your live application. Note that production environment has a few special features:
 
+
+
 1. It can be aliased to custom domains
 2. It is available without an environment prefix, e.g. `http://fakeblock.divshot.io/`
 3. It is automatically cached and accelerated by a Content Delivery Network (CDN)
@@ -45,6 +47,15 @@ If you don't specify an environment, `production` will be assumed:
 > **Why does it take longer to deploy to production?**  
 > Your production environment is hosted on a CDN, so it takes a little extra time for us to purge the old release and update necessary information. This ensures a fast, seamless experience for your end users.
     
+
+#### History
+
+Each deploy is tagged with an auto-incrementing number. This is great because "cool urls don't change".
+
+You can have an immutable link to your application by using release #s in your urls:
+
+    http://v25.my-app-name.production.divshot.io
+
 ### Promoting Builds and Rollback
 
 You may want to move a build that is presently in one environment to another. To do this, you
