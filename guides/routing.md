@@ -3,7 +3,7 @@ layout: default
 title: "Routing in Your Divshot.io Application"
 ---
 
-# Divshot.io Routing
+# Divshot Routing
 
 <p class="lead">Divshot.io provides simple configuration for custom routing enabling you
 both to display clean, user-friendly URLs for your content as well as power sophisticated
