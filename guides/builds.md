@@ -40,7 +40,7 @@ can be used to verify that there aren't any bugs or unexpected glitches.
 ### Deploying to an Environment
 
 Deploying to an environment is as simple as specifying it in the `divshot push` command.
-If you don't specify an environment, `production` will be assumed:
+If you don't specify an environment, `development` will be assumed:
 
     divshot push staging
     

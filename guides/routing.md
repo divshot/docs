@@ -3,7 +3,7 @@ layout: default
 title: "Routing in Your Divshot.io Application"
 ---
 
-# Divshot.io Routing
+# Divshot Routing
 
 <p class="lead">Divshot.io provides simple configuration for custom routing enabling you
 both to display clean, user-friendly URLs for your content as well as power sophisticated
@@ -17,8 +17,8 @@ For example:
 
 ```json
 {
-  "name":"my-app-name",
-  "clean_urls":true
+  "name": "my-app-name",
+  "clean_urls": true
 }
 ```
 
@@ -45,10 +45,10 @@ As an example, if I have an application with a landing page at `index.html` but 
 
 ```json
 {
-  "name":"my-app-name",
-  "routes":{
-    "/":"index.html",
-    "/app/**","app.html"
+  "name": "my-app-name",
+  "routes": {
+    "/*.html": "index.html",
+    "/app/**/*.html": "app.html"
   }
 }
 ```
