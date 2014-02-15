@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+  <base href="/http/">
+  {% include head.html %}  
+  <body class="http-docs">
+    {% include navbar.html section="HTTP" %}
+    <style>
+      .secondary-nav {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <div class="container content http-docs">
+      <div class="row">
+        <div class="col-md-8 main-content">
+          {{content}}
+        </div>
+        <div class="col-md-4 secondary-nav">
+          <code style="margin: 0; padding: 0;">
+          <h3 class="list-group-item"><a href="overview/requests">Making Requests</a></h3>
+          <h3 class="list-group-item"><a href="overview/authentication">Authentication</a></h3>
+          <h3 class="list-group-item"><a href="overview/errors">Errors</a></h3>
+          {% for module in site.data.http %}
+            <h3 class="list-group-item">
+              <a href="entities/{{module.entity_name}}">
+                {{module.name}}
+              </a>
+            </h3>
+            {% for route in module.routes %}
+              <a class="list-group-item" href="{{route.method}}{{route.minpath}}">
+                <span class="label label-{{route.method | api_method_label}}">{{route.method}}</span> {{route.minpath}}</a>
+            {% endfor%}
+          {% endfor %}
+          </code>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    {% javascript docs %}
+  </body>
+
+</html>
