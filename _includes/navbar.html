@@ -1,0 +1,34 @@
+<nav class="navbar" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand"><img src="{% asset_path logo.svg %}" alt="Divshot" width="142"><span><b>/</b> {{include.section}}</span></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        {% comment %}
+        <li>
+          <a href="http://divshot.io/pricing">Pricing</a>
+        </li>
+        <li>
+          <a href="http://divshot.io/support">Support</a>
+        </li>
+        <li>
+          <a href="http://divshot.io/contact">Contact</a>
+        </li>
+        <li>
+          <a href="http://divshot.io/in">Sign In</a>
+        </li>
+        <li class="active">
+          <a href="http://divshot.io/up">Sign Up</a>
+        </li>
+        {% endcomment %}
+        <li class="active">
+          <a href="http://divshot.io">Request Beta Access</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,860 @@
+---
+- name: Access Token
+  routes:
+  - method: POST
+    params: {}
+    compiled: (?-mix:\A\/token(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /token(.:format)
+    minpath: /token
+    id: POST/token
+    description: |-
+      <p>See <a href="http://tools.ietf.org/html/rfc6749#section-4.3">http://tools.ietf.org/html/rfc6749#section-4.3</a> for exhaustive detail.</p>
+
+      <p><span class="label label-warning">Heads up!</span>
+      Request payloads for this endpoint MUST be formatted according to the mime-type: <code>application/x-www-form-urlencoded</code>.</p>
+
+      <h3>Sample Request with payload</h3>
+      <div class="highlight"><pre><span class="n">POST</span> <span class="o">/</span><span class="n">token</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+      <span class="nl">Host:</span> <span class="n">server</span><span class="p">.</span><span class="n">example</span><span class="p">.</span><span class="n">com</span>
+      <span class="nl">Authorization:</span> <span class="n">Basic</span> <span class="n">czZCaGRSa3F0MzpnWDFmQmF0M2JW</span>
+      <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="o">:</span> <span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">www</span><span class="o">-</span><span class="n">form</span><span class="o">-</span><span class="n">urlencoded</span>
+
+      <span class="n">grant_type</span><span class="o">=</span><span class="n">password</span><span class="o">&amp;</span><span class="n">username</span><span class="o">=</span><span class="n">johndoe</span><span class="o">&amp;</span><span class="n">password</span><span class="o">=</span><span class="n">A3ddj3w</span>
+      </pre></div>
+      <p>To get the correct HTTP header for your API Client see the API Client settings panel.[^1]</p>
+
+      <p>[^1]: This is a lie. Client settings panel does not exist yet.</p>
+
+      <h3>Sample Response</h3>
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="s2">&quot;THETOKENGOESHERE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="s2">&quot;bearer&quot;</span>
+      <span class="p">}</span>
+      </pre></div>
+    returns:
+    - AccessToken
+    return_type: instance
+    failure_modes:
+      missing_http_basic_auth:
+        message: invalid_request
+        status: 400
+        description: |
+          <p>HTTP Basic auth credentials MUST be supplied in an HTTP header.</p>
+
+          <p>From: <a href="http://www.ietf.org/rfc/rfc2617.txt">http://www.ietf.org/rfc/rfc2617.txt</a> </p>
+
+          <pre>
+          To receive authorization,
+          the client sends the userid and password, separated by a single colon
+          (":") character, within a base64 [7] encoded string in the
+          credentials.
+
+          basic-credentials = base64-user-pass
+          base64-user-pass  = &lt;base64 [4] encoding of user-pass,
+          user-pass   = userid ":" password
+          userid      = *&lt;TEXT excluding ":"&gt;
+          password    = *TEXT
+
+          If the user agent wishes to send the userid "Aladdin" and password
+          "open sesame", it would use the following header field:
+
+          Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+          </pre>
+
+          <p>To get the correct HTTP header for your API Client see the API Client
+          settings panel.[^1]</p>
+
+          <p>[^1]: This is a lie. Client settings panel does not exist yet.</p>
+      no_api_client_found:
+        message: invalid_client
+        status: 400
+        description: |
+          <p>There was no API Client found for the username given in the HTTP Basic
+          Authorization header.</p>
+
+          <p>To get the correct HTTP header for your API Client see the API Client
+          settings panel.[^1]</p>
+
+          <p>[^1]: This is a lie. Client settings panel does not exist yet.</p>
+      missing_parameters:
+        message: invalid_request
+        status: 400
+        description: |
+          <p>The POST data MUST contain three parameters:</p>
+
+          <ol>
+          <li><code>grant_type</code> MUST be &quot;password&quot;</li>
+          <li><code>username</code> MUST be a user&#39;s email</li>
+          <li><code>password</code> MUST be the user&#39;s password</li>
+          </ol>
+      wrong_username_or_password:
+        message: invalid_grant
+        status: 400
+        description: |
+          <p>This combination of username and password do not correspond to any
+          Divshot user.</p>
+    regex: ^\/token(?:\.(?<format>[^\/.?]+))?$
+  - method: POST
+    params: {}
+    compiled: (?-mix:\A\/access_token_request(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /access_token_request(.:format)
+    minpath: /access_token_request
+    id: POST/access_token_request
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: ^\/access_token_request(?:\.(?<format>[^\/.?]+))?$
+  - method: GET
+    params:
+      ref: ''
+      pin: ''
+    compiled: (?-mix:\A\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /access_token_request/:ref/:pin(.:format)
+    minpath: /access_token_request/:ref/:pin
+    id: GET/access_token_request/:ref/:pin
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: ^\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+  entity_name: AccessToken
+  docs:
+  - type: String
+    description: |
+      <p>The access token to the api. Keep this well protected as it gives access to all of a user&#39;s data on Divshot.</p>
+    name: token
+  - type: String
+    description: |
+      <p>The type of the access token.</p>
+    name: token_type
+- name: App
+  routes:
+  - method: GET
+    params: {}
+    compiled: (?-mix:\A\/apps(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps(.:format)
+    minpath: /apps
+    id: GET/apps
+    description: |
+      <h1>Get a user&#39;s Apps.</h1>
+
+      <p>Returns a collection of lists of <a href="/entities/App">App entities</a></p>
+
+      <p>The <code>self</code> key lists Apps owned directly by the current user.</p>
+
+      <p>The &#39;org:<organization nickname>&#39; keys list Apps the current user has access to through
+      organizations they are a member of.</p>
+    returns:
+    - Object
+    return_type: instance
+    failure_modes: {}
+    regex: ^\/apps(?:\.(?<format>[^\/.?]+))?$
+  - method: POST
+    params:
+      name:
+        required: true
+        type: String
+        desc: The subdomain at which the app will be located.
+      project_id:
+        required: false
+        type: String
+        desc: |
+          The id of the divshot.com Project this Application should be associated with.
+    compiled: (?-mix:\A\/apps(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps(.:format)
+    minpath: /apps
+    id: POST/apps
+    description: |-
+      <h1>Create an App</h1>
+
+      <p>The created application will be owned by the current AuthenticatedUser.</p>
+
+      <h2>Sample request payload:</h2>
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;my-fantastic-app&quot;</span>
+      <span class="p">}</span>
+      </pre></div>
+      <h2>Sample response payload:</h2>
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;524c0904562410a437000004&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;my-fantastic-app&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;environment_hash&quot;</span><span class="o">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1380748357</span>
+        <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1380748357</span>
+      <span class="p">}</span>
+      </pre></div>
+    returns:
+    - App
+    return_type: instance
+    failure_modes:
+      invalid_data:
+        status: 422
+        message: Data did not pass validaitons.
+        description: |
+          <p>Refer to the errors hash and try again.</p>
+      no_such_project:
+        status: 400
+        message: No Divshot.com Project by that id.
+        description: |
+          <p>The given <code>project_id</code> does not correspond to any Projects created by the Divshot.com editor.
+          Please check your records.</p>
+      project_already_has_app:
+        status: 400
+        message: Cannot add a Project to two Applications.
+        description: |
+          <p>The project id specified already has an Application associated with it.</p>
+      project_owned_by_another_user:
+        status: 400
+        message: Cannot set Application for other user's Projects.
+        description: |
+          <p>The project specified doesn&#39;t belong to you.</p>
+      cannot_assign_project_application:
+        status: 400
+        message: You do not have permission to set Application for this Project.
+        description: |
+          <p>The project specified belongs to an Organization that you do not have permissions for.</p>
+    regex: ^\/apps(?:\.(?<format>[^\/.?]+))?$
+  - method: GET
+    params:
+      id: ''
+    compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:id(.:format)
+    minpath: /apps/:id
+    id: GET/apps/:id
+    description: |
+      <p>See <a href="/entities/app">App</a> for example of the App entity_name</p>
+    returns:
+    - App
+    return_type: instance
+    failure_modes:
+      app_not_found:
+        message: No app found by this id.
+        status: 404
+        description: |
+          <p>There is no app registered to that id. Please check your records and if neccessary contact <a href="mailto:support@divshot.com">support@divshot.com</a>.</p>
+      unauthorized_read:
+        message: Not authorized to view this app.
+        status: 403
+        description: |
+          <p>You are attempting to access an app you are not authorized to access. Please contact the owner of the application.</p>
+    regex: ^\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+  - method: PUT
+    params:
+      id: ''
+      name:
+        required: false
+        type: String
+        desc: |
+          The subdomain at which the app will be located.
+          When you change the subdomain of an app it becomes available
+          for registration. If you wish to retain your subdomain it is reccomended
+          to create a new app instead of renaming one.
+      owner:
+        required: false
+        type: String
+        desc: |
+          The nickname of an organization you wish to transfer this app to.
+
+          You must either own the app or be an admin of the organization that own the
+          app to initiate a transfer.
+
+          You must also be an admin of the org that will receive the app.
+    compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:id(.:format)
+    minpath: /apps/:id
+    id: PUT/apps/:id
+    description: |
+      <p>Update the App. At this time only the name of the app may be changed.</p>
+
+      <p>Be careful with this operation as it will change the subdomain your app will be reached at.</p>
+    returns:
+    - App
+    return_type: instance
+    failure_modes:
+      app_not_found:
+        message: No app found by this id.
+        status: 404
+        description: |
+          <p>There is no app registered to that id. Please check your records and if neccessary contact <a href="mailto:support@divshot.com">support@divshot.com</a>.</p>
+      unauthorized_read:
+        message: Not authorized to view this app.
+        status: 403
+        description: |
+          <p>You are attempting to access an app you are not authorized to access. Please contact the owner of the application.</p>
+      unauthorized_mutation:
+        message: Not authorized to mutate this resource.
+        status: 403
+        description: |
+          <p>You are attempting to access an app you are not authorized make changes to. Please contact the owner of the applicaton.</p>
+      invalid_data:
+        status: 422
+        message: Data did not pass validaitons.
+        description: |
+          <p>Refer to the errors hash and try again.</p>
+      cannot_transfer_to_new_owner:
+        status: 403
+        message: Cannot transfer app to org
+        description: |
+          <p>You do not have permission to transfer this app to that owner.</p>
+    regex: ^\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+  - method: DELETE
+    params:
+      id: ''
+    compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:id(.:format)
+    minpath: /apps/:id
+    id: DELETE/apps/:id
+    description: |
+      <p>Delete the App.</p>
+
+      <p>Be extremely careful with this destructive action.</p>
+    returns: 
+    return_type: 
+    failure_modes:
+      app_not_found:
+        message: No app found by this id.
+        status: 404
+        description: |
+          <p>There is no app registered to that id. Please check your records and if neccessary contact <a href="mailto:support@divshot.com">support@divshot.com</a>.</p>
+      unauthorized_read:
+        message: Not authorized to view this app.
+        status: 403
+        description: |
+          <p>You are attempting to access an app you are not authorized to access. Please contact the owner of the application.</p>
+      unauthorized_mutation:
+        message: Not authorized to mutate this resource.
+        status: 403
+        description: |
+          <p>You are attempting to access an app you are not authorized make changes to. Please contact the owner of the applicaton.</p>
+    regex: ^\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+  - method: POST
+    params:
+      organization_id: ''
+    compiled: (?-mix:\A\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /organizations/:organization_id/apps(.:format)
+    minpath: /organizations/:organization_id/apps
+    id: POST/organizations/:organization_id/apps
+    description: |-
+      <h1>Create an App</h1>
+
+      <p>The created application will be owned by the specified Organization.</p>
+
+      <h2>Sample request payload:</h2>
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;my-fantastic-app&quot;</span>
+      <span class="p">}</span>
+      </pre></div>
+      <h2>Sample response payload:</h2>
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;524c0904562410a437000004&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;my-fantastic-app&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;environment_hash&quot;</span><span class="o">:</span> <span class="p">{},</span>
+        <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="mi">1380748357</span>
+        <span class="s2">&quot;updated_at&quot;</span><span class="o">:</span> <span class="mi">1380748357</span>
+      <span class="p">}</span>
+      </pre></div>
+    returns:
+    - app
+    return_type: instance
+    failure_modes:
+      cannot_create_app_for_org:
+        status: 403
+        message: Cannot create Org resources.
+        description: |
+          <p>You do not have permission to create apps for this Organization. Please contact the a representative of the Organization.</p>
+      invalid_data:
+        status: 422
+        message: Data did not pass validaitons.
+        description: |
+          <p>Refer to the errors hash and try again.</p>
+    regex: ^\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?$
+  - method: GET
+    params:
+      organization_id: ''
+    compiled: (?-mix:\A\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /organizations/:organization_id/apps(.:format)
+    minpath: /organizations/:organization_id/apps
+    id: GET/organizations/:organization_id/apps
+    description: |
+      <h1>Get a list of App entities.</h1>
+
+      <p>Lists apps owned directly by the specified Organization.</p>
+    returns:
+    - App
+    return_type: instance
+    failure_modes:
+      unauthorized_org_read:
+        status: 403
+        message: Cannot list Org Apps.
+        description: |
+          <p>You do not have permission te list apps for this Organization. Please contact the a representative of the Organization.</p>
+    regex: ^\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?$
+  entity_name: HostedApplication
+  docs:
+  - type: String
+    immutable: true
+    description: |
+      <p>The machine readable identifier for a Hosted Application.</p>
+    name: id
+  - type: String
+    description: |
+      <p>The human readable identifier for a Hosted Application.</p>
+
+      <p>divshot.io reserves a handful of application names for internal use. At this time an application may not be named any of: .</p>
+
+      <p>The <code>name</code> MUST be a valid subdomain name as it will be used in a domain.</p>
+
+      <p>Furthermore, the <code>name</code> MUST be unique across the entire divshot.io system.</p>
+    name: name
+  - type: Array
+    description: |
+      <p>A List of domains for this application.</p>
+    name: custom_domains
+  - type: Timestamp
+    description: |
+      <p><a href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a></p>
+    name: created_at
+  - type: Timestamp
+    description: |
+      <p><a href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a></p>
+    name: updated_at
+  - type: Hash
+    description: |
+      <p>A hash of the application environments.</p>
+
+      <p>By default, apps have <code>development</code>, <code>staging</code>, and <code>production</code> environments.</p>
+
+      <p>For each environment there is a key <code>build</code> which gives the build id. This is useful for when you want to promote a build, e.g. promoting staging to production.</p>
+
+      <p>For further details see <a href="/routes/POST/apps/:app_id/releases/:env">the promotion api</a>.</p>
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="nt">&quot;development&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
+        <span class="nt">&quot;staging&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
+        <span class="nt">&quot;production&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">}</span>
+      <span class="p">}</span>
+      </pre></div>
+      <p>In this synthetic example, each environment is pointing to the same build.</p>
+    name: environment_hash
+- name: Domain
+  routes:
+  - method: PUT
+    params:
+      app_id: ''
+      name:
+        required: true
+        type: String
+        desc: |
+          A domain name. As in DNS. MUST NOT be an apex domain.
+
+          `www.example.com` is acceptable, `example.com` is not.
+
+          `www.example.co.uk` is acceptable, `example.co.uk` is not.
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/domains/*name(.:format)
+    minpath: /apps/:app_id/domains/*name
+    id: PUT/apps/:app_id/domains/*name
+    description: ''
+    returns: []
+    return_type: ''
+    failure_modes:
+      app_not_found:
+        status: 404
+        message: App not found.
+        description: ''
+      unathorized_for_custom_domains:
+        status: 403
+        message: Not authorized to manage domains for this app.
+        description: ''
+      domain_not_valid:
+        status: 400
+        message: .name MUST be a valid domain name. (MUST contain at least 1 subdomain,
+          e.g. 'www')
+        description: ''
+      domain_is_apex:
+        status: 400
+        message: Domain names MUST NOT be apex domains. (MUST contain at least 1 subdomain,
+          e.g. 'www')
+        description: ''
+      domain_already_on_app:
+        status: 304
+        message: This Domain is already registered to this app.
+        description: ''
+      this_domain_is_in_another_castle:
+        status: 403
+        message: I'm sorry Mario, this domain is registered to another app. Please
+          contact support if you own this Domain.
+        description: ''
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?$
+  - method: DELETE
+    params:
+      app_id: ''
+      name:
+        required: true
+        type: String
+        desc: |
+          A domain name. As in DNS. MUST NOT be an apex domain.
+
+          `www.example.com` is acceptable, `example.com` is not.
+
+          `www.example.co.uk` is acceptable, `example.co.uk` is not.
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/domains/*name(.:format)
+    minpath: /apps/:app_id/domains/*name
+    id: DELETE/apps/:app_id/domains/*name
+    description: ''
+    returns: []
+    return_type: ''
+    failure_modes:
+      app_not_found:
+        status: 404
+        message: App not found.
+        description: ''
+      unathorized_for_custom_domains:
+        status: 403
+        message: Not authorized to manage domains for this app.
+        description: ''
+      domain_not_valid:
+        status: 400
+        message: .name MUST be a valid domain name. (MUST contain at least 1 subdomain,
+          e.g. 'www')
+        description: ''
+      domain_is_apex:
+        status: 400
+        message: Domain names MUST NOT be apex domains. (MUST contain at least 1 subdomain,
+          e.g. 'www')
+        description: ''
+      domain_already_on_app:
+        status: 304
+        message: This Domain is already registered to this app.
+        description: ''
+      this_domain_is_in_another_castle:
+        status: 403
+        message: I'm sorry Mario, this domain is registered to another app. Please
+          contact support if you own this Domain.
+        description: ''
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?$
+  entity_name: CustomDomain
+  docs: []
+- name: Build
+  routes:
+  - method: GET
+    params:
+      app_id: ''
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/builds(.:format)
+    minpath: /apps/:app_id/builds
+    id: GET/apps/:app_id/builds
+    description: ''
+    returns:
+    - Build
+    return_type: collection
+    failure_modes:
+      cannot_access_builds_for_app:
+        message: Not authorized to create builds for this app.
+        status: 403
+        description: |
+          <p>You do not have permission to access builds for this app. Please contact the owner of this app.</p>
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?$
+  - method: POST
+    params:
+      app_id: ''
+      message:
+        required: false
+        type: String
+        desc: A custom message describing this build.
+      config:
+        required: true
+        type: Hash
+        desc: Configuration to host the app. Corresponds to `divshot.json` generated
+          by the command line tools.
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/builds(.:format)
+    minpath: /apps/:app_id/builds
+    id: POST/apps/:app_id/builds
+    description: ''
+    returns:
+    - Build
+    return_type: instance
+    failure_modes:
+      cannot_access_builds_for_app:
+        message: Not authorized to create builds for this app.
+        status: 403
+        description: |
+          <p>You do not have permission to access builds for this app. Please contact the owner of this app.</p>
+      invalid_data:
+        status: 422
+        message: Data did not pass validaitons.
+        description: |
+          <p>Refer to the errors hash and try again.</p>
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?$
+  - method: GET
+    params:
+      app_id: ''
+      id: ''
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/builds/:id(.:format)
+    minpath: /apps/:app_id/builds/:id
+    id: GET/apps/:app_id/builds/:id
+    description: ''
+    returns:
+    - Build
+    return_type: instance
+    failure_modes:
+      cannot_access_builds_for_app:
+        message: Not authorized to create builds for this app.
+        status: 403
+        description: |
+          <p>You do not have permission to access builds for this app. Please contact the owner of this app.</p>
+      no_such_build:
+        message: No build found by that ref for this app.
+        status: 404
+        description: |
+          <p>Could not find the build referenced in the url. Please check your records and try again.</p>
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+  - method: PUT
+    params:
+      app_id: ''
+      id: ''
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)\/finalize(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/builds/:id/finalize(.:format)
+    minpath: /apps/:app_id/builds/:id/finalize
+    id: PUT/apps/:app_id/builds/:id/finalize
+    description: ''
+    returns:
+    - Build
+    return_type: instance
+    failure_modes:
+      cannot_access_builds_for_app:
+        message: Not authorized to create builds for this app.
+        status: 403
+        description: |
+          <p>You do not have permission to access builds for this app. Please contact the owner of this app.</p>
+      no_such_build:
+        message: No build found by that ref for this app.
+        status: 404
+        description: |
+          <p>Could not find the build referenced in the url. Please check your records and try again.</p>
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)\/finalize(?:\.(?<format>[^\/.?]+))?$
+  entity_name: Build
+  docs:
+  - type: String
+    description: |
+      <p>The identifier of the build. Immutable.</p>
+    name: id
+  - type: Boolean
+    description: |
+      <p>Is the build finalized? Once a build is final no further changes will be accepted.</p>
+    name: final
+  - type: String
+    description: |
+      <p>A message describing the build. Maybe something like: &quot;new copy on lander re: holiday discount&quot;</p>
+    name: message
+  - type: Object
+    description: |
+      <p>divshot.io hosting configuration.</p>
+
+      <p>Corresponds to the <code>divshot.json</code> file created by the command line tools.</p>
+    name: config
+  - type: Array (String)
+    description: |-
+      <p>A list of the files contained in the build.</p>
+      <div class="highlight"><pre><span class="p">[</span>
+        <span class="s2">&quot;/index.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;/css/main.css&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;/images/logo.png&quot;</span>
+      <span class="p">]</span>
+      </pre></div>
+    name: files
+  - type: Hash
+    description: ''
+    name: loadpoint
+  - type: App
+    description: |
+      <p>See <a href="entities/App">App documentation</a>.</p>
+
+      <p>
+        <label class="label label-info">Heads Up!</label>
+        This field will only be present if extra detail is requested.
+        <label class="label label-error">Is this implemented? — Collin</label>
+      </p>
+    name: application
+- name: Release
+  routes:
+  - method: GET
+    params:
+      app_id: ''
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/releases(.:format)
+    minpath: /apps/:app_id/releases
+    id: GET/apps/:app_id/releases
+    description: ''
+    returns:
+    - Release
+    return_type: collection
+    failure_modes: {}
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases(?:\.(?<format>[^\/.?]+))?$
+  - method: GET
+    params:
+      app_id: ''
+      env: ''
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/releases/:env(.:format)
+    minpath: /apps/:app_id/releases/:env
+    id: GET/apps/:app_id/releases/:env
+    description: ''
+    returns:
+    - Release
+    return_type: collection
+    failure_modes:
+      app_not_found:
+        message: No app found by this id.
+        status: 404
+        description: ''
+      not_authorized_to_release:
+        message: Not authorized to release this app.
+        status: 403
+        description: ''
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+  - method: POST
+    params:
+      app_id: ''
+      env: ''
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/releases/:env(.:format)
+    minpath: /apps/:app_id/releases/:env
+    id: POST/apps/:app_id/releases/:env
+    description: |
+      <p>In the POST body, include only one of the attributes <code>build</code> or <code>environment</code>.</p>
+
+      <p>The <code>build</code> attribute specifes a build to release by the <code>ref</code> of the build.
+      The following POST would deploy the build <code>v0.3.1</code> to the staging environment:</p>
+
+      <p><code>POST /apps/my-app/releases/staging</code>
+      <code>json
+      {
+        &quot;build&quot;: &quot;v0.3.1&quot;
+      }
+      </code></p>
+
+      <p>The <code>environment</code> attribute will promote an existing release to a new environment.</p>
+
+      <p>The following POST would deploy the current staging build to production:</p>
+
+      <p><code>POST /apps/my-app/releases/production</code>
+      <code>json
+      {
+        &quot;environment&quot;: &quot;staging&quot;
+      }
+      </code></p>
+    returns:
+    - Release
+    return_type: instance
+    failure_modes:
+      app_not_found:
+        message: No app found by this id.
+        status: 404
+        description: ''
+      not_authorized_to_release:
+        message: Not authorized to release this app.
+        status: 403
+        description: ''
+      no_such_build:
+        status: 422
+        description: ''
+      too_many_candidates:
+        message: 'Specify one of params: ''build'' or ''environment'', but not both.'
+        status: 400
+        description: ''
+      duplicate_release:
+        message: Already released that build in this environment.
+        status: 403
+        description: ''
+      build_not_final:
+        message: Build must be finalized before release.
+        status: 403
+        description: ''
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+  - method: POST
+    params:
+      app_id: ''
+      env: ''
+    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)\/rollback(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:app_id/releases/:env/rollback(.:format)
+    minpath: /apps/:app_id/releases/:env/rollback
+    id: POST/apps/:app_id/releases/:env/rollback
+    description: |-
+      <p>If there is a previous release for the environment specified at <code>:env</code> a new release will be created
+      for the build referenced in that release.</p>
+
+      <p>That is to say, if the current staging release version is <code>23</code>, issuing a rollback will create a new
+      release at version <code>24</code>. The build in the new release will be the same as the build in release <code>22</code>.</p>
+
+      <p>If a <code>version</code> parameter is provided the generated release will use the same build as the release specified.</p>
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="mi">12</span>
+      <span class="p">}</span>
+      </pre></div>
+    returns:
+    - Release
+    return_type: instance
+    failure_modes:
+      app_not_found:
+        message: No app found by this id.
+        status: 404
+        description: ''
+      not_authorized_to_release:
+        message: Not authorized to release this app.
+        status: 403
+        description: ''
+      no_such_build:
+        status: 422
+        description: ''
+      no_such_release:
+        status: 422
+        description: ''
+      not_enough_releases:
+        message: Not enough releases to rollback to.
+        status: 403
+        description: ''
+      already_current_version:
+        message: Specified version is already the current release.
+        status: 403
+        description: ''
+      no_such_version:
+        message: Specified version does not exist.
+        status: 403
+        description: ''
+    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)\/rollback(?:\.(?<format>[^\/.?]+))?$
+  entity_name: Release
+  docs:
+  - type: String
+    description: |
+      <p>The email address of the user who created this release.</p>
+    name: author
+  - type: String
+    description: |
+      <p>The ID of the application for this release.</p>
+    name: application_id
+  - type: Environment
+    description: |
+      <p>The environment for this build.</p>
+
+      <p>See <a href="entities/Environment">Environment documentation</a> for a description of this data.</p>
+    name: env
+  - type: String
+    description: |
+      <p>Url specific to this release.</p>
+    name: url
+  - type: Integer
+    description: |
+      <p>Monotonically incrementing version number. Release versions are scoped by the environment.</p>
+    name: version
+  - type: Timestamp
+    description: |
+      <p><a href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a></p>
+    name: timestamp
+  - type: Build
+    description: |
+      <p>See <a href="entities/Build">Build documentation</a> for a description of this data.</p>
+    name: build

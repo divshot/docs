@@ -1,0 +1,14 @@
+---
+layout: http
+---
+
+<h1>{{page.entity.name}}</h1>
+<h2>Fields:</h2>
+{% for field in page.entity.docs %}
+  <section class="panel panel-info">
+      <header class="panel-heading">
+        <h3 class="panel-title"><code>{{field.name}} &mdash; ({{field.type}})</code></h3>
+      </header>
+      <section class="panel-body">{{field.description}}</section>
+  </section>
+{% endfor %}
