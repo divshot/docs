@@ -18,6 +18,7 @@ exclude:
 assets:
   sources:
     - _assets/images
+    - _assets/images/architect
     - _assets/javascripts
     - _assets/stylesheets
     - _vendor/stylesheets

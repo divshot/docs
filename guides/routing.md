@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: hosting
 title: "Routing in Your Divshot.io Application"
 ---
 

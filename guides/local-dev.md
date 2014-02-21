@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: hosting
 title: Local Development for Divshot.io
 ---
 
