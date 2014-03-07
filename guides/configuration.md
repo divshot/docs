@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: hosting
 title: Divshot.io Configuration Reference
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: hosting
 title: "Custom Domains on Divshot.io"
 ---
 
