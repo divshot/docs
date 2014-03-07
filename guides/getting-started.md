@@ -5,9 +5,8 @@ title: Getting Started
 
 # Getting Started with Divshot.io
 
-**Note:** As we are currently in private beta, you must already have a Divshot account
-with Divshot.io hosting enabled to use Divshot.io. Want to get into the beta? Just head
-over and [request access today](http://www.divshot.io)!
+**Note:** you must have a Divshot account to use hosting features. Want to get started? Just head
+over and [request access today](http://www.divshot.com)!
 
 ## Step 1: Install Node.js and the Divshot Command-Line Interface
 
