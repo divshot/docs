@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: hosting
 title: "Continuous Deployment with Travis CI"
 ---
 

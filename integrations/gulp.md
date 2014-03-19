@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Using Gulp with Divshot.io
+layout: hosting
+title: Using Gulp with Divshot Hosting
 ---
 
 # Using Gulp with Divshot Hosting
