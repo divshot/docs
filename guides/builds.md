@@ -5,9 +5,9 @@ title: Builds and Environments
 
 # Builds and Environments
 
-Divshot.io works by creating an immutable snapshot of your application when you deploy
-it. This is called a **build**. A build encapsulates both the files for your application
-as well as the configuration you specified in your `divshot.json` file.
+<p class="lead">Divshot.io works by creating an immutable snapshot of your application when you deploy
+it. This is called a <b>build</b>. A build encapsulates both the files for your application
+as well as the configuration you specified in your <code>divshot.json</code> file.</p>
 
 Builds are frozen and immutable to give you maximum stability. Once a build is created it
 will never be changed, making it simple to roll back to a previous state if something goes

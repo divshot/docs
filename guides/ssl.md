@@ -5,9 +5,9 @@ title: "Routing in Your Divshot.io Application"
 
 # Using SSL With Your Divshot App
 
-We offer full SSL encryption for your Divshot applications across the board. By default, you should be
-able to access a secure version of your site just by visiting `https://app-name.divshot.io`. This works
-great for your production environment, but what about development and staging?
+<p class="lead">We offer full SSL encryption for your Divshot applications across the board. By default, you should be
+able to access a secure version of your site just by visiting <code>https://app-name.divshot.io</code>. This works
+great for your production environment, but what about development and staging?</p>
 
 ## Wildcard SSL Rules
 

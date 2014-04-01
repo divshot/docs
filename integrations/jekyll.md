@@ -5,8 +5,8 @@ title: Publishing Jekyll Sites to Divshot Hosting
 
 # Publishing Jekyll Sites to Divshot Hosting
 
-[Jekyll](http://jekyllrb.com/) is a powerful static website generator that works great with
-Divshot.io (in fact, it's powering this very documentation site!).
+<p class="lead"><a href="http://jekyllrb.com/">Jekyll</a> is a powerful static website generator that works great with
+Divshot.io. In fact, it's powering this very documentation site!</p>
 
 ## Getting Started
 

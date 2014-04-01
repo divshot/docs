@@ -5,8 +5,8 @@ title: Divshot.io Configuration Reference
 
 # Configuration Reference
 
-Your application is configured by a `divshot.json` file in the project root directory.
-The following are the available configuration options:
+<p class="lead">Your application is configured by a <code>divshot.json</code> file in the project root directory.
+The following are the available configuration options:</p>
 
 * **name:** the Divshot.io application name. This is the same as your application's subdomain (e.g. `myapp.divshot.io`)
 * **root:** this is the directory that will serve as the public root. If your application uses preprocessors or any other
