@@ -1,0 +1,60 @@
+=respond-to($media)
+  // Phone
+  @if $media == phone
+    @media (max-width: 480px)
+      @content
+  // Tablet Portrait
+  @if $media == tablet-portrait
+    @media (max-width: 767px)
+      @content
+  // Tablet Landscape - Desktop
+  @if $media == tablet-landscape-desktop
+    @media (min-width: 768px) and (max-width: 992px)
+      @content
+  // Large Desktop
+  @if $media == large-desktop
+    @media (min-width: 1200px)
+      @content
+  // Non-Retina
+  @if $media == non-retina
+    @media screen and (-webkit-max-device-pixel-ratio: 1)
+      @content
+  // Retina Only
+  @if $media == retina
+    @media screen and (-webkit-min-device-pixel-ratio: 2)
+      @content
+
+=font-family($family: "proxima-nova")
+  @if $family == "proxima-nova"
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif
+  @if $family == "freight-sans"
+    font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+  @if $family == "chaparral-pro"
+    font-family: "chaparral-pro", Georgia, "Times New Roman", Times, sans-serif
+  @if $family == "jaf-facitweb"
+    font-family: "jaf-facitweb", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+=font-size($size: 1.6, $line: $size * 1.25)
+  font-size: ($size * 10) + px
+  line-height: ($line * 10) + px
+  font-size: $size + rem
+  line-height: $line + rem
+
+=mp0()
+  margin: 0
+  padding: 0
+
+=hide-text()
+  font: 0/0 a
+  text-shadow: none
+  color: transparent
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content

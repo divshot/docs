@@ -1,8 +1,14 @@
 //= require bootstrap
 
+@import "mixins"
+
 body
-  background: #000 url(asset-path('background3.jpg')) top left no-repeat
-  background-size: 100%
+  background: #000 url(asset-path('background2.jpg')) top left no-repeat
+  background-size: 100% auto
+  @include respond-to(tablet-portrait)
+    background-size: 180%
+  @include respond-to(phone)
+    background-size: 380%
 
 .navbar
   background: transparent
