@@ -12,7 +12,7 @@ Integrating with [Travis CI](http://www.travis-ci.com) allows you to both run te
 as you commit them to GitHub. Combine Travis with Divshot.io's [multiple environments](/guides/build) and you've got
 a fantastic way to keep your development processes humming.
 
-### Configuring Travis.yml
+## Configuring Travis.yml
 
 First, you'll need to make sure that your Travis build script does whatever compilation, concatenation, and minifaction
 you need and sets up the Divshot.io root directory exactly as you want it. Once you've done that, you'll need to add
@@ -31,7 +31,7 @@ deploy:
 Note that the `skip_cleanup` option prevents Travis from automatically hard resetting to the latest `git` version which
 can wipe out your build.
 
-### Adding Your API Key
+## Adding Your API Key
 
 Next you'll want to encrypt your API key into your Travis configuration so that it isn't exposed in the Git repo. To do
 this, install the Travis command line tool (`gem install travis`) and run this command:
