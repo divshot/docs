@@ -33,20 +33,28 @@ body
 .navbar-nav
   margin: 21px 0 0 0
   > li
+    font-size: 12px
     padding: 0 6px
     > a
-      padding: 6px 18px
-      border: 2px solid rgba(255,255,255,0)
-      border-radius: 14px
-      color: #fff
+      font-family: "futura-pt", Helvetica, Tahoma, Arial, sans-serif
+      text-transform: uppercase
+      letter-spacing: 1px
+      padding: 4px 12px
+      border: 1px solid rgba(255,255,255,0)
+      border-radius: 4px
+      color: #ccc
       transition: color 250ms ease-out
       &:hover
         color: #fff
-        background-color: transparent !important
+        background: transparent !important
     &.active a
+      font-weight: 600
+      color: #fff
       border-color: rgba(255,255,255,.2)
       &:hover
         border-color: #fff
+        color: #000
+        background-color: #fff !important
     &:last-child
       padding-right: 0
 
