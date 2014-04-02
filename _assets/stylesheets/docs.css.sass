@@ -19,8 +19,15 @@ body
   margin-left: 0 !important
   padding: 25px 10px
   color: #ccc
+  .glyph
+    display: none
+    float: left
   @include respond-to(tablet-portrait)
     padding-left: 30px
+    .logotype
+      display: none
+    .glyph
+      display: block
   &:hover
     color: #fff
   span
@@ -127,6 +134,9 @@ footer
   @include respond-to(tablet-portrait)
     font-size: 21px
 
+h1
+  line-height: 41px
+
 h2
   line-height: 33px
 
@@ -137,6 +147,10 @@ blockquote p
   font-size: 14px
   line-height: 23px
 
+code
+  @include respond-to(tablet-portrait)
+    white-space: normal
+
 .btn-lg.btn-primary
   font-family: "futura-pt", Helvetica, Tahoma, Arial, sans-serif
   font-size: 18px
@@ -146,3 +160,4 @@ blockquote p
   background: #fec600
   text-transform: uppercase
   letter-spacing: 1px
+  white-space: normal
