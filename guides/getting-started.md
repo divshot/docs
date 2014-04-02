@@ -44,4 +44,4 @@ the release command completes, you should be able to visit your application at
 `http://development.your-app-name.divshot.io`.
 
 That's all it takes to get started with Divshot.io! If you have any questions, please
-[send us a note](mailto:support@divshot.io) and we'll do our best to help.
+[send us a note](mailto:support@divshot.com) and we'll do our best to help.

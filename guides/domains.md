@@ -33,4 +33,4 @@ tool, you should be able to see your site up and running immediately!
 We do not presently offer `A` record IP addresses to host apex domains with Divshot.io. If you wish
 to use the apex domain (e.g. `my-app.com` instead of `www.my-app.com`) with Divshot.io we recommend
 you use a service such as [DNSimple](http://dnsimple.com/) that offers special record types like
-`ALIAS`. If you have any questions about custom domains, please [get in touch](mailto:support@divshot.io).
+`ALIAS`. If you have any questions about custom domains, please [get in touch](mailto:support@divshot.com).

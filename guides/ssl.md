@@ -19,5 +19,5 @@ ability to fully test SSL capabilities for any of your app's environments.
 
 ## Custom Domain SSL
 
-If you need SSL enabled for a custom domain, please [email us](mailto:support@divshot.io) and we'll get
+If you need SSL enabled for a custom domain, please [email us](mailto:support@divshot.com) and we'll get
 things up and running as quickly as possible.
