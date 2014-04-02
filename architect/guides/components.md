@@ -4,7 +4,7 @@ title: Working With Components
 description: "Learn more about Divshot's powerful drag-and-drop component panel."
 ---
 
-<h1 class='page-header'>Working With Components</h1>
+# Working With Components
 
 <p class='lead'>Components are the building blocks of Divshot's pages. A component represents a single user interface element such as a button, navigation bar, or alert box.</p>
 

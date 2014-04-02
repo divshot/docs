@@ -4,9 +4,7 @@ title: Publishing to Divshot Hosting
 description: "Learn how to publish your projects to Divshot's integrated static web hosting platform."
 ---
 
-<div class="alert alert-warning"><b>Note:</b> Divshot hosting is in beta and is not enabled on all user accounts. Please <a href="/contact">contact us</a> with any questions.</div>
-
-<h1 class='page-header'>Publishing to Divshot Hosting</h1>
+# Publishing to Divshot Hosting
 
 <p class='lead'>Share your project with the world using Divshot's integrated hosting and one-click publishing.</p>
 

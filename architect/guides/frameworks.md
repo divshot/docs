@@ -4,7 +4,7 @@ title: Divshot Frameworks
 description: "Learn about the various frameworks supported by the Divshot editor."
 ---
 
-<h1 class='page-header'>Supported Frameworks</h1>
+# Supported Frameworks
 
 <p class='lead'>Divshot supports several popular UI frameworks to make it easy for you to go from prototype to production.</p>
 

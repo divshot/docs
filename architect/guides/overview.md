@@ -4,7 +4,7 @@ title: Interface Overview
 description: "Get a bird's-eye view of the Divshot user interface."
 ---
 
-<h1 class='page-header'>Overview</h1>
+# Overview
 
 <p class='lead'>There are five main components of the Divshot interface: the <b>header</b>, <b>navigator</b>, <b>canvas</b>, <b>inspector</b>, and <b>source editor</b>.</p>
 

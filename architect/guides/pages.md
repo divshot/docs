@@ -4,7 +4,7 @@ title: Making Pages
 description: "Learn about page and folder management within Divshot."
 ---
 
-<h1 class='page-header'>Making Pages</h1>
+# Making Pages
 
 <p class='lead'>Divshot organizes your work into <b><a href="/guides/projects.html">projects</a></b> and <b>pages</b>. Pages are simply HTML files that you can edit using the Divshot visual canvas.</p>
 
