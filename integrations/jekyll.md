@@ -16,7 +16,7 @@ First, you'll need a working Ruby runtime and to install Jekyll:
     
 You'll also need Node.js and the Divshot command-line tool:
 
-    npm install -g divshot
+    npm install -g divshot-cli
     
 ## Configuring Divshot.io
 
