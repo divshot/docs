@@ -1,6 +1,6 @@
 ---
 layout: hosting
-title: "Custom Domains on Divshot.io"
+title: Custom Domains on Divshot.io
 ---
 
 # Custom Domains on Divshot.io

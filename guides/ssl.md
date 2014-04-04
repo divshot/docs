@@ -1,6 +1,6 @@
 ---
 layout: hosting
-title: "Routing in Your Divshot.io Application"
+title: Using SSL With Your Divshot App
 ---
 
 # Using SSL With Your Divshot App
