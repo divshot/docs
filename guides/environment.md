@@ -34,3 +34,9 @@ To help developers get started on an existing project a set of environment varia
 automatically pulled down to `.env.json`
 
   divshot env:pull development
+
+### Rollback
+
+Configuration changes create new releases and can be rolled back just like any other release.
+
+See the <a href="/guides/builds">Builds</a> guide for more details on rolling back releases.

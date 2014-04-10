@@ -14,6 +14,17 @@
     regex: ^\/token(?:\.(?<format>[^\/.?]+))?$
   - method: POST
     params: {}
+    compiled: (?-mix:\A\/token\/tickets(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /token/tickets(.:format)
+    minpath: /token/tickets
+    id: POST/token/tickets
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: ^\/token\/tickets(?:\.(?<format>[^\/.?]+))?$
+  - method: POST
+    params: {}
     compiled: (?-mix:\A\/access_token_request(?:\.(?<format>[^\/.?]+))?\Z)
     path: /access_token_request(.:format)
     minpath: /access_token_request
