@@ -1,11 +1,11 @@
 ---
-layout: default
-title: Using Yeoman with Divshot.io
+layout: hosting
+title: Using Yeoman with Divshot Hosting
 ---
 
-# Using Yeoman with Divshot.io
+# Using Yeoman with Divshot Hosting
 
-[Yeoman](http://yeoman.io) is a powerful workflow for developing web apps using Yo (scaffolding), Grunt (builds), and Bower (package management). Yo provides "generators" to help you scaffold new apps. Generators write your Grunt configuration and pull in relevant Grunt tasks.
+<p class="lead"><a href="http://yeoman.io">Yeoman</a> is a powerful workflow for developing web apps using Yo (scaffolding), Grunt (builds), and Bower (package management). Yo provides "generators" to help you scaffold new apps. Generators write your Grunt configuration and pull in relevant Grunt tasks.</p>
 
 ## Getting Started
 

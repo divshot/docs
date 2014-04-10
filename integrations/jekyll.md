@@ -1,12 +1,12 @@
 ---
-layout: default
-title: Publishing Jekyll Sites to Divshot.io
+layout: hosting
+title: Publishing Jekyll Sites to Divshot Hosting
 ---
 
-# Publishing Jekyll Sites to Divshot.io
+# Publishing Jekyll Sites to Divshot Hosting
 
-[Jekyll](http://jekyllrb.com/) is a powerful static website generator that works great with
-Divshot.io (in fact, it's powering this very documentation site!).
+<p class="lead"><a href="http://jekyllrb.com/">Jekyll</a> is a powerful static website generator that works great with
+Divshot.io. In fact, it's powering this very documentation site!</p>
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ First, you'll need a working Ruby runtime and to install Jekyll:
     
 You'll also need Node.js and the Divshot command-line tool:
 
-    npm install -g divshot
+    npm install -g divshot-cli
     
 ## Configuring Divshot.io
 

@@ -5,8 +5,8 @@ title: Getting Started
 
 # Getting Started with Divshot.io
 
-**Note:** you must have a Divshot account to use hosting features. Want to get started? Just head
-over and [register today](http://www.divshot.com)!
+<p class="lead"><b>Note:</b> You must have a Divshot account to use hosting features. Want to get started? Just head
+over and <a href="http://auth.divshot.com/register">register today</a>!</p>
 
 ## Step 1: Install Node.js and the Divshot Command-Line Interface
 
@@ -44,4 +44,4 @@ the release command completes, you should be able to visit your application at
 `http://development.your-app-name.divshot.io`.
 
 That's all it takes to get started with Divshot.io! If you have any questions, please
-[send us a note](mailto:support@divshot.io) and we'll do our best to help.
+[send us a note](mailto:support@divshot.com) and we'll do our best to help.

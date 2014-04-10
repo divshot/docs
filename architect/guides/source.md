@@ -4,7 +4,7 @@ title: Using the Source Editor
 description: "Learn how to edit HTML, CSS, and JavaScript in real-time with Divshot."
 ---
 
-<h1 class='page-header'>Using the Source Editor</h1>
+# Using the Source Editor
 
 <p class='lead'>Divshot's powerful source editor allows you full control over your page, letting you edit HTML, CSS, and JavaScript directly with immediate preview.</p>
 

@@ -1,22 +1,39 @@
 //= require bootstrap
 
+@import "mixins"
+
 body
-  background: #000 url(asset-path('background3.jpg')) top left no-repeat
-  background-size: 100%
+  background: #000 url(asset-path('background2.jpg')) top left no-repeat
+  background-size: 100% auto
+  @include respond-to(tablet-portrait)
+    background-size: 180%
+  @include respond-to(phone)
+    background-size: 380%
 
 .navbar
   background: transparent
-  height: 120px
+  height: auto
+  margin-bottom: 12px
 
 .navbar-brand
   margin-left: 0 !important
   padding: 25px 10px
   color: #ccc
+  .glyph
+    display: none
+    float: left
+  @include respond-to(tablet-portrait)
+    padding-left: 30px
+    .logotype
+      display: none
+    .glyph
+      display: block
   &:hover
     color: #fff
   span
+    float: right
     font-size: 15px
-    margin: 0 0 0 10px
+    margin: 7px 0 0 10px
     text-transform: uppercase
     letter-spacing: 1px
     b
@@ -24,37 +41,65 @@ body
       color: #FED044
       padding: 0 6px 0 0
 
+.navbar-toggle
+  margin-top: 24px
+  margin-right: 25px
+  border: 1px solid rgba(255,255,255,0.2)
+  outline: none
+  .icon-bar
+    background: #fff
+
+// .navbar-collapse
+  // background: #000
+
 .navbar-nav
-  margin: 21px 0 0 0
+  margin: 25px 0 0 0
   > li
+    font-size: 12px
     padding: 0 6px
     > a
-      padding: 6px 18px
-      border: 2px solid rgba(255,255,255,0)
-      border-radius: 14px
-      color: #fff
+      font-family: "futura-pt", Helvetica, Tahoma, Arial, sans-serif
+      text-transform: uppercase
+      letter-spacing: 1px
+      padding: 4px 12px
+      border: 1px solid rgba(255,255,255,0)
+      border-radius: 4px
+      color: #ccc
       transition: color 250ms ease-out
       &:hover
         color: #fff
-        background-color: transparent !important
+        background: transparent !important
     &.active a
+      font-weight: 600
+      color: #fff
       border-color: rgba(255,255,255,.2)
       &:hover
         border-color: #fff
+        color: #000
+        background-color: #fff !important
     &:last-child
       padding-right: 0
 
 .content
   position: relative
-  margin-top: -68px
+  margin-top: 0
   z-index: 1001
+  .row
+    background: rgba(0,0,0,.6)
+    border-top: 0
+    border-right: 0
+    box-shadow: 0 1px 1px rgba(0,0,0,0.03)
 
-.row
-  background: rgba(0,0,0,.6)
-  // border: 1px solid #dadbde
-  border-top: 0
-  border-right: 0
-  box-shadow: 0 1px 1px rgba(0,0,0,0.03)
+.secondary-nav
+  &.navbar-collapse
+    width: 25%
+    @media (min-width: 992px)
+      max-height: 100%
+    @include respond-to(tablet-landscape-desktop)
+      width: auto
+      overflow-y: auto !important
+    @include respond-to(tablet-portrait)
+      width: auto
 
 .list-group h3
   color: #999
@@ -82,3 +127,37 @@ footer
   
 .start-here
   margin: 35px 0
+
+.lead
+  margin-bottom: 30px
+  line-height: 32px
+  @include respond-to(tablet-portrait)
+    font-size: 21px
+
+h1
+  line-height: 41px
+
+h2
+  line-height: 33px
+
+h2:first-of-type
+  margin-top: 20px
+
+blockquote p
+  font-size: 14px
+  line-height: 23px
+
+code
+  @include respond-to(tablet-portrait)
+    white-space: normal
+
+.btn-lg.btn-primary
+  font-family: "futura-pt", Helvetica, Tahoma, Arial, sans-serif
+  font-size: 18px
+  font-weight: 600
+  padding: 20px 40px
+  color: #000
+  background: #fec600
+  text-transform: uppercase
+  letter-spacing: 1px
+  white-space: normal

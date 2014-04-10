@@ -4,7 +4,7 @@ title: Export and Preview
 description: "Discover how to export and preview your pages in Divshot."
 ---
 
-<h1 class='page-header'>Export and Preview</h1>
+# Export and Preview
 
 <p class='lead'>Divshot gives you the ability to quickly preview and share a project as well as export projects to your local filesystem.</p>
 

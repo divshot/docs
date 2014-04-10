@@ -4,7 +4,7 @@ title: Editing Content
 description: "Learn more about text editing in the Divshot canvas."
 ---
 
-<h1 class='page-header'>Editing Content</h1>
+# Editing Content
 
 <p class='lead'>Divshot's canvas gives you the power to directly manipulate content on the fly.</p>
 

@@ -1,6 +1,6 @@
 ---
 layout: hosting
-title: "Routing in Your Divshot.io Application"
+title: Routing in Divshot.io
 ---
 
 # Divshot Routing

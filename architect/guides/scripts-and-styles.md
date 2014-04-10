@@ -4,7 +4,7 @@ title: Scripts and Styles
 description: "Divshot allows you to add custom stylesheets and scripts to your projects. Here's how."
 ---
 
-<h1 class='page-header'>Scripts and Styles</h1>
+# Scripts and Styles
 
 <p class='lead'>Divshot allows you to add custom stylesheets and scripts to your projects.</p>
 

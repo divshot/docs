@@ -1,6 +1,6 @@
 ---
 layout: hosting
-title: Performance and Caching on Divshot.io
+title: Performance and Caching in Divshot.io
 ---
 
 # Performance and Caching in Divshot.io

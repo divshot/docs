@@ -4,7 +4,7 @@ title: Managing Projects
 description: "Learn about how to create and manage projects in the Divshot interface."
 ---
 
-<h1 class='page-header'>Managing Projects</h1>
+# Managing Projects
 
 <p class='lead'>Projects are the primary way that your content is organized within Divshot. You can think of a project much like a folder on your computer: it can contain HTML files, stylesheets, scripts, images, and more!</p>
 

@@ -1,13 +1,13 @@
 ---
-layout: default
-title: Using Gulp with Divshot.io
+layout: hosting
+title: Using Gulp with Divshot Hosting
 ---
 
 # Using Gulp with Divshot Hosting
 
-[Gulp](http://gulpjs.com) is a streaming build system for Node.js that offers many great features.
+<p class="lead"><a href="http://gulpjs.com">Gulp</a> is a streaming build system for Node.js that offers many great features.
 Due to its simple, programmable nature, you can integrate Divshot with your Gulp processes in no
-time!
+time!</p>
 
 ## Running a Local Server
 
