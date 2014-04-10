@@ -30,16 +30,22 @@ To set enviroment variables, just use `env:add`:
 
 To access environment variables in your application, add a script tag:
 
-  <script src="/__/env.js"></script>
+```
+<script src="/__/env.js"></script>
+```
 
 The contents of this file will look something like this:
 
-  this.__env = {"KEY1":"value1", "KEY2":"value2"};
+```
+this.__env = {"KEY1":"value1", "KEY2":"value2"};
+```
 
 They can be accessed like so:
-  
-  console.log(window.__env.KEY1);
-    
+
+```  
+console.log(window.__env.KEY1);
+```
+
 ### Local Environment
 
 The divshot local server will read environment variables from a file in the project root `.env.json`.
