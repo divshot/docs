@@ -15,7 +15,7 @@ Environment variables are a great way to specify api keys for 3rd party services
 Be careful not to set any secret keys as environment variables, as this data will be accessible
 to your users. An appropriate case for environment variables is analytics tracking codes.
 
-### Adding Environment Variables to your app
+### Adding Environment Variables to Your App
 
 In the directory for your Divshot.io project, you can see the current variables for your application's
 various environmounts:
@@ -25,6 +25,20 @@ various environmounts:
 To set enviroment variables, just use `env:add`:
 
     divshot env:add production KEY1=value1 KEY2=value2
+
+### Using Environment Variables in Your App
+
+To access environment variables in your application, add a script tag:
+
+  <script src="/__/env.js"></script>
+
+The contents of this file will look something like this:
+
+  this.__env = {"KEY1":"value1", "KEY2":"value2"};
+
+They can be accessed like so:
+  
+  console.log(window.__env.KEY1);
     
 ### Local Environment
 
