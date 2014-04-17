@@ -41,6 +41,8 @@ They can be accessed like so:
 console.log(window.__env.KEY1);
 ```
 
+Environment variables may also be loaded as raw JSON located at this path: `/__/env.json`
+
 ## Local Environment
 
 Divshot's [static web server](/guides/local-dev) will read environment variables from `.env.json` in the project root.
