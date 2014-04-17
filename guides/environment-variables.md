@@ -43,7 +43,7 @@ console.log(window.__env.KEY1);
 
 Environment variables may also be loaded as raw JSON located at this path: `/__/env.json`
 
-This documentation is hosted on Divshot. Checkout <a href="/__/env.json">/__/env.json</a> and <a href="/__/env.js">/__/env.js</a> for concrete examples.
+This documentation is hosted on Divshot. Checkout [/__/env.json](/__/env.json) and [/__/env.js](/__/env.js) for concrete examples.
 
 ## Local Environment
 
