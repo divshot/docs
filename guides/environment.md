@@ -46,6 +46,12 @@ They can be accessed like so:
 console.log(window.__env.KEY1);
 ```
 
+Alternately, you can load your environment config as json through this path:
+
+```
+/__/env.json
+```
+
 ### Local Environment
 
 The divshot local server will read environment variables from a file in the project root `.env.json`.
