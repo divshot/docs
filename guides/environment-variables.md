@@ -43,6 +43,8 @@ console.log(window.__env.KEY1);
 
 Environment variables may also be loaded as raw JSON located at this path: `/__/env.json`
 
+This documentation is hosted on Divshot. Checkout <a href="/__/env.json">/__/env.json</a> and <a href="/__/env.js">/__/env.js</a> for concrete examples.
+
 ## Local Environment
 
 Divshot's [static web server](/guides/local-dev) will read environment variables from `.env.json` in the project root.
