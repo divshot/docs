@@ -61,7 +61,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (3.1.1)
     safe_yaml (1.0.3)
-    sass (3.2.19)
+    sass (3.3.7)
     sprockets (2.12.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -83,5 +83,6 @@ DEPENDENCIES
   coffee-script
   jekyll (= 2.0.3)
   jekyll-assets (= 0.7.8)
+  redcarpet
   sprockets
   sprockets-sass
