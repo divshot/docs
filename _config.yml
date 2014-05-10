@@ -1,6 +1,6 @@
 safe: false
-markdown: redcarpet
-pygments: true
+markdown: kramdown
+highlighter: pygments
 baseurl: /
 url: http://docs.divshot.io
 exclude:
