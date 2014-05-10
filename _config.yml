@@ -1,5 +1,5 @@
 safe: false
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 baseurl: /
 url: http://docs.divshot.io
