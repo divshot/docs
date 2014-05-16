@@ -47,39 +47,6 @@
     return_type: 
     failure_modes: {}
     regex: ^\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: OPTIONS/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: GET
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: GET/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/access_token_request(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /access_token_request(.:format)
-    minpath: /access_token_request
-    id: OPTIONS/access_token_request
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/access_token_request(?:\.(?<format>[^\/.?]+))?$
   - method: GET
     params: {}
     compiled: (?-mix:\A\/access_token_request(?:\.(?<format>[^\/.?]+))?\Z)
@@ -91,19 +58,6 @@
     return_type: 
     failure_modes: {}
     regex: ^\/access_token_request(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params:
-      ref: ''
-      pin: ''
-    compiled: (?-mix:\A\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /access_token_request/:ref/:pin(.:format)
-    minpath: /access_token_request/:ref/:pin
-    id: OPTIONS/access_token_request/:ref/:pin
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
   - method: PUT
     params:
       ref: ''
@@ -117,15 +71,13 @@
     return_type: 
     failure_modes: {}
     regex: ^\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
-  entity_name: AccessToken
+  entity_name: Access Token
   docs:
   - type: String
-    description: |
-      <p>The access token to the api. Keep this well protected as it gives access to all of a user&#39;s data on Divshot.</p>
+    description: ''
     name: token
   - type: String
-    description: |
-      <p>The type of the access token.</p>
+    description: ''
     name: token_type
 - name: App
   routes:
@@ -227,9 +179,6 @@
     params:
       id: ''
       name:
-        required: false
-        type: String
-      owner:
         required: false
         type: String
     compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
@@ -358,30 +307,52 @@
         description: |
           <p>You do not have permission te list apps for this Organization. Please contact the a representative of the Organization.</p>
     regex: ^\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: OPTIONS/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: PATCH
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: PATCH/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  entity_name: HostedApplication
-  docs: []
+  entity_name: App
+  docs:
+  - type: String
+    immutable: true
+    description: |
+      <p>The machine readable identifier for a Hosted Application.</p>
+    name: id
+  - type: String
+    description: |
+      <p>The human readable identifier for a Hosted Application.</p>
+
+      <p>The <code>name</code> MUST be a valid subdomain name as it will be used in a domain.</p>
+
+      <p>Furthermore, the <code>name</code> MUST be unique across the entire divshot.io system.</p>
+    name: name
+  - type: Array
+    description: |
+      <p>A List of domains for this application.</p>
+    name: custom_domains
+  - type: Timestamp
+    description: |
+      <p><a href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a></p>
+    name: created_at
+  - type: Timestamp
+    description: |
+      <p><a href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a></p>
+    name: updated_at
+  - type: Object
+    description: |
+      <p>A hash of the application environments.</p>
+
+      <p>By default, apps have <code>development</code>, <code>staging</code>, and <code>production</code> environments.</p>
+
+      <p>For each environment there is a key <code>build</code> which gives the build id. This is useful for when you want to promote a build, e.g. promoting staging to production.</p>
+
+      <p>For further details see <a href="/routes/POST/apps/:app_id/releases/:env">the promotion api</a>.</p>
+
+      <div class="highlight"><pre><span class="p">{</span>
+        <span class="nt">&quot;development&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
+        <span class="nt">&quot;staging&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
+        <span class="nt">&quot;production&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">}</span>
+      <span class="p">}</span>
+      </pre></div>
+
+      <p>In this synthetic example, each environment is pointing to the same build.</p>
+    name: environments
 - name: Domain
   routes:
   - method: PUT
@@ -456,29 +427,7 @@
           contact support if you own this Domain.
         description: ''
     regex: ^\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: OPTIONS/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: GET
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: GET/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  entity_name: CustomDomain
+  entity_name: Domain
   docs: []
 - name: Build
   routes:
@@ -571,39 +520,6 @@
         description: |
           <p>Could not find the build referenced in the url. Please check your records and try again.</p>
     regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)\/finalize(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: OPTIONS/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: PUT
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: PUT/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/finalize(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /finalize(.:format)
-    minpath: /finalize
-    id: OPTIONS/finalize
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/finalize(?:\.(?<format>[^\/.?]+))?$
   - method: GET
     params: {}
     compiled: (?-mix:\A\/finalize(?:\.(?<format>[^\/.?]+))?\Z)
@@ -616,7 +532,48 @@
     failure_modes: {}
     regex: ^\/finalize(?:\.(?<format>[^\/.?]+))?$
   entity_name: Build
-  docs: []
+  docs:
+  - type: String
+    description: |
+      <p>The identifier of the build. Immutable.</p>
+    name: id
+  - type: Boolean
+    description: |
+      <p>Is the build finalized? Once a build is final no further changes will be accepted.</p>
+    name: final
+  - type: String
+    description: |
+      <p>A message describing the build. Maybe something like: &quot;new copy on lander re: holiday discount&quot;</p>
+    name: message
+  - type: Object
+    description: |
+      <p>divshot.io hosting configuration.</p>
+
+      <p>Corresponds to the <code>divshot.json</code> file created by the command line tools.</p>
+    name: config
+  - type: Array[String]
+    description: |
+      <p>A list of the files contained in the build.</p>
+
+      <div class="highlight"><pre><span class="p">[</span>
+        <span class="s2">&quot;/index.html&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;/css/main.css&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;/images/logo.png&quot;</span>
+      <span class="p">]</span>
+      </pre></div>
+    name: files
+  - type: Object
+    description: |
+      <p>Monotonically incrementing version number. Release versions are scoped by the environment.</p>
+    name: loadpoint
+  - type: Timestamp
+    description: |
+      <p><a href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a></p>
+    name: timestamp
+  - type: Build
+    description: |
+      <p>See <a href="entities/Build">Build documentation</a> for a description of this data.</p>
+    name: build
 - name: Release
   routes:
   - method: GET
@@ -723,39 +680,6 @@
     return_type: 
     failure_modes: {}
     regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)\/rollback(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: OPTIONS/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: PUT
-    params: {}
-    compiled: (?-mix:\A\/(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /(.:format)
-    minpath: /
-    id: PUT/
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/(?:\.(?<format>[^\/.?]+))?$
-  - method: OPTIONS
-    params: {}
-    compiled: (?-mix:\A\/rollback(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /rollback(.:format)
-    minpath: /rollback
-    id: OPTIONS/rollback
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/rollback(?:\.(?<format>[^\/.?]+))?$
   - method: GET
     params: {}
     compiled: (?-mix:\A\/rollback(?:\.(?<format>[^\/.?]+))?\Z)
@@ -768,4 +692,26 @@
     failure_modes: {}
     regex: ^\/rollback(?:\.(?<format>[^\/.?]+))?$
   entity_name: Release
-  docs: []
+  docs:
+  - type: String
+    description: |
+      <p>The email address of the user who created this release.    </p>
+    name: author
+  - type: String
+    description: |
+      <p>The ID of the application for this release.</p>
+    name: application_id
+  - type: String
+    description: |
+      <p>The environment for this build.</p>
+
+      <p>See <a href="entities/Environment">Environment documentation</a> for a description of this data.</p>
+    name: env
+  - type: String
+    description: |
+      <p>Url specific to this release.</p>
+    name: url
+  - type: Integer
+    description: |
+      <p>Version # for this release.</p>
+    name: version

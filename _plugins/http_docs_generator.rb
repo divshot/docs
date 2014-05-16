@@ -1,3 +1,7 @@
+Liquid::Condition.operators['is_current_page'.freeze] = lambda do |cond, left, right|
+  left && right ? left.gsub('/index.html', '').match(Regexp.new(right + '$')) : false
+end
+
 module Jekyll
 
   class RoutePage < Page

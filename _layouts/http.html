@@ -2,38 +2,48 @@
 
 <html>
   <base href="/http/">
-  {% include head.html %}  
+  <!-- {% include navbar.html section="HTTP" %} -->
+  {% include head.html %} 
   <body class="http-docs">
-    {% include navbar.html section="HTTP" %}
     <style>
       .secondary-nav {
         background: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        right: 0px;
+        overflow-y: scroll;
+        padding-bottom: 120px;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+      }
+      html, body, .main-content {
+        min-height: 100%;
+      }
+      footer {
+        display: none;
       }
     </style>
-    <div class="container content http-docs">
-      <div class="row">
-        <div class="col-md-8 main-content">
-          {{content}}
-        </div>
-        <div class="col-md-4 secondary-nav">
-          <code style="margin: 0; padding: 0;">
-          <h3 class="list-group-item"><a href="overview/requests">Making Requests</a></h3>
-          <h3 class="list-group-item"><a href="overview/authentication">Authentication</a></h3>
-          <h3 class="list-group-item"><a href="overview/errors">Errors</a></h3>
-          {% for module in site.data.http %}
-            <h3 class="list-group-item">
-              <a href="entities/{{module.entity_name}}">
-                {{module.name}}
-              </a>
-            </h3>
-            {% for route in module.routes %}
-              <a class="list-group-item" href="{{route.method}}{{route.minpath}}">
-                <span class="label label-{{route.method | api_method_label}}">{{route.method}}</span> {{route.minpath}}</a>
-            {% endfor%}
-          {% endfor %}
-          </code>
-        </div>
-      </div>
+    <div class="col-md-8 main-content">
+      {{content}}
+    </div>
+    <div id="navigation" class="col-md-4 secondary-nav">
+      <code style="margin: 0; padding: 0;">
+      <h3 class="list-group-item"><a href="overview/requests" data-pjax>Making Requests</a></h3>
+      <h3 class="list-group-item"><a href="overview/authentication" data-pjax>Authentication</a></h3>
+      <h3 class="list-group-item"><a href="overview/errors" data-pjax>Errors</a></h3>
+      {% for module in site.data.http %}
+        <h3 class="list-group-item">
+          <a href="entities/{{module.entity_name}}" data-pjax>
+            {{module.name}}
+          </a>
+        </h3>
+        {% for route in module.routes %}
+          <a class="list-group-item{% if page.url is_current_page route.id %} active{% endif %}" href="{{route.id}}" data-pjax>
+            <span class="label label-{{route.method | api_method_label}}">{{route.method}}</span> {{route.minpath}}</a>
+        {% endfor%}
+      {% endfor %}
+      </code>
     </div>
     {% include footer.html %}
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -47,6 +57,37 @@
 
       ga('create', 'UA-30884255-9', 'divshot.com');
       ga('send', 'pageview');
+    </script>
+    <script>
+      (function () {
+        function _navigate (href) {
+          jQuery.get(href).then(function (response) {
+            var fragment = $(response);
+
+            var nav = $('.secondary-nav')
+            var navScroll = nav[0].scrollTop;
+
+            jQuery('.main-content')
+              .replaceWith(fragment.filter('.main-content'));
+
+            nav.replaceWith(fragment.filter('.secondary-nav'));
+
+            $('.secondary-nav')[0].scrollTop = navScroll;
+          });
+        }
+
+        window.addEventListener("popstate", function(event) {
+          _navigate(location.pathname);
+        });
+
+        jQuery('body').delegate('a[data-pjax]', 'click', function(event) {
+          if(history.pushState) {          
+            history.pushState(null, null, this.href);
+            _navigate(this.href);
+            event.preventDefault();
+          }
+        });
+      })();
     </script>
   </body>
 </html>
