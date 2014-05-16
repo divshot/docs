@@ -31,3 +31,7 @@ The typical workflow for deploying via the API is:
 1. Create a release [POST /apps/:app_id/releases](POST/apps/:app_id/releases/:env)
 
 SDKs are available for interacting with the API and uploading data to the loadpoint server.
+
+[JavaScript SDK](https://github.com/divshot/divshot-api)
+
+[JavaScript loadpoint SDK](https://github.com/divshot/divshot-upload)
