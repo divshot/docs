@@ -15,7 +15,7 @@ All of Divshot hosting stems from the [App](entities/App) entity.
 
 An App has a name, which is used as the subdomain in urls.
 
-An App has multiple environments (currently `dev`, `staging`, and `production).
+An App has multiple environments (currently `dev`, `staging`, and `production`).
 
 In each environment, an application has a serially versioned list of [Releases](entities/Release).
 
