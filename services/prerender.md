@@ -9,7 +9,7 @@ title: Prerender SEO Service
 
 <p class="lead">Search engine optimization (SEO) is one of the most annoying challenges when building single page web applications. Divshot has partnered with <a href="http://prerender.io">Prerender</a> to make it easy to serve up rendered JavaScript pages for search engine crawlers.</p>
 
-### How does AJAX crawling work?
+## How does AJAX crawling work?
 
 Search engines work by fetching and reading through the source code of websites exactly as sent
 by the server. Many modern applications use JavaScript to fetch data and populate the
@@ -28,7 +28,7 @@ in place of the page source. Basically it works like this:
 This is great, because it lets JavaScript applications be fully crawlable. Unfortunately,
 it can be very difficult and complicated to set up a proper HTML snapshotting system. Until now.
 
-### Configuration
+## Configuration
 
 To make your AJAX application crawlable (in the simplest way possible), all you need to do is
 add this to your `divshot.json`:
@@ -48,7 +48,7 @@ If you want a little more control, there are two options available:
 * **whitelist:** a JSON array that, if supplied, defines the routes for which Prerender is active.
 * **blacklist:** a JSON array of paths you want the Prerender service to ignore.
 
-### Status Codes and Headers
+## Status Codes and Headers
 
 If you'd like to specify the status code or special headers to the search engine, you simply need
 to add special `<meta>` tags to the `<head>` of your page using JavaScript:
@@ -62,7 +62,7 @@ to add special `<meta>` tags to the `<head>` of your page using JavaScript:
 <meta name="prerender-header" content="Location: http://www.google.com">
 ```
 
-### Wait for Render
+## Wait for Render
 
 While Prerender generally does a good job of knowing when a page is fully loaded, in some cases
 the snapshot will be taken when content has yet to be fully populated. If this happens to you,
@@ -74,12 +74,6 @@ window.prerenderReady = false;
 
 Then, once your content has fully loaded set `window.prerenderReady` to `true`. The snapshot will
 be taken when the variable is set or 20 seconds elapses (whichever comes first).
-
-### Additional Info
-
-If you need additional information about how the system works, we recommend you check out the
-documentation on [Prerender.io](https://prerender.io/getting-started). If you have any questions,
-feel free to [contact us](mailto:support@divshot.com)!
 
 ## Testing Prerender
 
@@ -96,3 +90,9 @@ For URLs with hashbangs, add the route after `#!` to the end of `?_escaped_fragm
 http://my-app.divshot.io/#!/dashboard
 http://my-app.divshot.io/?_escaped_fragment_=/dashboard
 ```
+
+## Additional Info
+
+If you need additional information about how the system works, we recommend you check out the
+documentation on [Prerender.io](https://prerender.io/getting-started). If you have any questions,
+feel free to [contact us](mailto:support@divshot.com)!
