@@ -11,7 +11,7 @@ title: Form to Email Service
 to be sent. Divshot's Form service makes it simple to collect data via email
 for contact forms, beta signups, and more.</p>
 
-### Configuration
+## Configuration
 
 To utilize the forms service, you'll need to define a `forms` key in your `divshot.json`
 file. This key will be an object with form names and specific details for each form.
@@ -49,7 +49,7 @@ this in our page:
 That's it! When a user fills out the form and submits it, we'll send an
 email to the configured email address.
 
-### Templating
+## Templating
 
 The `subject`, `reply_to`, `html`, and `text` fields are all rendered
 using [Handlebars](http://handlebarsjs.com/). If you don't supply

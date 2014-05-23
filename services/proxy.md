@@ -13,7 +13,7 @@ However, users who need to support older browsers may need an alternative. Divsh
 Service allows you to make cross-domain AJAX requests anchored to a same-origin
 path on your application.</p>
 
-### Configuring the Proxy
+## Configuring the Proxy
 
 To configure an AJAX proxy you will need to add a `proxy` key to your `divshot.json`
 file. This key will be an object that defines a named proxy and properties about it.

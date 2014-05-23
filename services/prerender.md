@@ -1,15 +1,13 @@
 ---
 layout: hosting
-title: Prerender SEO
+title: Prerender SEO Service
 ---
 
 <div class="alert alert-warning"><b>Beta Alert:</b> This feature is currently in beta and is subject to change.</div>
 
 # Prerender JavaScript SEO
 
-<p class="lead">One of the hardest problems to solve in client-side applications is that of
-<b>search engine friendliness</b>. Divshot has partnered with <a href="http://prerender.io">Prerender.io</a>
-to offer powerful AJAX crawling as a core platform feature.</p>
+<p class="lead">Search engine optimization (SEO) is one of the most annoying challenges when building single page web applications. Divshot has partnered with <a href="http://prerender.io">Prerender</a> to make it easy to serve up rendered JavaScript pages for search engine crawlers.</p>
 
 ### How does AJAX crawling work?
 
@@ -82,3 +80,19 @@ be taken when the variable is set or 20 seconds elapses (whichever comes first).
 If you need additional information about how the system works, we recommend you check out the
 documentation on [Prerender.io](https://prerender.io/getting-started). If you have any questions,
 feel free to [contact us](mailto:support@divshot.com)!
+
+## Testing Prerender
+
+Let's verify Prerender is working for your app. Compare the source of one of your pages with and without `_escaped_fragment` in the URL. If you're using HTML5 pushState, you can check specific routes like so:
+
+```
+http://my-app.divshot.io/dashboard
+http://my-app.divshot.io/dashboard?_escaped_fragment=
+```
+
+For URLs with hashbangs, add the route after `#!` to the end of `?_escaped_fragment_=`:
+
+```
+http://my-app.divshot.io/#!/dashboard
+http://my-app.divshot.io/?_escaped_fragment_=/dashboard
+```
