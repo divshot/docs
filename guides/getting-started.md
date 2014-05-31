@@ -123,3 +123,5 @@ Of course, once your application is ready for prime time you'll want to use your
     divshot domains:add www.example.com
     
 Custom domain names are only available on paid Divshot plans. If you try to add a domain on a free plan, the command-line interface should give you instructions on how to upgrade. You can also upgrade your apps simply by [visiting the dashboard](https://dashboard.divshot.com).
+
+Once you've added the domain name to Divshot, you just need to create a `CNAME` record with your DNS provider linking the appropriate domain to your app's primary subdomain (e.g. `my-app-name.divshot.io`). Once complete, your app will be available from your own domain!
