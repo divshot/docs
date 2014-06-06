@@ -17,17 +17,23 @@ Each site you want to host with Divshot is called an **app**. You can create as 
 
 Each app has three **environments**: `development`, `staging`, and `production`. You can think of environments as a way to test out a new version of your app before making it public. To visit an environment, just add it's name to the URL, for instance `development.dojo.divshot.io`.
 
+<img src="{% asset_path guides/environments.jpg %}" alt="Divshot Environments" class="img-responsive">
+
 <div class="alert alert-info"><p><b>Note:</b> Each app's primary subdomain (e.g. <code>dojo.divshot.io</code>) and any custom domains assigned to the app are equivalent to its production environment, just served on a global Content Delivery Network (CDN) to make it blazing fast!</p></div>
 
 ### Releases
 
 Every time you deploy new code to an app, it creates a new **release**. This allows you to quickly roll back to any previous version of your code as well as **promote** a release from one environment to another (for example, moving a release from staging to production after verifying that everything is working).
 
+<img src="{% asset_path guides/releases.jpg %}" alt="Divshot Releases" class="img-responsive">
+
 <div class="alert alert-info"><p><b>Note:</b> Releases always start with a clean slate. They don't use any files from previous deployments. If you create a release by deploying a single file, only that file will be available on the new release even if you had many before.</p></div>
 
 ### Configuration
 
 Each release can be configured using a special `divshot.json` file in your project's directory. This gives you access to Divshot's advanced features such as HTML5 routing, browser cache control, and more. For more information on available options, see the [configuration reference](/guides/configuration).
+
+<img src="{% asset_path guides/configuration.jpg %}" alt="Divshot Configuration" class="img-responsive">
 
 ## First Steps
 
