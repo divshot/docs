@@ -115,6 +115,8 @@ Remember that we chose `public` as our root directory earlier, so that is what w
     
 That's all there is to it! If you copy and paste the URL from the success message, you should be able to visit the site and see "Hello, World".
 
+<img src="{% asset_path guides/hello-world.jpg %}" alt="Divshot Hello World Example" class="img-responsive">
+
 ### Promoting to Production
 
 Since everything seems to be working on the development environment, you're now ready to deploy to production! Instead of uploading a new release directly to production, however, we can simply take the existing release on development and copy it to production:
