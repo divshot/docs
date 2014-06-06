@@ -43,6 +43,8 @@ Before you can create and deploy code to the Divshot platform, you'll need to [s
 
 For developers, the Divshot command line interface (CLI) is the best way to interact with the Divshot platform. With it you can create new apps, deploy existing apps, change application configuration, and more!
 
+<img src="{% asset_path guides/cli.jpg %}" alt="Divshot CLI" class="img-responsive">
+
 ### Installing the Divshot CLI
 
 The Divshot CLI is written using Node.js and installed through NPM (the Node Package Manager). If you aren't sure if you have Node.js installed, type `npm` into the terminal. If it outputs `command not found`, you'll need to [install Node.js](https://github.com/joyent/node/wiki/Installation) in order to continue.
@@ -58,6 +60,8 @@ Every time you use the Divshot CLI, type `divshot` followed by a command name an
     divshot login
     
 This should open a browser window (or display a URL that you can paste into a browser). Simply login (if you aren't already) and the command-line interface will automatically be authenticated to your account.
+
+<img src="{% asset_path guides/cli-login.jpg %}" alt="Divshot CLI Authorization" class="img-responsive">
 
 ### Creating Your First Application
 
@@ -80,6 +84,8 @@ Once you're in your new application's directory, you can initialize a new Divsho
     Success: my-app-name has been created
     
 The `root directory` is the folder that will be uploaded to Divshot when you deploy. For instance, if my root directory is `public` (as above) then `my-app-name.divshot.io` will resolve to `public/index.html` after I have deployed.
+
+<img src="{% asset_path guides/public.jpg %}" alt="Divshot App Structure Example" class="img-responsive">
 
 <div class="alert alert-info"><p><b>Note:</b> We strongly encourage using a subdirectory for your root so that you can put things such as sensitive configuration files or a README in your project directory without accidentally deploying them.</p></div>
 
