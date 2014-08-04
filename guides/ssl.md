@@ -19,5 +19,15 @@ ability to fully test SSL capabilities for any of your app's environments.
 
 ## Custom Domain SSL
 
-If you need SSL enabled for a custom domain, please [email us](mailto:support@divshot.com) and we'll get
+Divshot supports uploading your own SSL certificates through the command line tool.
+
+Once you have your `.crt` and `.key` files, uploading the certificate data is easy:
+
+```
+divshot cert path/to/certificate.crt path/to/key.key
+```
+
+By default, Divshot delivers SSL certificates to browsers using the [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication).
+
+If you need non-SNI SSL enabled for a custom domain, please [email us](mailto:support@divshot.com) and we'll get
 things up and running as quickly as possible.
