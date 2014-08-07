@@ -1,4 +1,5 @@
 _site
+.divshot-cache
 .sass-cache
 .gist-cache
 s3_website.yml
