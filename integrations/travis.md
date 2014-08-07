@@ -9,7 +9,7 @@ title: "Continuous Deployment with Travis CI"
 Continuous Deployment makes your front-end stack just as powerful as your back-end!</p>
 
 Integrating with [Travis CI](http://www.travis-ci.com) allows you to both run tests and run build processes for your static applications as soon
-as you commit them to GitHub. Combine Travis with Divshot.io's [multiple environments](/guides/build) and you've got
+as you commit them to GitHub. Combine Travis with Divshot.io's [multiple environments](/guides/builds) and you've got
 a fantastic way to keep your development processes humming.
 
 ## Configuring Travis.yml
