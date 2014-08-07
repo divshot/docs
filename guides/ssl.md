@@ -27,7 +27,7 @@ Once you have your `.crt` and `.key` files, uploading the certificate data is ea
 divshot cert path/to/certificate.crt path/to/key.key
 ```
 
-By default, Divshot delivers SSL certificates to browsers using the [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication).
+By default, Divshot delivers SSL certificates to browsers using [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication).
 
 If you need non-SNI SSL enabled for a custom domain, please [email us](mailto:support@divshot.com) and we'll get
 things up and running as quickly as possible.
