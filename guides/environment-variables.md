@@ -1,6 +1,6 @@
 ---
 layout: hosting
-title: "Environment Variables on Divshot.io"
+title: "Environment Variables on Divshot"
 ---
 
 # Environment Variables on Divshot.io
