@@ -18,19 +18,21 @@ file. This key will be an object with form names and specific details for each f
 An example:
 
 ```json
+{% raw %}
 {
   "forms": {
     "contact": {
-      "to":"info@your-company.com",
+      "to": "info@your-company.com",
       "reply_to": "{{email}}",
       "subject": "Contact Received from {{name}}",
-      "html":"<b>Name:</b> {{name}}",
-      "text":"Name: {{name}}",
-      "success":"/contact-received",
-      "failure":"/contact-failure"
+      "html": "<b>Name:</b> {{name}}",
+      "text": "Name: {{name}}",
+      "success": "/contact-received",
+      "failure": "/contact-failure"
     }
   }
 }
+{% endraw %}
 ```
 
 This allows you to create simple HTML forms that, when submitted, will
