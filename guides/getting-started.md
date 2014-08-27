@@ -11,7 +11,7 @@ title: Divshot Static Web Hosting Platform - Intro
 
 ## Platform Overview
 
-Each site you want to host with Divshot is called an **app**. You can create as many apps as you like for free, and each one gets its own unique subdomain on `divshot.io`. For instance, if I named my app `dojo` it would be hosted at `dojo.divshot.io`.
+Each site you want to host with Divshot is called an **app**. You can create as many apps as you like for free, and each one gets its own unique subdomain on `divshot.io`. For instance, if I named my app `dojo` it would be hosted at `dojo.divshot.io`. You can also assign custom subdomains to all of your apps to help you during development.
 
 ### Environments
 
@@ -19,7 +19,7 @@ Each app has three **environments**: `development`, `staging`, and `production`.
 
 <img src="{% asset_path guides/environments.jpg %}" alt="Divshot Environments" class="img-responsive">
 
-<div class="alert alert-info"><p><b>Note:</b> Each app's primary subdomain (e.g. <code>dojo.divshot.io</code>) and any custom domains assigned to the app are equivalent to its production environment, just served on a global Content Delivery Network (CDN) to make it blazing fast!</p></div>
+<div class="alert alert-info"><p><b>Note:</b> Each app's primary subdomain (e.g. <code>dojo.divshot.io</code>) and any custom domains assigned to the app are equivalent to its production environment, but are served on a global Content Delivery Network (CDN) if you've purchased a paid plan.</p></div>
 
 ### Releases
 
@@ -132,10 +132,12 @@ You can promote from any environment to any other, though the most common workfl
 
 ### Using Your Own Domain Name
 
-Once your application is ready for prime time you'll want to use your own domain name. This is accomplished like so:
+Your Divshot apps can easily be made available on a domain that you own. Simply add the domain to your app in the Dashboard or from the command line like so:
 
     divshot domains:add www.example.com
     
-Custom domain names are only available on paid Divshot plans. If you try to add a domain on a free plan, the command-line interface should give you instructions on how to upgrade. You can also upgrade your apps simply by [visiting the dashboard](https://dashboard.divshot.com).
-
 Once you've added the domain name to Divshot, you just need to create a `CNAME` record with your DNS provider linking the appropriate domain to your app's primary subdomain (e.g. `my-app-name.divshot.io`). Once complete, your app will be available from your own domain!
+
+### Production Mode
+
+When an app is ready for primetime, you'll want to take advantage of Divshot's awesome CDN hosting and other advanced features like custom domain SSL. To do this, you'll need to purchase a plan and upgrade your apps to [production mode](/guides/production).

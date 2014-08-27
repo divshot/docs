@@ -3,74 +3,74 @@
   routes:
   - method: POST
     params: {}
-    compiled: (?-mix:\A\/token(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /token(.:format)
-    minpath: /token
+    compiled: "(?-mix:\\A\\/token(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/token(.:format)"
+    minpath: "/token"
     id: POST/token
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/token(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/token(?:\\.(?<format>[^\\/.?]+))?$"
   - method: POST
     params: {}
-    compiled: (?-mix:\A\/token\/tickets(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /token/tickets(.:format)
-    minpath: /token/tickets
+    compiled: "(?-mix:\\A\\/token\\/tickets(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/token/tickets(.:format)"
+    minpath: "/token/tickets"
     id: POST/token/tickets
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/token\/tickets(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/token\\/tickets(?:\\.(?<format>[^\\/.?]+))?$"
   - method: POST
     params: {}
-    compiled: (?-mix:\A\/access_token_request(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /access_token_request(.:format)
-    minpath: /access_token_request
+    compiled: "(?-mix:\\A\\/access_token_request(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/access_token_request(.:format)"
+    minpath: "/access_token_request"
     id: POST/access_token_request
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/access_token_request(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/access_token_request(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params:
       ref: ''
       pin: ''
-    compiled: (?-mix:\A\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /access_token_request/:ref/:pin(.:format)
-    minpath: /access_token_request/:ref/:pin
+    compiled: "(?-mix:\\A\\/access_token_request\\/(?<ref>[^\\/.?]+)\\/(?<pin>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/access_token_request/:ref/:pin(.:format)"
+    minpath: "/access_token_request/:ref/:pin"
     id: GET/access_token_request/:ref/:pin
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/access_token_request\\/(?<ref>[^\\/.?]+)\\/(?<pin>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params: {}
-    compiled: (?-mix:\A\/access_token_request(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /access_token_request(.:format)
-    minpath: /access_token_request
+    compiled: "(?-mix:\\A\\/access_token_request(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/access_token_request(.:format)"
+    minpath: "/access_token_request"
     id: GET/access_token_request
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/access_token_request(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/access_token_request(?:\\.(?<format>[^\\/.?]+))?$"
   - method: PUT
     params:
       ref: ''
       pin: ''
-    compiled: (?-mix:\A\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /access_token_request/:ref/:pin(.:format)
-    minpath: /access_token_request/:ref/:pin
+    compiled: "(?-mix:\\A\\/access_token_request\\/(?<ref>[^\\/.?]+)\\/(?<pin>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/access_token_request/:ref/:pin(.:format)"
+    minpath: "/access_token_request/:ref/:pin"
     id: PUT/access_token_request/:ref/:pin
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/access_token_request\/(?<ref>[^\/.?]+)\/(?<pin>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/access_token_request\\/(?<ref>[^\\/.?]+)\\/(?<pin>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
   entity_name: Access Token
   docs:
   - type: String
@@ -83,9 +83,9 @@
   routes:
   - method: GET
     params: {}
-    compiled: (?-mix:\A\/apps(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps(.:format)
-    minpath: /apps
+    compiled: "(?-mix:\\A\\/apps(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps(.:format)"
+    minpath: "/apps"
     id: GET/apps
     description: |
       <p>Returns a collection of lists of <a href="/entities/App">App entities</a>
@@ -95,12 +95,12 @@
     - App
     return_type: collection
     failure_modes: {}
-    regex: ^\/apps(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps(?:\\.(?<format>[^\\/.?]+))?$"
   - method: POST
     params: {}
-    compiled: (?-mix:\A\/apps(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps(.:format)
-    minpath: /apps
+    compiled: "(?-mix:\\A\\/apps(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps(.:format)"
+    minpath: "/apps"
     id: POST/apps
     description: |-
       <h1>Create an App</h1>
@@ -150,13 +150,13 @@
         message: You do not have permission to set Application for this Project.
         description: |
           <p>The project specified belongs to an Organization that you do not have permissions for.</p>
-    regex: ^\/apps(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params:
       id: ''
-    compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:id(.:format)
-    minpath: /apps/:id
+    compiled: "(?-mix:\\A\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:id(.:format)"
+    minpath: "/apps/:id"
     id: GET/apps/:id
     description: |
       <p>See <a href="/entities/app">App</a> for example of the App entity_name</p>
@@ -174,7 +174,7 @@
         status: 401
         description: |
           <p>You are attempting to access an app you are not authorized to access. Please contact the owner of the application.</p>
-    regex: ^\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
   - method: PUT
     params:
       id: ''
@@ -184,9 +184,9 @@
       owner:
         required: false
         type: String
-    compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:id(.:format)
-    minpath: /apps/:id
+    compiled: "(?-mix:\\A\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:id(.:format)"
+    minpath: "/apps/:id"
     id: PUT/apps/:id
     description: |
       <p>Update the App. At this time only the name of the app may be changed.
@@ -220,13 +220,13 @@
         message: Cannot transfer app to org
         description: |
           <p>You do not have permission to transfer this app to that owner.</p>
-    regex: ^\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
   - method: DELETE
     params:
       id: ''
-    compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:id(.:format)
-    minpath: /apps/:id
+    compiled: "(?-mix:\\A\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:id(.:format)"
+    minpath: "/apps/:id"
     id: DELETE/apps/:id
     description: |
       <p>Delete the App.
@@ -249,13 +249,53 @@
         status: 401
         description: |
           <p>You are attempting to access an app you are not authorized make changes to. Please contact the owner of the applicaton.</p>
-    regex: ^\/apps\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
+  - method: PUT
+    params:
+      id: ''
+      ssl_cert:
+        required: true
+      ssl_key:
+        required: true
+      ssl_bundle:
+        required: false
+    compiled: "(?-mix:\\A\\/apps\\/(?<id>[^\\/.?]+)\\/ssl(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:id/ssl(.:format)"
+    minpath: "/apps/:id/ssl"
+    id: PUT/apps/:id/ssl
+    description: |
+      <p>Upload an ssl certificate for your application.</p>
+    returns: 
+    return_type: 
+    failure_modes:
+      needs_production_plan:
+        message: App needs a production plan to add custom domain SSL. Upgrade your
+          subscription at https://divshot.com
+        status: 402
+        description: |
+          <p>You are attempting to add an SSL certificate to an app that is not on a production level service plan. We only allow custom domain SSL on production apps.</p>
+      app_not_found:
+        message: No app found by this id.
+        status: 404
+        description: |
+          <p>There is no app registered to that id. Please check your records and if neccessary contact <a href="mailto:support@divshot.com">support@divshot.com</a>.</p>
+      unauthorized_mutation:
+        message: Not authorized to mutate this resource.
+        status: 401
+        description: |
+          <p>You are attempting to access an app you are not authorized make changes to. Please contact the owner of the applicaton.</p>
+      invalid_data:
+        status: 422
+        message: Data did not pass validaitons.
+        description: |
+          <p>Refer to the errors hash and try again.</p>
+    regex: "^\\/apps\\/(?<id>[^\\/.?]+)\\/ssl(?:\\.(?<format>[^\\/.?]+))?$"
   - method: POST
     params:
       organization_id: ''
-    compiled: (?-mix:\A\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /organizations/:organization_id/apps(.:format)
-    minpath: /organizations/:organization_id/apps
+    compiled: "(?-mix:\\A\\/organizations\\/(?<organization_id>[^\\/.?]+)\\/apps(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/organizations/:organization_id/apps(.:format)"
+    minpath: "/organizations/:organization_id/apps"
     id: POST/organizations/:organization_id/apps
     description: |-
       <h1>Create an App</h1>
@@ -290,13 +330,13 @@
         message: Data did not pass validaitons.
         description: |
           <p>Refer to the errors hash and try again.</p>
-    regex: ^\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/organizations\\/(?<organization_id>[^\\/.?]+)\\/apps(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params:
       organization_id: ''
-    compiled: (?-mix:\A\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /organizations/:organization_id/apps(.:format)
-    minpath: /organizations/:organization_id/apps
+    compiled: "(?-mix:\\A\\/organizations\\/(?<organization_id>[^\\/.?]+)\\/apps(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/organizations/:organization_id/apps(.:format)"
+    minpath: "/organizations/:organization_id/apps"
     id: GET/organizations/:organization_id/apps
     description: |
       <p>Lists apps owned directly by the specified Organization.</p>
@@ -309,7 +349,18 @@
         message: Cannot list Org Apps.
         description: |
           <p>You do not have permission te list apps for this Organization. Please contact the a representative of the Organization.</p>
-    regex: ^\/organizations\/(?<organization_id>[^\/.?]+)\/apps(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/organizations\\/(?<organization_id>[^\\/.?]+)\\/apps(?:\\.(?<format>[^\\/.?]+))?$"
+  - method: GET
+    params: {}
+    compiled: "(?-mix:\\A\\/ssl(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/ssl(.:format)"
+    minpath: "/ssl"
+    id: GET/ssl
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: "^\\/ssl(?:\\.(?<format>[^\\/.?]+))?$"
   entity_name: App
   docs:
   - type: String
@@ -360,9 +411,9 @@
     params:
       app_id: ''
       name: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/domains/*name(.:format)
-    minpath: /apps/:app_id/domains/:name
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/domains\\/(?<name>.+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/domains/*name(.:format)"
+    minpath: "/apps/:app_id/domains/:name"
     id: PUT/apps/:app_id/domains/:name
     description: Undocumented
     returns:
@@ -391,14 +442,14 @@
         message: I'm sorry Mario, this domain is registered to another app. Please
           contact support if you own this Domain.
         description: ''
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/domains\\/(?<name>.+)(?:\\.(?<format>[^\\/.?]+))?$"
   - method: DELETE
     params:
       app_id: ''
       name: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/domains/*name(.:format)
-    minpath: /apps/:app_id/domains/:name
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/domains\\/(?<name>.+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/domains/*name(.:format)"
+    minpath: "/apps/:app_id/domains/:name"
     id: DELETE/apps/:app_id/domains/:name
     description: Undocumented
     returns: []
@@ -427,7 +478,7 @@
         message: I'm sorry Mario, this domain is registered to another app. Please
           contact support if you own this Domain.
         description: ''
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/domains\/(?<name>.+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/domains\\/(?<name>.+)(?:\\.(?<format>[^\\/.?]+))?$"
   entity_name: Domain
   docs: []
 - name: Build
@@ -435,9 +486,9 @@
   - method: GET
     params:
       app_id: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/builds(.:format)
-    minpath: /apps/:app_id/builds
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/builds(.:format)"
+    minpath: "/apps/:app_id/builds"
     id: GET/apps/:app_id/builds
     description: Undocumented
     returns:
@@ -449,19 +500,25 @@
         status: 401
         description: |
           <p>You do not have permission to access builds for this app. Please contact the owner of this app.</p>
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds(?:\\.(?<format>[^\\/.?]+))?$"
   - method: POST
     params:
       app_id: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/builds(.:format)
-    minpath: /apps/:app_id/builds
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/builds(.:format)"
+    minpath: "/apps/:app_id/builds"
     id: POST/apps/:app_id/builds
     description: Undocumented
     returns:
     - Build
     return_type: instance
     failure_modes:
+      app_not_found:
+        message: App does not exist. Run 'divshot create <name>' with the name in
+          your divshot.json
+        status: 404
+        description: |
+          <p>Cannot create a build for an app that does not exist. Check divshot.json and run &#39;divshot create <name-of-app>&#39;</p>
       cannot_access_builds_for_app:
         message: Not authorized to create builds for this app.
         status: 401
@@ -472,14 +529,14 @@
         message: Data did not pass validaitons.
         description: |
           <p>Refer to the errors hash and try again.</p>
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params:
       app_id: ''
       id: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/builds/:id(.:format)
-    minpath: /apps/:app_id/builds/:id
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/builds/:id(.:format)"
+    minpath: "/apps/:app_id/builds/:id"
     id: GET/apps/:app_id/builds/:id
     description: Undocumented
     returns:
@@ -496,14 +553,14 @@
         status: 404
         description: |
           <p>Could not find the build referenced in the url. Please check your records and try again.</p>
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
   - method: PUT
     params:
       app_id: ''
       id: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)\/finalize(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/builds/:id/finalize(.:format)
-    minpath: /apps/:app_id/builds/:id/finalize
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds\\/(?<id>[^\\/.?]+)\\/finalize(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/builds/:id/finalize(.:format)"
+    minpath: "/apps/:app_id/builds/:id/finalize"
     id: PUT/apps/:app_id/builds/:id/finalize
     description: Undocumented
     returns:
@@ -520,18 +577,18 @@
         status: 404
         description: |
           <p>Could not find the build referenced in the url. Please check your records and try again.</p>
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/builds\/(?<id>[^\/.?]+)\/finalize(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/builds\\/(?<id>[^\\/.?]+)\\/finalize(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params: {}
-    compiled: (?-mix:\A\/finalize(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /finalize(.:format)
-    minpath: /finalize
+    compiled: "(?-mix:\\A\\/finalize(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/finalize(.:format)"
+    minpath: "/finalize"
     id: GET/finalize
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/finalize(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/finalize(?:\\.(?<format>[^\\/.?]+))?$"
   entity_name: Build
   docs:
   - type: String
@@ -579,9 +636,9 @@
   - method: GET
     params:
       app_id: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/releases(.:format)
-    minpath: /apps/:app_id/releases
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/releases(.:format)"
+    minpath: "/apps/:app_id/releases"
     id: GET/apps/:app_id/releases
     description: Undocumented
     returns:
@@ -596,14 +653,14 @@
         message: Not authorized to release this app.
         status: 401
         description: ''
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params:
       app_id: ''
       env: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/releases/:env(.:format)
-    minpath: /apps/:app_id/releases/:env
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases\\/(?<env>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/releases/:env(.:format)"
+    minpath: "/apps/:app_id/releases/:env"
     id: GET/apps/:app_id/releases/:env
     description: Undocumented
     returns:
@@ -618,14 +675,14 @@
         message: Not authorized to release this app.
         status: 401
         description: ''
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases\\/(?<env>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
   - method: POST
     params:
       app_id: ''
       env: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/releases/:env(.:format)
-    minpath: /apps/:app_id/releases/:env
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases\\/(?<env>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/releases/:env(.:format)"
+    minpath: "/apps/:app_id/releases/:env"
     id: POST/apps/:app_id/releases/:env
     description: |
       <p>In the POST body, include only one of the attributes <code>build</code> or <code>environment</code>.
@@ -666,31 +723,31 @@
         message: Build must be finalized before release.
         status: 403
         description: ''
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases\\/(?<env>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
   - method: POST
     params:
       app_id: ''
       env: ''
-    compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)\/rollback(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /apps/:app_id/releases/:env/rollback(.:format)
-    minpath: /apps/:app_id/releases/:env/rollback
+    compiled: "(?-mix:\\A\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases\\/(?<env>[^\\/.?]+)\\/rollback(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:app_id/releases/:env/rollback(.:format)"
+    minpath: "/apps/:app_id/releases/:env/rollback"
     id: POST/apps/:app_id/releases/:env/rollback
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)\/rollback(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/apps\\/(?<app_id>[^\\/.?]+)\\/releases\\/(?<env>[^\\/.?]+)\\/rollback(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params: {}
-    compiled: (?-mix:\A\/rollback(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /rollback(.:format)
-    minpath: /rollback
+    compiled: "(?-mix:\\A\\/rollback(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/rollback(.:format)"
+    minpath: "/rollback"
     id: GET/rollback
     description: Undocumented
     returns: 
     return_type: 
     failure_modes: {}
-    regex: ^\/rollback(?:\.(?<format>[^\/.?]+))?$
+    regex: "^\\/rollback(?:\\.(?<format>[^\\/.?]+))?$"
   entity_name: Release
   docs:
   - type: String
