@@ -77,11 +77,11 @@ be taken when the variable is set or 20 seconds elapses (whichever comes first).
 
 ## Testing Prerender
 
-Let's verify Prerender is working for your app. Compare the source of one of your pages with and without `_escaped_fragment` in the URL. If you're using HTML5 pushState, you can check specific routes like so:
+Let's verify Prerender is working for your app. Compare the source of one of your pages with and without `_escaped_fragment_` in the URL. If you're using HTML5 pushState, you can check specific routes like so:
 
 ```
 http://my-app.divshot.io/dashboard
-http://my-app.divshot.io/dashboard?_escaped_fragment=
+http://my-app.divshot.io/dashboard?_escaped_fragment_=
 ```
 
 For URLs with hashbangs, add the route after `#!` to the end of `?_escaped_fragment_=`:
