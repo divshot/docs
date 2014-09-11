@@ -43,8 +43,8 @@ this in our page:
 
 ```html
 <form method="POST" action="/__/forms/contact">
-  <label>Name:</label> <input name="name" type="text">
-  <label>Email:</label> <input name="email" type="submit">
+  <label>Name:</label> <input type="text" name="name">
+  <label>Email:</label> <input type="email" name="email">
   <button type="submit">Contact Us</button>
 </form>
 ```
