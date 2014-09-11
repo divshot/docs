@@ -39,4 +39,4 @@ next to it.
 ### Premium Hosting Features
 
 Divshot's hosting platform is a robust, one-of-a-kind static web hosting system with many advanced features. If you're
-interested in learning more, please visit <a href="http://www.divshot.io/">www.divshot.io</a>.
+interested in learning more, please visit <a href="https://divshot.com">our homepage</a>.

@@ -6,7 +6,7 @@ title: Publishing Jekyll Sites to Divshot Hosting
 # Publishing Jekyll Sites to Divshot Hosting
 
 <p class="lead"><a href="http://jekyllrb.com/">Jekyll</a> is a powerful static website generator that works great with
-Divshot.io. In fact, it's powering this very documentation site!</p>
+Divshot. In fact, it's powering this very documentation site!</p>
 
 ## Getting Started
 
@@ -18,9 +18,9 @@ You'll also need Node.js and the Divshot command-line tool:
 
     npm install -g divshot-cli
     
-## Configuring Divshot.io
+## Configuring Divshot
 
-In the project folder for your Jekyll site, initialize a Divshot.io app:
+In the project folder for your Jekyll site, initialize a Divshot app:
 
     divshot init
     
@@ -38,7 +38,7 @@ exclude:
     
 ## Running Locally
 
-To take advantage of advanced Divshot.io features like custom routing, you'll want to serve
+To take advantage of advanced Divshot features like custom routing, you'll want to serve
 your app locally using the Divshot server:
 
     divshot server

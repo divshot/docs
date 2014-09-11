@@ -1,15 +1,15 @@
 ---
 layout: hosting
-title: Performance and Caching in Divshot.io
+title: Performance and Caching in Divshot
 ---
 
-# Performance and Caching in Divshot.io
+# Performance and Caching in Divshot
 
-<p class="lead">Divshot.io serves all content from a Content Delivery Network (CDN) with edge servers located
+<p class="lead">Divshot serves all content from a Content Delivery Network (CDN) with edge servers located
 around the world. You don't need to configure anything for your app to enable this: it's built
 in to every app.</p>
 
-Divshot.io's built-in performance features include:
+Divshot's built-in performance features include:
 
 1. Production environment (e.g. `your-app.divshot.io`) served via CDN
 2. Automatic gzipping of text-based content
@@ -22,7 +22,7 @@ frequently update content on those environments without worrying about a stale b
 
 You can manually configure the `Cache-Control` headers for content served in your application
 by setting the `cache_control` configuration object in your `divshot.json` file. The path matching
-works just like [Divshot.io's routing](/guides/routing) and the values that are supplied work
+works just like [Divshot's routing](/guides/routing) and the values that are supplied work
 as follows:
 
 * If you supply an `Integer` value, the `Cache-Control` header is set to `public, max-age=YOURVALUE`.

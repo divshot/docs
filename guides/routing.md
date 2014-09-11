@@ -1,17 +1,17 @@
 ---
 layout: hosting
-title: Routing in Divshot.io
+title: Routing in Divshot
 ---
 
 # Divshot Routing
 
-<p class="lead">Divshot.io provides simple configuration for custom routing enabling you
+<p class="lead">Divshot provides simple configuration for custom routing enabling you
 both to display clean, user-friendly URLs for your content as well as power sophisticated
 apps using HTML5 pushState.</p>
 
 ## Clean URLs
 
-You can configure your Divshot.io application to automatically drop the `.html` extension
+You can configure your Divshot application to automatically drop the `.html` extension
 when serving files by setting the `clean_urls` option in your [Configuration File](/guides/configuration).
 For example:
 

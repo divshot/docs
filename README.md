@@ -1,4 +1,4 @@
-# Divshot.io Docs
+# Divshot Docs
 
 Official documentation for our static web hosting service.
 

@@ -3,13 +3,13 @@ layout: hosting
 title: "Custom Domains on Divshot"
 ---
 
-# Custom Domains on Divshot.io
+# Custom Domains on Divshot
 
-<p class="lead">It's easy to get your Divshot.io app up and running on a custom domain.</p>
+<p class="lead">It's easy to get your Divshot app up and running on a custom domain.</p>
 
 ### Adding the Domain to Your App
 
-In the directory for your Divshot.io project, you can see existing custom domains for your app
+In the directory for your Divshot project, you can see existing custom domains for your app
 like so:
 
     divshot domains

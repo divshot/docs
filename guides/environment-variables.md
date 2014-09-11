@@ -3,7 +3,7 @@ layout: hosting
 title: "Environment Variables on Divshot"
 ---
 
-# Environment Variables on Divshot.io
+# Environment Variables on Divshot
 
 <p class="lead">Divshot's development, staging, and production environments are great for operations, but don't solve the problem of service configurations. Environment variables are a great way to specify API keys for 3rd party services.</p>
 
@@ -12,7 +12,7 @@ to your users. An appropriate use case for environment variables would be analyt
 
 ## Adding Environment Variables to Your App
 
-In the directory for your Divshot.io project, you can see the current variables for your application's
+In the directory for your Divshot project, you can see the current variables for your application's
 various environments:
 
     divshot env production

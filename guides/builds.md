@@ -5,7 +5,7 @@ title: Builds and Environments
 
 # Builds and Environments
 
-<p class="lead">Divshot.io works by creating an immutable snapshot of your application when you deploy
+<p class="lead">Divshot works by creating an immutable snapshot of your application when you deploy
 it. This is called a <b>build</b>. A build encapsulates both the files for your application
 as well as the configuration you specified in your <code>divshot.json</code> file.</p>
 
@@ -16,7 +16,7 @@ change them in a future build without worrying about breaking an old build.
 
 ## Environments
 
-Each Divshot.io application comes with three environments: `development`, `staging`, and
+Each Divshot application comes with three environments: `development`, `staging`, and
 `production`. These environments can be accessed by prefixing your application's name as
 a subdomain of `divshot.io`. If your app was called `fakeblock` then you could reach 
 the staging environment at `http://staging.fakeblock.divshot.io/`. The recommended use
