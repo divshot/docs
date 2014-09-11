@@ -23,7 +23,8 @@ An example:
   "forms": {
     "contact": {
       "to": "info@your-company.com",
-      "reply_to": "{{email}}",
+      "from": "contact@your-company.com",
+      "replyTo": "{{name}} <{{email}}>",
       "subject": "Contact Received from {{name}}",
       "html": "<b>Name:</b> {{name}}",
       "text": "Name: {{name}}",
@@ -53,7 +54,7 @@ email to the configured email address.
 
 ## Templating
 
-The `subject`, `reply_to`, `html`, and `text` fields are all rendered
+The `subject`, `replyTo`, `html`, and `text` fields are all rendered
 using [Handlebars](http://handlebarsjs.com/). If you don't supply
 `html` or `text` we will automatically format a simple list of the
 submitted form information.
