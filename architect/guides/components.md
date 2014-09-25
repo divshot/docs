@@ -12,7 +12,7 @@ description: "Learn more about Divshot's powerful drag-and-drop component panel.
 
 In Divshot, a component is any reusable user interface element. Everything you see on a page in Divshot is made up of components. Components can be nested inside each other (for instance, a "Button Group" component might contain several "Button" components) and some components are only meant to be used inside another component (for instance, a "Menu Item" Bootstrap component is only meant to be used inside a "Menu" component).
 
-![Divshot - Components]({% asset_path components.png %} "Components")
+<img src="{% asset_path components.png %}" width="100%" alt="Divshot - Components" title="Components">
 
 Some components have configurable attributes (see [configuring components](#configuring-components) below) that alter their appearance or behavior. For instance, a Bootstrap "Menu" component may be tabs or pills and also may stack vertically or not.
 
@@ -20,7 +20,7 @@ Some components have configurable attributes (see [configuring components](#conf
 
 To add a component to the canvas, you simply drag it from the component drawer on the right hand side of the Divshot interface onto the canvas. As you drag, you will see a "ghost" version of the component appear. This ghost indicates where the component will be placed when you release the mouse button.
 
-![Divshot - Canvas Component Dragging]({% asset_path canvas-drag.gif %} "Dragging Components to the Canvas")
+<img src="{% asset_path canvas-drag.gif %}" width="100%" alt="Divshot - Canvas Component Dragging" title="Dragging Components to the Canvas">
 
 <div class='alert alert-question alert-info alert-block'>
   <h4>Why doesn't the component drop directly under my mouse?</h4>
@@ -32,7 +32,7 @@ To add a component to the canvas, you simply drag it from the component drawer o
 
 You can select a component on the canvas by clicking it. The currently selected component will be outlined in blue and will also cause the options available in the [inspector](#configuring-components) to change based on the type of component.
 
-![Divshot - Canvas Component Selecting]({% asset_path canvas-select.gif %} "Selecting Components on the Canvas")
+<img src="{% asset_path canvas-select.gif %}" width="100%" alt="Divshot - Canvas Component Selecting" title="Selecting Components on the Canvas">
 
 <div class='alert alert-success'><b>Quick Tip:</b> If you want to select a parent of the selected component, you can use the breadcrumb navigation at the top of the canvas to select components up the hierarchy.</div>
 
@@ -42,7 +42,7 @@ If there is text content you want to modify on the page, simply **double click**
 
 <h3 id='configuring-components'>Configuring Components with the Inspector</h3>
 
-![Divshot - Inspector Component Configuration]({% asset_path inspector.gif %} "Configuring Components with the Inspector")
+<img src="{% asset_path inspector.gif %}" width="100%" alt="Divshot - Inspector Component Configuration" title="Configuring Components with the Inspector">
 
 The **Inspector** is a panel in the sidebar that allows you to change both component-specific attributes and generic properties of a component. Any component-specific attributes should be self-descriptive (for instance, the Bootstrap "Button" component has a "Size" attribute in the inspector that lets you change the size of the button). There are some attributes that can be applied to all Divshot components, these are:
 
