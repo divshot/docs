@@ -45,6 +45,35 @@ Environment variables may also be loaded as raw JSON located at this path: `/__/
 
 This documentation is hosted on Divshot. Checkout [/__/env.json](/__/env.json) and [/__/env.js](/__/env.js) for concrete examples.
 
+## Release Information
+
+There is a special key called `__release` included by default in the environment
+configuration that contains some useful information about the current deploy.
+
+```json
+{
+  "__release": {
+    build_id: "abc123...",
+    release: 56,
+    timestamp: 1412193270
+  }
+}
+```
+
+The `build_id` is a unique ID for the currently deployed code. The `release` key
+is the current numbered release for the environment (it will increment with each
+new push or environment change). And `timestamp` is a UNIX integer timestamp of
+when the release happened. You can convert it to a JavaScript Date object like
+so:
+
+```js
+new Date(__env.__release.timestamp * 1000);
+```
+
+**Note:** Obviously your local environment doesn't have any release information,
+but you can manually add it to `.env.json` to simulate or test out checking release
+data in your application.
+
 ## Local Environment
 
 Divshot's [static web server](/guides/local-dev) will read environment variables from `.env.json` in the project root.
