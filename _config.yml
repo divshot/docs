@@ -1,5 +1,7 @@
 safe: false
 markdown: redcarpet
+redcarpet:
+  extensions: [with_toc_data]
 highlighter: pygments
 baseurl: /
 url: http://docs.divshot.io

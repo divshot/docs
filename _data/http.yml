@@ -184,6 +184,9 @@
       owner:
         required: false
         type: String
+      production:
+        required: false
+        type: Virtus::Attribute::Boolean
     compiled: "(?-mix:\\A\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?\\Z)"
     path: "/apps/:id(.:format)"
     minpath: "/apps/:id"
@@ -220,7 +223,28 @@
         message: Cannot transfer app to org
         description: |
           <p>You do not have permission to transfer this app to that owner.</p>
+      payment_required:
+        status: 402
+        message: Payment or an upgrade to larger plan is required in order to perform
+          the requested action.
+        description: ''
     regex: "^\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
+  - method: POST
+    params:
+      id: ''
+      to:
+        required: true
+        type: String
+        desc: The new user or org to which to transfer this app.
+    compiled: "(?-mix:\\A\\/apps\\/(?<id>[^\\/.?]+)\\/transfer(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:id/transfer(.:format)"
+    minpath: "/apps/:id/transfer"
+    id: POST/apps/:id/transfer
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: "^\\/apps\\/(?<id>[^\\/.?]+)\\/transfer(?:\\.(?<format>[^\\/.?]+))?$"
   - method: DELETE
     params:
       id: ''
@@ -350,6 +374,17 @@
         description: |
           <p>You do not have permission te list apps for this Organization. Please contact the a representative of the Organization.</p>
     regex: "^\\/organizations\\/(?<organization_id>[^\\/.?]+)\\/apps(?:\\.(?<format>[^\\/.?]+))?$"
+  - method: GET
+    params: {}
+    compiled: "(?-mix:\\A\\/transfer(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/transfer(.:format)"
+    minpath: "/transfer"
+    id: GET/transfer
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: "^\\/transfer(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params: {}
     compiled: "(?-mix:\\A\\/ssl(?:\\.(?<format>[^\\/.?]+))?\\Z)"
