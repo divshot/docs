@@ -29,6 +29,14 @@ file in my application, users would be able to go to `/about` and see the page.
 Note that in order to maximize search-engine friendliness when Clean URLs are enabled `.html`
 extensions will trigger 301 redirects to the same path with the extension dropped.
 
+To enable Clean URLs for specific paths, you can use glob patterns:
+
+```json
+{
+  "clean_urls": ["/app**", "!/components**"]
+}
+```
+
 ## Custom Routes
 
 Custom routes are great for hosting HTML5 pushState applications. They allow you to collapse many
