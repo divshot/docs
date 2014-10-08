@@ -62,3 +62,16 @@ As an example, if I have an application with a landing page at `index.html` but 
 ```
 
 In my application with this configuration, any URL prefixed with `/app` would serve up `app.html`.
+
+## AngularJS
+
+To use the AngularJS RouteProvider HTML5 mode, set up the routes in your [Configuration File](/guides/configuration) as seen below:
+
+```json
+{
+  "name": "my-app-name",
+  "routes": {
+    "**": "index.html",
+  }
+}
+```
