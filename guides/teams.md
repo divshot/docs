@@ -31,6 +31,6 @@ Click the "Transfer App..." button and select the organization:
 
 ## Organization Roles
 
-Divshot provides two different roles for organization access control: Admins and members. Admins can manage the organization and invite/remove members. <b>Both roles have access to every app in the organization.</b> To promote an existing member to an admin, go to your organization settings and use the status dropdown:
+Divshot provides two different roles for organization access control: Admins and members. Admins can manage the organization and invite/remove members. <b>Both roles have access to every app in the organization.</b> To promote an existing member to an admin, go to your organization settings and use the role dropdown:
 
 <img src="{% asset_path guides/promote-member.jpg %}" alt="Promote Organization Member" class="img-responsive">
