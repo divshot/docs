@@ -13,7 +13,11 @@ To create a new organization, use the account switcher in the dashboard:
 
 <img src="{% asset_path guides/account-switcher.jpg %}" alt="Account Switcher" class="img-responsive">
 
-After filling out the Create Organization form, you'll be redirected to your new organization. You can now create organization apps or use the account switcher to return back to your personal account.
+Fill out the Create Organization form and invite your teammates now or later:
+
+<img src="{% asset_path guides/create-org.jpg %}" alt="Create Organization" class="img-responsive">
+
+Each teammate you invite will receive a notification email. If they don't have a Divshot account, they'll be able to create one and automatically join the organization. After clicking "Create Organization" you'll be redirected to the app list. You can now create organization apps or use the account switcher to return back to your personal account.
 
 ## Transferring Apps
 
@@ -24,8 +28,6 @@ If you'd like to transfer a personal app to an organization, go to your app sett
 Click the "Transfer App..." button and select the organization:
 
 <img src="{% asset_path guides/transfer-app.jpg %}" alt="Transfer App" class="img-responsive">
-
-Keep in mind you'll need to be an admin of the organization receiving the transfer. If not, the app will remain in your personal account.
 
 ## Organization Roles
 
