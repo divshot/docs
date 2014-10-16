@@ -9,9 +9,9 @@ title: Team Collaboration
 
 ## Creating an Organization
 
-To create a new organization, use the account switcher in the dashboard:
+To create a new organization, use the account dropdown in the dashboard:
 
-<img src="{% asset_path guides/account-switcher.jpg %}" alt="Account Switcher" class="img-responsive">
+<img src="{% asset_path guides/account-dropdown.jpg %}" alt="Account Dropdown" class="img-responsive">
 
 Fill out the Create Organization form and invite your teammates now or later:
 
