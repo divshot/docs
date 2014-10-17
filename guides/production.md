@@ -9,7 +9,7 @@ title: Production Mode
 Divshot at no charge. However, to take full advantage of the Divshot platform,
 you'll want to purchase a plan with <b>Production Slots</b>.</p>
 
-### Enabling Production Mode
+## Enabling Production Mode
 
 When you purchase a plan (see the [pricing page](http://www.divshot.com/pricing)
 for specific availability) you are allotted a certain number of production slots
@@ -44,7 +44,7 @@ mode, we discontinue CDN and SSL hosting. It is *strongly recommended* that you
 upgrade your apps to production before you make them publicly available to
 ensure performance and availability.
 
-### Production Environments vs. Production Mode
+## Production Environments vs. Production Mode
 
 Note that all apps, even development apps, have a production *environment*. Only
 apps that appear in one of the production slots in the Dashboard will have the
