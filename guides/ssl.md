@@ -19,7 +19,13 @@ ability to fully test SSL capabilities for any of your app's environments.
 
 ## Custom Domain SSL
 
-Divshot supports uploading your own SSL certificates through the command line tool.
+Divshot supports uploading your own SSL certificates (including wildcard) through the command line tool.
+
+1. Purchase a new SSL certificate from the domain registrar of your choice.
+2. After purchasing, your registrar will ask for a CSR code.
+3. Generate a CSR code (`.csr`) and `.key` file manually [using OpenSSL](http://wiki.gandi.net/en/ssl/csr).
+4. Validate your domain and finish the certificate approval process.
+5. Once approved, your registrar will give you a `.crt` or `.pem` file. [Click here](http://stackoverflow.com/questions/13732826/convert-pem-to-crt-and-key) if you get a `.pem` file.
 
 Once you have your `.crt` and `.key` files, uploading the certificate data is easy:
 
