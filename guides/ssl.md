@@ -27,11 +27,15 @@ Divshot supports uploading your own SSL certificates (including wildcard) throug
 4. Validate your domain and finish the certificate approval process.
 5. Once approved, your registrar will give you a `.crt` or `.pem` file. [Click here](http://stackoverflow.com/questions/13732826/convert-pem-to-crt-and-key) if you get a `.pem` file.
 
+### Uploading to Divshot
+
 Once you have your `.crt` and `.key` files, uploading the certificate data is easy:
 
 ```
 divshot cert path/to/certificate.crt path/to/key.key
 ```
+
+### SNI Custom SSL
 
 By default, Divshot delivers SSL certificates to browsers using [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication).
 
