@@ -1,9 +1,9 @@
 ---
 layout: hosting
-title: Using SSL With Your Divshot App
+title: Using SSL with Your Divshot App
 ---
 
-# Using SSL With Your Divshot App
+# Using SSL with Your Divshot App
 
 <p class="lead">We offer full SSL encryption for your Divshot applications across the board. By default, you should be
 able to access a secure version of your site just by visiting <code>https://app-name.divshot.io</code>. This works
@@ -19,13 +19,23 @@ ability to fully test SSL capabilities for any of your app's environments.
 
 ## Custom Domain SSL
 
-Divshot supports uploading your own SSL certificates through the command line tool.
+Divshot supports uploading your own SSL certificates (including wildcard) through the command line tool.
+
+1. Purchase a new SSL certificate from the domain registrar of your choice.
+2. After purchasing, your registrar will ask for a CSR code.
+3. Generate a CSR code (`.csr`) and `.key` file manually [using OpenSSL](http://wiki.gandi.net/en/ssl/csr).
+4. Validate your domain and finish the certificate approval process.
+5. Once approved, your registrar will give you a `.crt` or `.pem` file. [Convert](http://stackoverflow.com/questions/13732826/convert-pem-to-crt-and-key) if you get a `.pem` file.
+
+### Uploading to Divshot
 
 Once you have your `.crt` and `.key` files, uploading the certificate data is easy:
 
 ```
 divshot cert path/to/certificate.crt path/to/key.key
 ```
+
+### SNI Custom SSL
 
 By default, Divshot delivers SSL certificates to browsers using [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication).
 
