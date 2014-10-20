@@ -4,6 +4,6 @@
   "clean_urls": true,
   "error_page": "error.html",
   "redirects": {
-    "/guides/production": "guides/high-performance"
+    "/guides/production": "/guides/high-performance"
   }
 }
