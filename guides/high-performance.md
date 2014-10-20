@@ -9,7 +9,7 @@ title: High-Performance Mode
 Divshot at no charge. However, to take full advantage of the Divshot platform,
 you'll want to purchase a plan with <b>High-Performance Slots</b>.</p>
 
-### Enabling High-Performance Mode
+## Enabling High-Performance Mode
 
 When you purchase a plan (see the [pricing page](http://www.divshot.com/pricing)
 for specific availability) you are allotted a certain number of High-Performance slots
