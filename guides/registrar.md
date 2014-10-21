@@ -12,7 +12,7 @@ If you don't see your registrar here and would like to have it listed, please [g
 ## CNAME Setup Guides
 
   * [1&1](http://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/enter-a-cname-record-for-your-domain-a643600.html)
-  * [CloudFlare (Non-Apex)](https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-)
+  * [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-)
   * [DNSimple](http://support.dnsimple.com/articles/cname-record/)
   * [Dynadot](https://www.dynadot.com/community/help/question/create-CNAME)
   * [DreamHost](http://wiki.dreamhost.com/CNAME_record)
