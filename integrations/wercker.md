@@ -33,7 +33,7 @@ deploy:
 You'll need to ensure the `WERCKER_DEPLOYTARGET_NAME` is one of `development`, `staging`, or `production` and you'll have to
 set the `DIVSHOT_TOKEN` variable to your divshot API key.
 
-You can get your divshot api key from the divshot command line tools.
+You can get your Divshot API key from our command line tool.
 
 First login to the service:
 
