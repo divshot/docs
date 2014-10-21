@@ -63,15 +63,59 @@ As an example, if I have an application with a landing page at `index.html` but 
 
 In my application with this configuration, any URL prefixed with `/app` would serve up `app.html`.
 
-## AngularJS
+## Custom Redirects
 
-To use the AngularJS RouteProvider HTML5 mode, set up the routes in your [Configuration File](/guides/configuration) as seen below:
+If you move an existing page somewhere else, you'll want to create a redirect to make sure any backlinks continue 
+working as normal. By default, redirects in Divshot return a 301 HTTP response for SEO. You can also specify
+a custom HTTP status code. Redirect route path matching is similar to using custom routes. For example:
 
 ```json
 {
-  "name": "my-app-name",
-  "routes": {
-    "**": "index.html",
+  "redirects": {
+    "/some/old/path": "/some/new/path"
   }
 }
 ```
+
+To implement a custom HTTP status code, use the `status` key:
+
+```json
+{
+  "redirects": {
+    "/some/old/path": {
+      "status": 302,
+      "url": "/some/new/path"
+    }
+  }
+}
+```
+
+Route segments are also supported:
+
+```json
+{
+  "redirects": {
+    "/old/:segment/path": "/new/path/:segment"
+  }
+}
+```
+
+## Custom Headers
+
+If you need to set custom response headers for specific routes, you can use the `headers` key in your configuration file:
+
+```json
+{
+  "headers": {
+    "/cors-stuff/**": {
+      "Access-Control-Allow-Origin": "*"
+    },
+    "/scripts/**": {
+      "content-type": "text/javascript"
+    }
+  }
+}
+```
+
+This can be useful for applying a content security policy, enforcing a different `content-type`, enabling
+cross-origin resource sharing (CORS), and more.
