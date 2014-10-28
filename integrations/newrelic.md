@@ -5,9 +5,9 @@ title: Monitor Divshot App Performance with New Relic Browser
 
 # Monitor App Performance with New Relic
 
-[New Relic](http://newrelic.com) provides a comprehensive suite of application
+<p class="lead"><a href="http://newrelic.com">New Relic</a> provides a comprehensive suite of application
 performance monitoring tools, including sophisticated tools for monitoring
-browser applications.
+browser applications.</p>
 
 To integrate New Relic monitoring with your Divshot application, you will need
 to generate a JavaScript snippet for a "standalone" browser application. New
