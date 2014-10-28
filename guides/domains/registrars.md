@@ -5,7 +5,7 @@ title: "Setting Up Domains with Your Registrar"
 
 # Custom Domains on Divshot
 
-It's easy to get your custom domain set up on Divshot. We've collected guides from the major registrars on how to set up your CNAME. Just point a CNAME record to `your-app.divshot.io`.
+<p class="lead">It's easy to get your custom domain set up on Divshot. We've collected guides from the major registrars on how to set up your CNAME. Just point a CNAME record to <code>your-app.divshot.io</code>.</p>
 
 If you don't see your registrar here and would like to have it listed, please [get in touch](mailto:support@divshot.io).
 
