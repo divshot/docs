@@ -5,7 +5,7 @@ title: Using Ember.js with Divshot Hosting
 
 # Using Ember.js with Divshot Hosting
 
-<p class="lead">[Ember.js](http://emberjs.com/) is a popular open-source framework for building ambitious web applications. Hosting Ember.js applications on Divshot is a great solution that is easy to get setup.</p>
+<p class="lead"><a href="http://emberjs.com/">Ember.js</a> is a popular open-source framework for building ambitious web applications. Hosting Ember.js applications on Divshot is a great solution that is easy to get setup.</p>
 
 ## Getting started
 
