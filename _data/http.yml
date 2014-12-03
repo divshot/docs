@@ -175,6 +175,18 @@
         description: |
           <p>You are attempting to access an app you are not authorized to access. Please contact the owner of the application.</p>
     regex: "^\\/apps\\/(?<id>[^\\/.?]+)(?:\\.(?<format>[^\\/.?]+))?$"
+  - method: GET
+    params:
+      id: ''
+    compiled: "(?-mix:\\A\\/apps\\/(?<id>[^\\/.?]+)\\/stats(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/apps/:id/stats(.:format)"
+    minpath: "/apps/:id/stats"
+    id: GET/apps/:id/stats
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: "^\\/apps\\/(?<id>[^\\/.?]+)\\/stats(?:\\.(?<format>[^\\/.?]+))?$"
   - method: PUT
     params:
       id: ''
@@ -374,6 +386,17 @@
         description: |
           <p>You do not have permission te list apps for this Organization. Please contact the a representative of the Organization.</p>
     regex: "^\\/organizations\\/(?<organization_id>[^\\/.?]+)\\/apps(?:\\.(?<format>[^\\/.?]+))?$"
+  - method: PUT
+    params: {}
+    compiled: "(?-mix:\\A\\/stats(?:\\.(?<format>[^\\/.?]+))?\\Z)"
+    path: "/stats(.:format)"
+    minpath: "/stats"
+    id: PUT/stats
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: "^\\/stats(?:\\.(?<format>[^\\/.?]+))?$"
   - method: GET
     params: {}
     compiled: "(?-mix:\\A\\/transfer(?:\\.(?<format>[^\\/.?]+))?\\Z)"
@@ -432,12 +455,14 @@
       <p>For each environment there is a key <code>build</code> which gives the build id. This is useful for when you want to promote a build, e.g. promoting staging to production.</p>
 
       <p>For further details see <a href="/routes/POST/apps/:app_id/releases/:env">the promotion api</a>.</p>
+
       <div class="highlight"><pre><span class="p">{</span>
         <span class="nt">&quot;development&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
         <span class="nt">&quot;staging&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
         <span class="nt">&quot;production&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">}</span>
       <span class="p">}</span>
       </pre></div>
+
       <p>In this synthetic example, each environment is pointing to the same build.</p>
     name: environments
 - name: Domain
@@ -645,8 +670,9 @@
       <p>Corresponds to the <code>divshot.json</code> file created by the command line tools.</p>
     name: config
   - type: Array[String]
-    description: |-
+    description: |
       <p>A list of the files contained in the build.</p>
+
       <div class="highlight"><pre><span class="p">[</span>
         <span class="s2">&quot;/index.html&quot;</span><span class="p">,</span>
         <span class="s2">&quot;/css/main.css&quot;</span><span class="p">,</span>
