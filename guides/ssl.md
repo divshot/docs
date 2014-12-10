@@ -41,3 +41,7 @@ By default, Divshot delivers SSL certificates to browsers using [SNI](https://en
 
 If you need non-SNI SSL enabled for a custom domain, please [email us](mailto:support@divshot.com) and we'll get
 things up and running as quickly as possible.
+
+### Force SSL
+
+Forcing all traffic to go through `https://` is available for Performance level apps. If you'd like to do so, [send us an email using this template](mailto:help@divshot.com?Subject=Force%20SSL%20Request&Body=Divshot%20App%20Name%20and%20Custom%20Domain%20Names%3A%0Amyapp1%2C%20myapp1.com), and we can get that processed within 24 hours.
