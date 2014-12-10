@@ -13,15 +13,15 @@ In the directory for your Divshot project, you can see existing custom domains f
 like so:
 
     divshot domains
-    
+
 To add a new custom domain, just use `domains:add`:
 
     divshot domains:add www.my-app.com
-    
+
 To remove a domain, just use `domains:remove`:
 
     divshot domains:remove www.my-app.com
-    
+
 ## Setting up DNS
 
 Once you've added the custom domain to your app, you will need to create a `CNAME` pointing your
@@ -38,5 +38,10 @@ work (let us know if there are others!):
 * [CloudFlare](http://cloudflare.com)
 * [DNSimple](http://dnsimple.com)
 * [DNS Made Easy](http://dnsmadeeasy.com)
+
+### Guides:
+
+* [Apex with Cloudflare](/guides/domains/apex-cloudflare)
+* [Apex with Route53 (External Site)](http://blog.chares.io/using-apex-domains-with-divshot-aws/)
 
 If you have any questions about custom domains, please [get in touch](mailto:support@divshot.io).
