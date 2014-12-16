@@ -12,7 +12,7 @@ The following are the available configuration options:</p>
 The Divshot application name. This is the same as your application's subdomain (e.g. `myapp.divshot.io`).
 
 #### **root**
-This is the directory that will serve as the public root. If your application uses preprocessors or any otherkind of build process, you will likely want to specify this option (for example `_site` or `public`).
+This is the directory that will serve as the public root. If your application uses preprocessors or any other kind of build process, you will likely want to specify this option (for example `_site` or `public`).
 
 #### **clean_urls**
 If true, Divshot will automatically drop `.html` extensions from your files. For more information see the [routing guide](/guides/routing).
