@@ -2,6 +2,7 @@ _site
 .divshot-cache
 .sass-cache
 .gist-cache
+.jekyll-assets-cache
 s3_website.yml
 .DS_Store
 .bundle
