@@ -335,7 +335,7 @@ textarea {
 }
 
 a {
-  color: #02b4e5;
+  color: #008cdd;
   text-decoration: none;
 }
 
@@ -6847,16 +6847,15 @@ h2 {
 }
 
 .main-content a {
-  text-decoration: none;
-  border-bottom: 1px solid #02b4e5;
+  text-decoration: underline;
 }
 
 .main-content a.btn {
-  border-bottom: 0;
+  text-decoration: none;
 }
 
 .main-content a:hover {
-  border-bottom-color: #02a0cc;
+  color: black;
 }
 
 h1 {
