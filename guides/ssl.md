@@ -35,6 +35,10 @@ Once you have your `.crt` and `.key` files, uploading the certificate data is ea
 divshot cert path/to/certificate.crt path/to/key.key
 ```
 
+Certificates must be in PEM format. If you are unable to open them using a Text Editor and view plain text, you must convert them before uploading to Divshot.
+
+[Convert SSL Certificates](https://www.sslshopper.com/ssl-converter.html)
+
 ### SNI Custom SSL
 
 By default, Divshot delivers SSL certificates to browsers using [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication).
