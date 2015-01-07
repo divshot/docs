@@ -32,6 +32,6 @@ Rule #3: `Forwarding` > `http://www.mydomain.com` > `https://mydomain.com` > `30
 ## General Setup
 
 1. Set `CNAME` for `www` to `my-app.divshot.io`
-2. Set `Cname` for `mydomain.com` to `my-app.divshot.io`
+2. Set `CNAME` for `mydomain.com` to `my-app.divshot.io`
 3. Apply rules from above
 4. If you have requested Force HTTPS from Divshot - Please request us to disable it
