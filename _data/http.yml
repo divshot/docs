@@ -326,6 +326,18 @@
         description: |
           <p>Refer to the errors hash and try again.</p>
     regex: ^\/apps\/(?<id>[^\/.?]+)\/ssl(?:\.(?<format>[^\/.?]+))?$
+  - method: GET
+    params:
+      id: ''
+    compiled: (?-mix:\A\/apps\/(?<id>[^\/.?]+)\/ssl(?:\.(?<format>[^\/.?]+))?\Z)
+    path: /apps/:id/ssl(.:format)
+    minpath: /apps/:id/ssl
+    id: GET/apps/:id/ssl
+    description: Undocumented
+    returns: 
+    return_type: 
+    failure_modes: {}
+    regex: ^\/apps\/(?<id>[^\/.?]+)\/ssl(?:\.(?<format>[^\/.?]+))?$
   - method: POST
     params:
       organization_id: ''
@@ -408,17 +420,6 @@
     return_type: 
     failure_modes: {}
     regex: ^\/transfer(?:\.(?<format>[^\/.?]+))?$
-  - method: GET
-    params: {}
-    compiled: (?-mix:\A\/ssl(?:\.(?<format>[^\/.?]+))?\Z)
-    path: /ssl(.:format)
-    minpath: /ssl
-    id: GET/ssl
-    description: Undocumented
-    returns: 
-    return_type: 
-    failure_modes: {}
-    regex: ^\/ssl(?:\.(?<format>[^\/.?]+))?$
   entity_name: App
   docs:
   - type: String
@@ -455,14 +456,12 @@
       <p>For each environment there is a key <code>build</code> which gives the build id. This is useful for when you want to promote a build, e.g. promoting staging to production.</p>
 
       <p>For further details see <a href="/routes/POST/apps/:app_id/releases/:env">the promotion api</a>.</p>
-
       <div class="highlight"><pre><span class="p">{</span>
         <span class="nt">&quot;development&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
         <span class="nt">&quot;staging&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
         <span class="nt">&quot;production&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">}</span>
       <span class="p">}</span>
       </pre></div>
-
       <p>In this synthetic example, each environment is pointing to the same build.</p>
     name: environments
 - name: Domain
@@ -670,9 +669,8 @@
       <p>Corresponds to the <code>divshot.json</code> file created by the command line tools.</p>
     name: config
   - type: Array[String]
-    description: |
+    description: |-
       <p>A list of the files contained in the build.</p>
-
       <div class="highlight"><pre><span class="p">[</span>
         <span class="s2">&quot;/index.html&quot;</span><span class="p">,</span>
         <span class="s2">&quot;/css/main.css&quot;</span><span class="p">,</span>
