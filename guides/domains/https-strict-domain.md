@@ -27,7 +27,7 @@ Rule #1: `Always Use HTTPS` for `http://mydomain.com`
 
 Rule #2: `Forwarding` > `https://www.mydomain.com` > `https://mydomain.com` > `301 Redirect`
 
-Rule #3: `Forwarding` > `http://www.mydomain.com` > `https://mydomain.com` > ` > `301 Redirect`
+Rule #3: `Forwarding` > `http://www.mydomain.com` > `https://mydomain.com` > `301 Redirect`
 
 ## General Setup
 
