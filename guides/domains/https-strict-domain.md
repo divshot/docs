@@ -11,7 +11,7 @@ title: "Forcing HTTPS with Strict Domains"
 
 ## Sign Up and Import Existing DNS Records
 
-CloudFlare will automatically import your DNS records after signup, after you get to the records screen follow the instructions below
+CloudFlare will automatically import your DNS records after signup, after you get to the records screen follow the instructions below:
 
 ## Rules for HTTPS and www
 
