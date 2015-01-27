@@ -15,7 +15,7 @@ Note that SSL is only available on Production environments. SSL on non-Productio
 
 ### Have Divshot Do Everything For You
 
-We can purchase and install an SSL certificate for you at a nominal fee. All you have to do is email us at [support@divshot.com](mailto:support@divshot.com?Subject=SSL%20Certificate%20Purchase%20and%20Install&Body=App%20Name%3A%0A%0ACustom%20Domain%20Name%3A%0A%0AWildcard%20%28Y/N%29%3A%20*Wildcard%20Certificates%20cost%20%24200*). A $25 one-time charge will be added to your next bill ($200 for Wildcard certificates). Certificate expire after one-year.
+We can purchase and install an SSL certificate for you at a nominal fee. All you have to do is email us at [support@divshot.com](mailto:support@divshot.com?Subject=SSL%20Certificate%20Purchase%20and%20Install&Body=App%20Name%3A%0A%0ACustom%20Domain%20Name%3A%0A%0AWildcard%20%28Y/N%29%3A%20*Wildcard%20Certificates%20cost%20%24200*). A $25 one-time charge will be added to your next bill ($200 for Wildcard certificates). Certificates expire after one-year.
 
 ### Do it on Your Own
 
