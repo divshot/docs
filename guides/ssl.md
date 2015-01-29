@@ -9,34 +9,42 @@ title: Using SSL with Your Divshot App
 
 ## Custom Domain SSL
 
-There are a few ways you can get SSL on your custom domain. If you have upgraded to one of our paid plans, you do one of the following things to go secure.
+There are a few ways you can get SSL on your custom domain. If you upgraded to one of our paid plans, you can do one of the following things to go secure.
 
-Note that SSL is only available on Production environments. SSL on non-Production environments are not supported at this time.
+Note that SSL is only available on production environments. SSL on non-production environments are not supported at this time.
 
 ### Have Divshot Do Everything For You
 
-We can purchase and install an SSL certificate for you at a nominal fee. All you have to do is email us at [support@divshot.com](mailto:support@divshot.com?Subject=SSL%20Certificate%20Purchase%20and%20Install&Body=App%20Name%3A%0A%0ACustom%20Domain%20Name%3A%0A%0AWildcard%20%28Y/N%29%3A%20*Wildcard%20Certificates%20cost%20%24200*). A $25 one-time charge will be added to your next bill ($200 for Wildcard certificates). Certificates expire after one-year.
+We can purchase and install an SSL certificate for you at a nominal fee. All you have to do is email us at [support@divshot.com](mailto:support@divshot.com?Subject=SSL%20Certificate%20Purchase%20and%20Install&Body=App%20Name%3A%0A%0ACustom%20Domain%20Name%3A%0A%0AWildcard%20%28Y/N%29%3A%20*Wildcard%20Certificates%20cost%20%24200*). A $25 one-time charge will be added to your next bill ($200 for Wildcard certificates). Certificates expire after one year.
 
 ### Do it on Your Own
 
+<<<<<<< HEAD
 If you know what you are doing, have your own (or plan to buy it on your own) certificate, and know your way around SSL certificates, we have two ways you can upload your own.
+=======
+If you know what you're doing and know your way around SSL certificates, we have two ways you can upload your own.
+>>>>>>> FETCH_HEAD
 
 #### Purchasing Certificates
 
-We **highly** recommend [SSLMate](https://sslmate.com) to purchase certificates. To purchase a certificate from SSLMate, [read their manual](https://sslmate.com/help/buy)
+We **highly** recommend [SSLMate](https://sslmate.com) to purchase certificates. To purchase a certificate from SSLMate, [read their manual.](https://sslmate.com/help/buy)
 
 #### Certificate Format
 
 If you did not buy your certificate from SSLMate, certificates must be in PEM format. If you are unable to open them using a text editor and view plain text, you must [convert them](https://www.sslshopper.com/ssl-converter.html) before installing to Divshot.
 
+<<<<<<< HEAD
 
 #### Easiest Way: Install Your Certificate on the Dashboard
+=======
+#### 1. Install Your Certificate on the Dashboard
+>>>>>>> FETCH_HEAD
 
 In Dashboard, click the name of the app you would like to install a certificate to.
 
 <img src="{% asset_path guides/ssl-app.png %}" alt="App List" class="img-responsive">
 
-On the top right, click the gear icon to go into settings
+On the top right, click the gear icon to go into settings.
 
 <img src="{% asset_path guides/environments-settings.png %}" alt="Environments List" class="img-responsive">
 
@@ -48,7 +56,7 @@ When all the information is entered and updated, click Change Certificate.
 
 <img src="{% asset_path guides/cert.png %}" alt="Certificate" class="img-responsive" style="width: 50%;">
 
-Let it propgate for a few minutes and you're done!
+Let it propagate for a few minutes and you're done!
 
 #### CLI Option: Upload Your Certificate through Divshot CLI
 
