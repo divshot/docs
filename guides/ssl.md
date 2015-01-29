@@ -19,7 +19,7 @@ We can purchase and install an SSL certificate for you at a nominal fee. All you
 
 ### Do it on Your Own
 
-If you know what you are doing, and know your way around SSL certificates, we have two ways you can upload your own.
+If you know what you are doing, have your own (or plan to buy it on your own) certificate, and know your way around SSL certificates, we have two ways you can upload your own.
 
 #### Purchasing Certificates
 
@@ -30,7 +30,7 @@ We **highly** recommend [SSLMate](https://sslmate.com) to purchase certificates.
 If you did not buy your certificate from SSLMate, certificates must be in PEM format. If you are unable to open them using a text editor and view plain text, you must [convert them](https://www.sslshopper.com/ssl-converter.html) before installing to Divshot.
 
 
-#### 1. Install Your Certificate on the Dashboard
+#### Easiest Way: Install Your Certificate on the Dashboard
 
 In Dashboard, click the name of the app you would like to install a certificate to.
 
@@ -50,7 +50,7 @@ When all the information is entered and updated, click Change Certificate.
 
 Let it propgate for a few minutes and you're done!
 
-#### 2. Upload Your Certificate through Divshot CLI
+#### CLI Option: Upload Your Certificate through Divshot CLI
 
 Once you have your `.crt` and `.key` files, uploading the certificate is easy, `cd` to your app directory, then:
 
