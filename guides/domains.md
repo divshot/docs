@@ -7,7 +7,28 @@ title: "Custom Domains on Divshot"
 
 <p class="lead">It's easy to get your Divshot app up and running on a custom domain.</p>
 
+You'll need to first add the domain into your Divshot app, and then set up your DNS to point at your app. You must do both parts for your custom domain to work.
+
 ## Adding the Domain to Your App
+
+### Using the Dashboard
+
+To add a custom domain to your app using the Dashboard, follow these steps:
+
+1. In your app list, click on `Add Domain` of the app you want to use.
+
+<img src="{% asset_path guides/domains-app.png %}" alt="Add Domain in App" class="img-responsive">
+
+2. Enter your domain - it is recommended you add both `www` and `non-www` if you are not 100% sure.
+
+<img src="{% asset_path guides/app-settings.png %}" alt="App Settings" class="img-responsive">
+
+3. Click Add Domain
+
+4. That's it! Set up your DNS if you haven't done so already, give it a few minutes to propagate and enjoy using a custom domain!
+
+
+### Using the CLI
 
 In the directory for your Divshot project, you can see existing custom domains for your app
 like so:
@@ -28,6 +49,8 @@ Once you've added the custom domain to your app, you will need to create a `CNAM
 domain to `your-app.divshot.io`. If you've already added the custom domain using the command line
 tool, you should be able to see your site up and running immediately!
 
+* [Guides for Namecheap, GoDaddy, Enom, and more!](http://docs.divshot.com/guides/domains/registrars)
+
 ## Apex Domains
 
 We do not presently offer `A` record IP addresses to host apex domains with Divshot. If you wish
@@ -41,7 +64,7 @@ work (let us know if there are others!):
 
 ### Guides:
 
-* [Apex with Cloudflare](/guides/domains/apex-cloudflare)
+* [Apex with Cloudflare](/guides/domains/apex-cloudflare) **Recommended if you want to use `https`**
 * [Apex with Route53 (External Site)](http://blog.chares.io/using-apex-domains-with-divshot-aws/)
 
 If you have any questions about custom domains, please [get in touch](mailto:support@divshot.io).

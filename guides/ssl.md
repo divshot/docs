@@ -33,9 +33,22 @@ If you did not buy your certificate from SSLMate, certificates must be in PEM fo
 #### 1. Install Your Certificate on the Dashboard
 
 1. In Dashboard, click the name of the app you would like to install a certificate to.
+
+<img src="{% asset_path guides/ssl-app.png %}" alt="App List" class="img-responsive">
+
 2. On the top right, click the gear icon to go into settings
+
+<img src="{% asset_path guides/environments-settings.png %}" alt="Environments List" class="img-responsive">
+
 3. Under Custom SSL, click Edit Certificate.
-4. When all the information is entered, click Apply.
+
+<img src="{% asset_path guides/custom-ssl.png %}" alt="Environments List" class="img-responsive">
+
+4. When all the information is entered and updated, click Apply.
+
+<img src="{% asset_path guides/cert.png %}" alt="Certificate" class="img-responsive">
+
+5. Let it propgate for a few minutes and you're done!
 
 #### 2. Upload Your Certificate through Divshot CLI
 
