@@ -15,17 +15,17 @@ You'll need to first add the domain into your Divshot app, and then set up your 
 
 To add a custom domain to your app using the Dashboard, follow these steps:
 
-1. In your app list, click on `Add Domain` of the app you want to use.
+In your app list, click on `Add Domain` of the app you want to use.
 
 <img src="{% asset_path guides/domains-app.png %}" alt="Add Domain in App" class="img-responsive">
 
-2. Enter your domain - it is recommended you add both `www` and `non-www` if you are not 100% sure.
+Enter your domain - it is recommended you add both `www` and `non-www` if you are not 100% sure.
 
 <img src="{% asset_path guides/app-settings.png %}" alt="App Settings" class="img-responsive">
 
-3. Click Add Domain
+Click Add Domain
 
-4. That's it! Set up your DNS if you haven't done so already, give it a few minutes to propagate and enjoy using a custom domain!
+That's it! Set up your DNS if you haven't done so already, give it a few minutes to propagate and enjoy using a custom domain!
 
 
 ### Using the CLI
