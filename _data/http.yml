@@ -456,12 +456,14 @@
       <p>For each environment there is a key <code>build</code> which gives the build id. This is useful for when you want to promote a build, e.g. promoting staging to production.</p>
 
       <p>For further details see <a href="/routes/POST/apps/:app_id/releases/:env">the promotion api</a>.</p>
+
       <div class="highlight"><pre><span class="p">{</span>
         <span class="nt">&quot;development&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
         <span class="nt">&quot;staging&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">},</span>
         <span class="nt">&quot;production&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="s2">&quot;cc32cuec32233cee2&quot;</span> <span class="p">}</span>
       <span class="p">}</span>
       </pre></div>
+
       <p>In this synthetic example, each environment is pointing to the same build.</p>
     name: environments
 - name: Domain
@@ -669,8 +671,9 @@
       <p>Corresponds to the <code>divshot.json</code> file created by the command line tools.</p>
     name: config
   - type: Array[String]
-    description: |-
+    description: |
       <p>A list of the files contained in the build.</p>
+
       <div class="highlight"><pre><span class="p">[</span>
         <span class="s2">&quot;/index.html&quot;</span><span class="p">,</span>
         <span class="s2">&quot;/css/main.css&quot;</span><span class="p">,</span>
@@ -787,6 +790,9 @@
     params:
       app_id: ''
       env: ''
+      version:
+        required: false
+        type: Integer
     compiled: (?-mix:\A\/apps\/(?<app_id>[^\/.?]+)\/releases\/(?<env>[^\/.?]+)\/rollback(?:\.(?<format>[^\/.?]+))?\Z)
     path: /apps/:app_id/releases/:env/rollback(.:format)
     minpath: /apps/:app_id/releases/:env/rollback

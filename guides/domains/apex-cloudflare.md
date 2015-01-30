@@ -17,7 +17,11 @@ First you'll want to add your domain to Divshot if you haven't already done so. 
 
 Next you'll want to add your site to CloudFlare and set up a DNS Zone File. Add two CNAME records both pointing to `your-app.divshot.io`, one for the Apex domain and the other for `www`. Make sure they're both active:
 
-<img src="{% asset_path guides/cloudflare-dns-zone-file.png %}" alt="CloudFlare DNS Zone File" class="img-responsive">
+<img src="{% asset_path guides/cloudflare-disable.png %}" alt="CloudFlare DNS Zone File" class="img-responsive">
+
+**We highly do not recommend using CloudFlare acceleration. Under 'Active', click the orange cloud icon and disable it. It should show a gray cloud.**
+
+Enabling CloudFlare acceleration causes issues with cacheing and delays with content refreshes. When using Divshot High-Performance, CloudFlare acceleration reduces the overall performance.
 
 ## Create CloudFlare Page Rule
 
