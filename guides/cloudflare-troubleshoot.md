@@ -5,7 +5,7 @@ title: Known Issues with 3rd Party Services
 
 # Known Issues with Cloudflare
 
-<p class="lead">There are some issues with CloudFlare that users have reported that is beyond our control. Here are the well known ones, and how to fix them.</p>
+<p class="lead">There are some issues with CloudFlare that users have reported that is beyond our control. Here is how to resolve the problem.</p>
 
 ## CloudFlare Acceleration
 
