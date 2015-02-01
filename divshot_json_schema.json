@@ -11,7 +11,8 @@
     "root": {
       "title": "App Root",
       "type": "string",
-      "description": "The directory (relative to the project root) from which you would like to serve files. Examples might be `_site` for Jekyll or `dist` for Grunt projects."
+      "description": "The directory (relative to the project root) from which you would like to serve files. Examples might be `_site` for Jekyll or `dist` for Grunt projects.",
+      "default": "."
     },
     "clean_urls": {
       "title": "Clean URLs",
