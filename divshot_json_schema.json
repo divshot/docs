@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Divshot App Configuration",
+  "type":"object",
+  "properties": {
+    "name": {
+      "title": "App Name",
+      "type": "string",
+      "description": "The Divshot application name. This is the same as your application's subdomain (e.g. `myapp.divshot.io`)."
+    },
+    "root": {
+      "title": "App Root",
+      "type": "string",
+      "description": "The directory (relative to the project root) from which you would like to serve files. Examples might be `_site` for Jekyll or `dist` for Grunt projects."
+    },
+    "clean_urls": {
+      "title": "Clean URLs",
+      "anyOf": [{
+        "type": "boolean",
+        "description": "If true, Divshot will automatically drop .html extensions from your files. For more information see the [routing guide](http://docs.divshot.com/guides/routing)."
+      },
+      {
+        "type": "array",
+        "description": "If an array is provided, only the routes specified will utilize Clean URL rewrites and redirects.",
+        "items": {
+          "type": "string",
+          "description": "A route upon which Clean URLs should be imposed. Prefix with `!` to exclude a path."
+        }
+      }]
+    }
+  }
+}
