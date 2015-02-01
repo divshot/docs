@@ -5,7 +5,7 @@ title: "Setup with GoDaddy"
 
 # Setting up Using GoDaddy
 
-<p class="lead">GoDaddy will work when using <code>www</code>, but it will not work when using an Apex domain. Here's how to forward the bare domain to <code>www</code></p>
+<p class="lead">GoDaddy works when using <code>www</code> but it won't work using an Apex domain. Here's how to forward the bare domain.</p>
 
 ## Setup Forwarding
 

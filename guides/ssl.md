@@ -5,7 +5,7 @@ title: Using SSL with Your Divshot App
 
 # Using SSL with Your Divshot App
 
-<p class="lead">We offer SSL on all apps through your <code>divshot.io</code> subdomain, but if you want SSL on your custom domain, you need to upgrade to a paid plan and use <a href="/guides/high-performance">High-Performance</a> apps.</p>
+<p class="lead">We offer SSL on all apps through your <code>divshot.io</code> subdomain. If you want SSL on your custom domain, you need to upgrade to a paid plan and use <a href="/guides/high-performance">High-Performance</a> apps.</p>
 
 ## Custom Domain SSL
 
@@ -19,9 +19,7 @@ We can purchase and install an SSL certificate for you at a nominal fee. All you
 
 ### Do it on Your Own
 
-
-If you know what you are doing, have your own (or plan to buy it on your own) certificate, and know your way around SSL certificates, we have two ways you can upload your own.
-
+If you know what you're doing and have your own certificate (or plan to buy it yourself) we have two ways you can upload your own.
 
 #### Purchasing Certificates
 
@@ -31,9 +29,7 @@ We **highly** recommend [SSLMate](https://sslmate.com) to purchase certificates.
 
 If you did not buy your certificate from SSLMate, certificates must be in PEM format. If you are unable to open them using a text editor and view plain text, you must [convert them](https://www.sslshopper.com/ssl-converter.html) before installing to Divshot.
 
-
 #### Easiest Way: Install Your Certificate on the Dashboard
-
 
 In Dashboard, click the name of the app you would like to install a certificate to.
 

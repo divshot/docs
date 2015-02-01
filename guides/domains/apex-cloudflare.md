@@ -19,9 +19,9 @@ Next you'll want to add your site to CloudFlare and set up a DNS Zone File. Add 
 
 <img src="{% asset_path guides/cloudflare-disable.jpg %}" alt="CloudFlare DNS Zone File" class="img-responsive">
 
-**We highly do not recommend using CloudFlare acceleration. Under 'Active', click the orange cloud icon and disable it. It should show a gray cloud.**
+**We strongly advise against using CloudFlare acceleration. Under 'Active', click the orange cloud icon and disable it. It should show a gray cloud.**
 
-Enabling CloudFlare acceleration causes issues with cacheing and delays with content refreshes. When using Divshot High-Performance, CloudFlare acceleration reduces the overall performance.
+Enabling CloudFlare acceleration causes issues with caching and delays with content refreshing. When using Divshot's High-Performance mode, CloudFlare acceleration reduces overall performance.
 
 ## Create CloudFlare Page Rule
 
