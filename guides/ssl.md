@@ -5,7 +5,7 @@ title: Using SSL with Your Divshot App
 
 # Using SSL with Your Divshot App
 
-<p class="lead">We offer SSL on all apps through your <code>divshot.io</code> subdomain. If you want SSL on your custom domain, you need to upgrade to a paid plan and use <a href="/guides/high-performance">High-Performance</a> apps.</p>
+<p class="lead">We offer SSL on all apps through your <code>divshot.io</code> subdomain. If you want SSL on your custom domain, you need to upgrade to a paid plan and use <a href="/guides/high-performance">High-Performance</a> mode.</p>
 
 ## Custom Domain SSL
 
@@ -17,9 +17,9 @@ Note that SSL is only available on production environments. SSL on non-productio
 
 We can purchase and install an SSL certificate for you at a nominal fee. All you have to do is email us at [support@divshot.com](mailto:support@divshot.com?Subject=SSL%20Certificate%20Purchase%20and%20Install&Body=App%20Name%3A%0A%0ACustom%20Domain%20Name%3A%0A%0AWildcard%20%28Y/N%29%3A%20*Wildcard%20Certificates%20cost%20%24200*). A $25 one-time charge will be added to your next bill ($200 for Wildcard certificates). Certificates expire after one year.
 
-### Do it on Your Own
+### Do It on Your Own
 
-If you know what you're doing and have your own certificate (or plan to buy it yourself) we have two ways you can upload your own.
+If you know what you're doing and have your own certificate (or plan to buy it yourself) we have two ways you can upload your own:
 
 #### Purchasing Certificates
 
@@ -31,19 +31,19 @@ If you did not buy your certificate from SSLMate, certificates must be in PEM fo
 
 #### Easiest Way: Install Your Certificate on the Dashboard
 
-In Dashboard, click the name of the app you would like to install a certificate to.
+In the Dashboard, click the name of the app you would like to install a certificate on:
 
 <img src="{% asset_path guides/ssl-app.jpg %}" alt="App List" class="img-responsive">
 
-On the top right, click the gear icon to go into settings.
+On the top right, click the gear icon to go into settings:
 
 <img src="{% asset_path guides/environments-settings.jpg %}" alt="Environments List" class="img-responsive">
 
-Under Custom SSL, click Edit Certificate.
+Under Custom SSL, click 'Edit Certificate':
 
 <img src="{% asset_path guides/custom-ssl.jpg %}" alt="Environments List" class="img-responsive">
 
-When all the information is entered and updated, click Change Certificate.
+When all the information is entered and updated, click Change Certificate:
 
 <img src="{% asset_path guides/cert.jpg %}" alt="Certificate" class="img-responsive" style="width: 50%;">
 
@@ -51,7 +51,7 @@ Let it propagate for a few minutes and you're done!
 
 #### CLI Option: Upload Your Certificate through Divshot CLI
 
-Once you have your `.crt` and `.key` files, uploading the certificate is easy, `cd` to your app directory, then:
+Once you have your `.crt` and `.key` files, uploading the certificate is easy. `cd` to your app directory and then:
 
 ```
 divshot cert path/to/certificate.crt path/to/key.key
