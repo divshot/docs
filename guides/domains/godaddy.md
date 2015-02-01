@@ -22,5 +22,3 @@ title: "Setup with GoDaddy"
 <img src="{% asset_path guides/godaddy-4.jpg %}" class="img-responsive">
 
 <img src="{% asset_path guides/godaddy-5.jpg %}" class="img-responsive">
-
-<img src="{% asset_path guides/godaddy-6.jpg %}" class="img-responsive">
