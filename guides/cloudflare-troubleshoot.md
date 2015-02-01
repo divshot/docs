@@ -15,4 +15,4 @@ When using Divshot High-Performance, it is required that you disable CloudFlare 
 
 To disable, under DNS settings for your app in CloudFlare, click the orange cloud icon under 'Active' to disable CloudFlare, and show a gray cloud icon. The result is shown below.
 
-<img src="{% asset_path guides/cloudflare-disable.png %}" alt="CloudFlare DNS Zone File" class="img-responsive">
+<img src="{% asset_path guides/cloudflare-disable.jpg %}" alt="CloudFlare DNS Zone File" class="img-responsive">

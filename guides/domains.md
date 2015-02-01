@@ -17,11 +17,11 @@ To add a custom domain to your app using the Dashboard, follow these steps:
 
 In your app list, click on `Add Domain` of the app you want to use.
 
-<img src="{% asset_path guides/domains-app.png %}" alt="Add Domain in App" class="img-responsive">
+<img src="{% asset_path guides/domains-app.jpg %}" alt="Add Domain in App" class="img-responsive">
 
 Enter your domain - it is recommended you add both `www` and `non-www` if you are not 100% sure.
 
-<img src="{% asset_path guides/app-settings.png %}" alt="App Settings" class="img-responsive">
+<img src="{% asset_path guides/app-settings-domain.jpg %}" alt="App Settings" class="img-responsive">
 
 Click Add Domain
 

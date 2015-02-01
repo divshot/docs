@@ -17,7 +17,7 @@ First you'll want to add your domain to Divshot if you haven't already done so. 
 
 Next you'll want to add your site to CloudFlare and set up a DNS Zone File. Add two CNAME records both pointing to `your-app.divshot.io`, one for the Apex domain and the other for `www`. Make sure they're both active:
 
-<img src="{% asset_path guides/cloudflare-disable.png %}" alt="CloudFlare DNS Zone File" class="img-responsive">
+<img src="{% asset_path guides/cloudflare-disable.jpg %}" alt="CloudFlare DNS Zone File" class="img-responsive">
 
 **We highly do not recommend using CloudFlare acceleration. Under 'Active', click the orange cloud icon and disable it. It should show a gray cloud.**
 
@@ -35,7 +35,7 @@ Turn on forwarding and use the following destination URL:
 
 Your rule should look like this:
 
-<img src="{% asset_path guides/cloudflare-page-rule.png %}" alt="CloudFlare Page Rule" class="img-responsive">
+<img src="{% asset_path guides/cloudflare-page-rule.jpg %}" alt="CloudFlare Page Rule" class="img-responsive">
 
 ## Mission Complete
 

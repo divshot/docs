@@ -37,19 +37,19 @@ If you did not buy your certificate from SSLMate, certificates must be in PEM fo
 
 In Dashboard, click the name of the app you would like to install a certificate to.
 
-<img src="{% asset_path guides/ssl-app.png %}" alt="App List" class="img-responsive">
+<img src="{% asset_path guides/ssl-app.jpg %}" alt="App List" class="img-responsive">
 
 On the top right, click the gear icon to go into settings.
 
-<img src="{% asset_path guides/environments-settings.png %}" alt="Environments List" class="img-responsive">
+<img src="{% asset_path guides/environments-settings.jpg %}" alt="Environments List" class="img-responsive">
 
 Under Custom SSL, click Edit Certificate.
 
-<img src="{% asset_path guides/custom-ssl.png %}" alt="Environments List" class="img-responsive">
+<img src="{% asset_path guides/custom-ssl.jpg %}" alt="Environments List" class="img-responsive">
 
 When all the information is entered and updated, click Change Certificate.
 
-<img src="{% asset_path guides/cert.png %}" alt="Certificate" class="img-responsive" style="width: 50%;">
+<img src="{% asset_path guides/cert.jpg %}" alt="Certificate" class="img-responsive" style="width: 50%;">
 
 Let it propagate for a few minutes and you're done!
 
