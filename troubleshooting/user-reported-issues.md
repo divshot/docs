@@ -26,6 +26,6 @@ Please [contact support](mailto:support@divshot.com) to get this resolved.
 
 ## Invalid SSL Certificates
 
-If you are suddenly getting invalid certificate errors, and your certificate is still valid, you will need to install a CA Bundle to resolve the issue.
+If you're suddenly getting invalid certificate errors and your certificate is still valid, you'll need to install a CA Bundle to resolve the issue.
 
-Please read the [SSL Certificates](/guides/ssl) doc to find out how to install a CA Bundle.
+Please read the [SSL Certificates](/guides/ssl) guide to learn how to install a CA Bundle.
