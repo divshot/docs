@@ -21,7 +21,7 @@ We can purchase and install an SSL certificate for you at a nominal fee. All you
 
 If you know what you're doing and have your own certificate (or plan to buy it yourself) we have two ways you can upload your own:
 
-**Warning: Please check that your Certificate and Private Key match before uploading to Divshot. Either use `openssl` in the Terminal or use a [3rd party tool](https://www.sslshopper.com/certificate-key-matcher.html)**
+**Warning: Please check that your Certificate and Private Key match before uploading to Divshot. Either use `openssl` in the Terminal or use a [3rd party tool](https://www.sslshopper.com/certificate-key-matcher.html).**
 
 #### Purchasing Certificates
 
