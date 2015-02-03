@@ -25,6 +25,24 @@ Your app directory doesn't actually contain anything. Check in the terminal that
 
 If you're using a site generator such as Jekyll or Middleman, you must compile your site before deploying to Divshot.
 
+## App Deletion/Recreation
+
+If you create an app, delete it, and immediately recreate it again using:
+
+* The same app name
+* Or the same custom domain name
+
+It will cause issues during our app deletion process. The new app you create will not function normally.
+
+If you've done this and notice issues such as:
+
+* Custom domain name doesn't work properly
+* New app points to content of old app
+* Unexpected 404s
+
+Please [contact support](mailto:support@divshot.com) to get this resolved.
+
+
 ## Unsupported Application
 
 Divshot supports front-end frameworks and technologies. We do not support PHP, Drupal, Wordpress, Node, or any dynamically generated sites. Popular supported frameworks are AngularJS, Ember, React, Polymer, Middleman, Jekyll, etc.
