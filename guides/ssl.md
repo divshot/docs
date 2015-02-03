@@ -56,8 +56,14 @@ Let it propagate for a few minutes and you're done!
 Once you have your `.crt` and `.key` files, uploading the certificate is easy. `cd` to your app directory and then:
 
 ```
-divshot cert path/to/certificate.crt path/to/key.key
+divshot cert path/to/certificate.crt path/to/key.key path/to/ca.bundle
 ```
+
+### CA Bundle
+
+Though a CA Bundle is optional, it is **highly** recommended. You may get invalid certificate errors when visiting your app.
+
+Please use the [What's My Chain Cert?](https://whatsmychaincert.com) tool to determine what bundle you should use, and generate one if necessary. **Note**: If you haven't already installed SSL on your domain, you should paste your certificate into the generator to get the correct chain.
 
 ### SNI Custom SSL
 

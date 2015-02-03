@@ -23,3 +23,9 @@ If you've done this and notice issues such as:
 * Unexpected 404s
 
 Please [contact support](mailto:support@divshot.com) to get this resolved.
+
+## CA Bundle
+
+Though a CA Bundle is optional, it is **highly** recommended. You may get invalid certificate errors when visiting your app.
+
+Please use the [What's My Chain Cert?](https://whatsmychaincert.com) tool to determine what bundle you should use, and generate one if necessary. **Note**: If you haven't already installed SSL on your domain, you should paste your certificate into the generator to get the correct chain.
