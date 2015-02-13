@@ -38,7 +38,7 @@ Once defined, you can call through to the proxy by making an AJAX request
 with the following structure:
 
     <METHOD> /__/proxy/<NAME>/<PATH>
-    
+
 Using the example above, if I wanted to make a `POST` request to the URL
 `https://api.my-example.com/users/123`, I could do the following (using
 jQuery as a simple example):
@@ -53,3 +53,7 @@ $.ajax({
   }
 })
 ```
+
+## Configuring CDN Proxy Cache for High-Performance Apps
+
+If you'd like to customize cacheing for specific requests while using our CDN, send us an email using this template and we'll get things taken care of: [CDN Proxy Cache Customization Request](mailto:support@divshot.com?Subject=CDN%20Proxy%20Customization&Body=app%20name%3A%0A%0Acustom%20domain%3A%0A%0AProxy%20requests%20to%20customize%20cacheing%3A).
