@@ -25,8 +25,11 @@ Enter your domain - it is recommended you add both `www` and `non-www` if you ar
 
 Click Add Domain
 
-That's it! Set up your DNS if you haven't done so already, give it a few minutes to propagate and enjoy using a custom domain!
+After a domain is added, you'll be able to choose which environment you want that domain set to
 
+<img src="{% asset_path guides/environment-domains.png %}" alt="Choose Domain" class="img-responsive">
+
+That's it! Set the record in your DNS and you're set!
 
 ### Using the CLI
 
