@@ -45,12 +45,10 @@ To remove a domain, just use `domains:remove`:
 
 ## Setting up DNS
 
-Once you've added the custom domain to your app, you will need to create a `CNAME` pointing your
-domain to `your-app.divshot.io`. If you've already added the custom domain using the command line
+Once you've added the custom domain to your environment, you will need to create a `CNAME` pointing your
+domain to `[environment].your-app.divshot.io`. If you've already added the domain using the command line
 tool, you should be able to see your site up and running immediately!
 
-**Note that we don't yet support custom domains on non-production environments, you must CNAME to `[environment].your-app.divshot.io`.**
-
-In place of `[environment]`, set either [development] or [staging]
+In place of `[environment]`, set either [development] or [staging].
 
 * [Guides for Namecheap, GoDaddy, Enom, and more!](http://docs.divshot.com/guides/domains/registrars)
