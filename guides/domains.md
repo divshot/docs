@@ -53,9 +53,8 @@ Once you've added the custom domain to your app, you will need to create a `CNAM
 domain to `your-app.divshot.io`. If you've already added the custom domain using the command line
 tool, you should be able to see your site up and running immediately!
 
-**Note that we don't yet support custom domains on non-production environments, you must CNAME to `your-app.divshot.io`.**
 
-Do not use `development.your-app.divshot.io`, `staging.your-app.divshot.io`, or `production.your-app.divshot.io`.
+Do not use `production.your-app.divshot.io` when setting up a domain for your Production environment. Use only `your-app.divshot.io`.
 
 * [Guides for Namecheap, GoDaddy, Enom, and more!](http://docs.divshot.com/guides/domains/registrars)
 
