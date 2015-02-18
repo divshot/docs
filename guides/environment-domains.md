@@ -56,3 +56,7 @@ tool, you should be able to see your site up and running immediately.
 In place of `[environment]`, set either `development` or `staging`.
 
 * [Guides for Namecheap, GoDaddy, Enom, and more!](http://docs.divshot.com/guides/domains/registrars)
+
+## SSL
+
+Environment domains does not support SSL yet. We are planning to support this in the future for Armada (and possibly Fleet). To help use gauge interest this feature, please [send us an email](mailto:support@divshot.com?Subject=Environment%20Domain%20SSL%20Vote&Body=Would%20you%20upgrade%20to%20Fleet%20for%20this%3F%20%28y/n%29%0A%0AWould%20you%20upgrade%20to%20Armada%20for%20this%3F%20%28y/n%29).
