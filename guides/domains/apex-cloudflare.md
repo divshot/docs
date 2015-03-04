@@ -21,7 +21,7 @@ Next you'll want to add your site to CloudFlare and set up a DNS Zone File. Add 
 
 **We strongly advise against using CloudFlare acceleration. Under 'Active', click the orange cloud icon and disable it. It should show a gray cloud.**
 
-Enabling CloudFlare acceleration causes issues with caching and delays with content refreshing. When using Divshot's High-Performance mode, CloudFlare acceleration reduces overall performance.
+Enabling CloudFlare acceleration causes issues with caching and delays with content refreshing. When using Divshot's High-Performance mode, CloudFlare acceleration reduces overall performance (CloudFlare rules will still apply for Apex domains).
 
 ## Create CloudFlare Page Rule
 
