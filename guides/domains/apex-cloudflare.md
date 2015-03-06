@@ -9,9 +9,10 @@ title: "Apex Domains Using CloudFlare"
 
 ## Add Your Domain to Divshot
 
-First you'll want to add your domain to Divshot if you haven't already done so. Use the [command line](/guides/domains) or [dashboard](https://dashboard.divshot.com). Omit the `www` since we're going the Apex route, like so:
+First you'll want to add your domain to Divshot if you haven't already done so. Use the [command line](/guides/domains) or [dashboard](https://dashboard.divshot.com). Add both `apex` and `www`:
 
     divshot domains:add my-app.com
+    divshot domains:add www.my-app.com
 
 ## Add Your Website to CloudFlare
 
@@ -23,19 +24,9 @@ Next you'll want to add your site to CloudFlare and set up a DNS Zone File. Add 
 
 Enabling CloudFlare acceleration causes issues with caching and delays with content refreshing. When using Divshot's High-Performance mode, CloudFlare acceleration reduces overall performance (CloudFlare rules will still apply for Apex domains).
 
-## Create CloudFlare Page Rule
+## Force Apex
 
-Lastly, you'll want to forward requests from `www.my-app.com` to `my-app.com` using a 301 permanent redirect. Enter the following URL pattern:
-
-    www.my-app.com/*
-
-Turn on forwarding and use the following destination URL:
-
-    http://my-app.com/$1
-
-Your rule should look like this:
-
-<img src="{% asset_path guides/cloudflare-page-rule.jpg %}" alt="CloudFlare Page Rule" class="img-responsive">
+If you would like to force all traffic through the apex domain, send us a request: [Force Apex Request](mailto:support@divshot.com?Subject=Force%20Apex%20Request&Body=App%20Name%3A%0A%0ACustom%20Domain%3A%0A%0A)
 
 ## Mission Complete
 
