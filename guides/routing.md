@@ -29,11 +29,11 @@ file in my application, users would be able to go to `/about` and see the page.
 Note that in order to maximize search-engine friendliness when Clean URLs are enabled `.html`
 extensions will trigger 301 redirects to the same path with the extension dropped.
 
-To enable Clean URLs for specific paths, you can use glob patterns:
+To enable Clean URLs for specific paths, you can use [glob patterns](https://github.com/isaacs/node-glob#glob-primer):
 
 ```json
 {
-  "clean_urls": ["/app**", "!/components**"]
+  "clean_urls": ["/app/**", "/!components/**"]
 }
 ```
 
