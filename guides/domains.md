@@ -72,6 +72,6 @@ work (let us know if there are others!):
 ### Guides:
 
 * [Apex with Cloudflare](/guides/domains/apex-cloudflare) **Recommended if you want to use `https`**
-* [Apex with Route53 (External Site)](http://blog.chares.io/using-apex-domains-with-divshot-aws/)
+* [Apex Redirection with Route53 (External Site)](http://blog.chares.io/using-apex-domains-with-divshot-aws/)
 
 If you have any questions about custom domains, please [get in touch](mailto:support@divshot.io).
