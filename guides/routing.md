@@ -63,6 +63,26 @@ As an example, if I have an application with a landing page at `index.html` but 
 
 In my application with this configuration, any URL prefixed with `/app` would serve up `app.html`.
 
+You can specify your routes as an array to guarantee priority:
+
+```json
+{
+  "name": "my-app-name",
+  "routes": [
+    {
+      "/custom_page.html": "custom_page.html"
+    },
+    {
+      "/**": "index.html"
+    }
+  ]
+}
+```
+
+In my application with this configuration, `/custom_age.html` will serve up `custom_page.html`--
+despite the subsequent route being a "catch-all" route.
+
+
 ## Custom Redirects
 
 If you move an existing page somewhere else, you'll want to create a redirect to make sure any backlinks continue 
