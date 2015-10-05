@@ -79,7 +79,7 @@ You can specify your routes as an array to guarantee priority:
 }
 ```
 
-In my application with this configuration, `/custom_age.html` will serve up `custom_page.html`--
+In my application with this configuration, `/custom_page.html` will serve up `custom_page.html`--
 despite the subsequent route being a "catch-all" route.
 
 
