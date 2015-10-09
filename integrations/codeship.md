@@ -32,8 +32,8 @@ To deploy to Divshot, we'll need to use a custom script in Codeship. Click the *
 Select the **$script** button from the list of deployment methods. Under Deployment commands, use the following script:
 
     npm install -g divshot-cli
-    divshot push staging --token $DIVSHOT_TOKEN
+    divshot push staging --token "${DIVSHOT_TOKEN}"
 
 <img src="{% asset_path integrations/codeship2.png %}" alt="Codeship Deployment Script" class="img-responsive">
 
-Click the green checkmark to save it. Now you've got continuous integration with Divshot!
+Remember to change _staging_ in the above script to the environment you want to deploy to. Then click the blue _Save changes_ button to save it. Now you've got continuous integration and deployment with Divshot!
